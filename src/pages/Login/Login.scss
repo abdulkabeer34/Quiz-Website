@@ -1,0 +1,99 @@
+.login-main {
+  min-height: 560px;
+
+  .left {
+    img {
+      width: 500px !important;
+    }
+  }
+
+  .right {
+    .center {
+      .image {
+        img {
+          width: 40px;
+        }
+      }
+
+      .heading {
+        margin-bottom: 15px;
+
+        h1 {
+          font-size: 40px;
+        }
+
+        p {
+          margin-bottom: 20px;
+        }
+      }
+      .form-item{
+        margin-top: 12px;
+      }
+
+   .password{
+    margin-top: 15px;
+   }
+      .form-bottom-1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+      
+        .remember-me {
+          margin-bottom: 0;
+        }
+      
+        p {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+
+      .form-bottom-2{
+        margin-top: 33px;
+        p {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          justify-content: center;
+          cursor: pointer;
+        
+          span {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .sign-login{
+        width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 20px;
+       margin-top: 10px;
+
+       span{
+        text-decoration: underline;
+        cursor: pointer;
+       }
+      }
+
+
+      h1 {
+        font-size: 33px;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: 500;
+        margin: -7px 0 0 7px;
+      }
+
+
+      .ant-form-item-explain-error {
+        font-size: 10px;
+      }
+    }
+  }
+}

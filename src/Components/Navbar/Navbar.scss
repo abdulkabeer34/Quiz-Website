@@ -1,0 +1,58 @@
+.nav-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+
+    @media (max-width:370px) {
+        padding: 0 10px;
+    }
+
+    .logo {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10.5px;
+        gap: 10px;
+
+        @media (max-width:670px) {
+            width: 50%;
+            justify-content: initial;
+        }
+
+        h1 {
+            font-weight: 501;
+
+            @media (max-width:670px) {
+                font-size: 16px;
+            }
+
+            @media (max-width:290px) {
+                font-size: 12px;
+            }
+
+        }
+
+        img {
+            width: 24px;
+        }
+
+    }
+
+
+    .profile {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 50px;
+            border-radius: 50%;
+        }
+    }
+}

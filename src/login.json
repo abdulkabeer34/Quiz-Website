@@ -1,0 +1,289 @@
+{
+  "users": [
+    {
+      "id": "YXNkZmFzZGZhREY=",
+      "username": "asdfasdfaDF",
+      "password": "asfasdfasf"
+    },
+    {
+      "id": "YWRmYXNkZg==",
+      "username": "adfasdf",
+      "password": "asdfasdf"
+    },
+    {
+      "id": "YXNqZGhmYWprc2Rm",
+      "username": "asjdhfajksdf",
+      "password": "ajksdhfkasjdha"
+    },
+    {
+      "id": "dHdlcnR3cg==",
+      "username": "twertwr",
+      "password": "egwertwert"
+    },
+    {
+      "id": "a2poamhramhramhramhrIA==",
+      "username": "kjhjhkjhkjhkjhk ",
+      "password": "kkjkjkjkjk"
+    }
+  ],
+  "quizPastHistory": [
+    {
+      "id": "YXNkZmFzZGZhREY=",
+      "date": []
+    },
+    {
+      "date": [],
+      "id": "YWRmYXNkZg==",
+      "data": [
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Science: Computers",
+              "question": "When did the online streaming service &quot;Mixer&quot; launch?",
+              "correct_answer": "2016",
+              "incorrect_answers": [
+                "2013",
+                "2009",
+                "2011"
+              ],
+              "shuffledAnswers": [
+                "2013",
+                "2009",
+                "2011",
+                "2016"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": 1
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "History",
+              "question": "During World War I, which nation&#039;s monarchs were blood related?",
+              "correct_answer": "England, Germany, Russia",
+              "incorrect_answers": [
+                "France, Russia, Germany",
+                "Serbia, Russia, Croatia",
+                "Germany, Spain, Austria"
+              ],
+              "shuffledAnswers": [
+                "France, Russia, Germany",
+                "Serbia, Russia, Croatia",
+                "Germany, Spain, Austria",
+                "England, Germany, Russia"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": 0
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "General Knowledge",
+              "question": "What is the romanized Russian word for &quot;winter&quot;?",
+              "correct_answer": "Zima",
+              "incorrect_answers": [
+                "Leto",
+                "Vesna",
+                "Osen&#039;"
+              ],
+              "shuffledAnswers": [
+                "Leto",
+                "Vesna",
+                "Osen&#039;",
+                "Zima"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": 1
+            }
+          ],
+          "basicInfo": {
+            "amount": 3,
+            "category": "any",
+            "difficulty": "any",
+            "type": "multiple",
+            "submited": "submitted",
+            "expirationTime": 5,
+            "startingDate": "2024-03-03T11:47:20.669Z",
+            "submittedTime": [
+              4,
+              50,
+              695
+            ]
+          },
+          "dataId": "U3VuIE1hciAwMyAyMDI0IDE2OjQ3OjA2IEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        }
+      ]
+    },
+    {
+      "id": "YXNqZGhmYWprc2Rm",
+      "data": []
+    },
+    {
+      "id": "dHdlcnR3cg==",
+      "date": [],
+      "data": [
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "General Knowledge",
+              "question": "Linus Pauling, one of the only winners of multiple Nobel Prizes, earned his Nobel Prizes in Chemistry and what?",
+              "correct_answer": "Peace",
+              "incorrect_answers": [
+                "Physics",
+                "Economics",
+                "Physiology/Medicine"
+              ],
+              "shuffledAnswers": [
+                "Physics",
+                "Peace",
+                "Economics",
+                "Physiology/Medicine"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": 1
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Science: Computers",
+              "question": "According to DeMorgan&#039;s Theorem, the Boolean expression (AB)&#039; is equivalent to:",
+              "correct_answer": "A&#039; + B&#039;",
+              "incorrect_answers": [
+                "A&#039;B + B&#039;A",
+                "A&#039;B&#039;",
+                "AB&#039; + AB"
+              ],
+              "shuffledAnswers": [
+                "A&#039; + B&#039;",
+                "A&#039;B + B&#039;A",
+                "A&#039;B&#039;",
+                "AB&#039; + AB"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": 1
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Film",
+              "question": "In the movie &quot;Scream&quot; who is Ghost Face?",
+              "correct_answer": "Billy Loomis and Stu Macher",
+              "incorrect_answers": [
+                "Dewey Riley",
+                "Sidney Prescott",
+                "Archie Prescott and Philip Marv"
+              ],
+              "shuffledAnswers": [
+                "Billy Loomis and Stu Macher",
+                "Dewey Riley",
+                "Sidney Prescott",
+                "Archie Prescott and Philip Marv"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": 1
+            }
+          ],
+          "basicInfo": {
+            "amount": 3,
+            "category": "any",
+            "difficulty": "any",
+            "type": "multiple",
+            "submited": "submitted",
+            "expirationTime": 5,
+            "startingDate": "2024-03-03T11:56:27.965Z",
+            "submittedTime": [
+              4,
+              17,
+              568
+            ]
+          },
+          "dataId": "U3VuIE1hciAwMyAyMDI0IDE2OjU2OjI1IEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        }
+      ]
+    },
+    {
+      "id": "a2poamhramhramhramhrIA==",
+      "data": [
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Sports",
+              "question": "Which NBA player has the most games played over the course of their career?",
+              "correct_answer": "Robert Parish",
+              "incorrect_answers": [
+                "Kareem Abdul-Jabbar",
+                "Kevin Garnett",
+                "Kobe Bryant"
+              ],
+              "shuffledAnswers": [
+                "Robert Parish",
+                "Kareem Abdul-Jabbar",
+                "Kevin Garnett",
+                "Kobe Bryant"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": 3
+            },
+            {
+              "type": "multiple",
+              "difficulty": "easy",
+              "category": "Entertainment: Video Games",
+              "question": "In &quot;Undertale&quot;, how many main endings are there?",
+              "correct_answer": "3",
+              "incorrect_answers": [
+                "2",
+                "5",
+                "13"
+              ],
+              "shuffledAnswers": [
+                "2",
+                "3",
+                "5",
+                "13"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "easy",
+              "category": "Entertainment: Music",
+              "question": "Where does the Mac part of the name Fleetwood Mac come from?",
+              "correct_answer": "John McVie",
+              "incorrect_answers": [
+                "Christine McVie",
+                "Mac McAnally",
+                "David Tennant"
+              ],
+              "shuffledAnswers": [
+                "John McVie",
+                "Christine McVie",
+                "Mac McAnally",
+                "David Tennant"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            }
+          ],
+          "basicInfo": {
+            "amount": 3,
+            "category": "any",
+            "difficulty": "any",
+            "type": "multiple",
+            "submited": "not submitted",
+            "expirationTime": 5,
+            "startingDate": "2024-03-03T11:59:35.004Z",
+            "submittedTime": "null"
+          },
+          "dataId": "U3VuIE1hciAwMyAyMDI0IDE2OjU5OjI3IEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        }
+      ]
+    }
+  ]
+}
