@@ -6,15 +6,16 @@ import {
   CustomModalAntd,
   FormItem,
 } from "../../styledComponents/styledComponent";
-import {
-  CategoriesDataSet,
-  DifficultyDataSet,
-  TypeDataSet,
-} from "./Attributes";
+
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { HandleSubmit, flattenObjectValues } from "../../apis";
 import { setAllQuizData, setData } from "../../store/quizStore";
+import {
+  CategoriesDataSet,
+  DifficultyDataSet,
+  TypeDataSet,
+} from "../../constants";
 
 export const Home = () => {
   const [open, setOpen] = useState(false);
@@ -28,7 +29,12 @@ export const Home = () => {
     const { quizData, dataId } = await HandleSubmit(e, setLoading, userId);
     console.log(dataId);
     dispatch(setData(quizData));
-    dispatch(setAllQuizData([...allQuizData,{...flattenObjectValues(e),submited:"not submitted"}]));
+    dispatch(
+      setAllQuizData([
+        ...allQuizData,
+        { ...flattenObjectValues(e), submited: "not submitted" },
+      ])
+    );
     navigate(`/quiz-area/${dataId}/0`);
   };
 

@@ -1,2 +1,3 @@
-export {createNewDataSet} from "./createNewDataSet"
-export {Loader} from './Loader/Loader'
+export { createNewDataSet } from "./createNewDataSet";
+export { openNotification } from "./OpenNotification";
+export { Loader } from "./Loader/Loader";
