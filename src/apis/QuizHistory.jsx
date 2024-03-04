@@ -50,9 +50,9 @@ export const setPastQuizHistory = async (
 export const getPastQuizHistory = async () => {
   try {
     const id = localStorage.getItem("token");
-    const { data:{data} } = await axios.get(
-      ` http://127.0.0.3:3003/quizPastHistory/${id}`
-    );
+    const {
+      data: { data },
+    } = await axios.get(` http://127.0.0.3:3003/quizPastHistory/${id}`);
 
     return { data, id };
   } catch (error) {

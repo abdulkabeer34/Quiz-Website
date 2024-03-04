@@ -1,28 +1,7 @@
-import { SmileOutlined } from "@ant-design/icons";
 import axios from "axios";
 import { Buffer } from "buffer";
-const notifications = {
-  loginSuccesful: {
-    message: "login succesful",
-    description: "taking you to the home page",
-    placement: "topLeft",
-  },
-  signupSuccesful: {
-    message: "signup succesful",
-    description: "taking you to the home page",
-    placement: "topLeft",
-  },
-  wrongCredentials: {
-    message: "wrong credentials",
-    description: "you entered the wrong email or password",
-    placement: "topLeft",
-  },
-  error: {
-    message: "Error",
-    description: "unexpected error occured try checking your internet",
-    placement: "topLeft",
-  },
-};
+import { notifications } from "../constants";
+import { openNotification } from "../utils";
 
 const SetUpUserQuizPastHistory = async (token) => {
   try {
@@ -34,21 +13,6 @@ const SetUpUserQuizPastHistory = async (token) => {
   } catch (error) {
     return false;
   }
-};
-
-const openNotification = ({ message, description, placement, api }) => {
-  api.open({
-    message,
-    description,
-    placement,
-    icon: (
-      <SmileOutlined
-        style={{
-          color: "#108ee9",
-        }}
-      />
-    ),
-  });
 };
 
 const fetchData = async () => {
@@ -103,7 +67,6 @@ export const verifyData = () => {
       openNotification({ ...notifications.signupSuccesful, api });
       localStorage.setItem("token", token);
       await SetUpUserQuizPastHistory(token);
-      // window.window.location.reload();
     } catch (error) {
       openNotification({ ...notifications.error, api });
     }

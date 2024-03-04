@@ -6,11 +6,13 @@ import { Boolean, MultipleChoice } from "../../Components";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { setData, setTimer } from "../../store/quizStore";
+import { setTimer } from "../../store/quizStore";
 import {
-  getPastQuizHistory,
-  updatePastQuizHistory,
-} from "../../apis/QuizHistory";
+  useStartAssignmentData,
+  useHandleQuizSubmit,
+  useSetSelectedAnswer,
+  useInitializeQuiz,
+} from "../../customHooks";
 
 let interval;
 
@@ -20,6 +22,10 @@ export const QuizArea = () => {
 
   const Timer = useSelector((e) => e.quizStore.timer);
   const token = useSelector((e) => e.quizStore.userToken);
+  const Assignment = useStartAssignmentData();
+  const HandleSubmit = useHandleQuizSubmit();
+  const SetSelectedAnswer = useSetSelectedAnswer();
+  const InitializeQuiz = useInitializeQuiz();
 
   const { id: dataId, question } = useParams();
   const navigate = useNavigate();
@@ -27,29 +33,15 @@ export const QuizArea = () => {
 
   useEffect(() => {
     const initializeQuiz = async () => {
-      const { data } = await getPastQuizHistory();
-      const currentQuiz = data.find((item) => item.dataId === dataId);
-
-      dispatch(setData(currentQuiz.quiz));
-
-      setQuizData(currentQuiz);
-
-      const { submittedTime, expirationTime, startingDate } =
-        currentQuiz.basicInfo;
-      if (currentQuiz.basicInfo.submited == "submitted") {
-        const difference = calculateTimeDifference(
-          submittedTime,
-          expirationTime
-        );
-
-        dispatch(setTimer(difference));
-      } else if (currentQuiz.basicInfo.submited == "not submitted") {
-        interval = setInterval(
-          () => calculateTime(startingDate, expirationTime),
-          100
-        );
-      }
-      setCurrentQuestionIndex(parseInt(question));
+      await InitializeQuiz.initializeQuiz({
+        dataId,
+        token,
+        quizData,
+        setQuizData,
+        interval,
+        setCurrentQuestionIndex,
+        question,
+      });
     };
 
     initializeQuiz();
@@ -60,38 +52,15 @@ export const QuizArea = () => {
     };
   }, []);
 
-  const setSelectedAnswer = async (index) => {
-    if (quizData.basicInfo.submited != "not submitted") return;
-    let newData = [...quizData.quiz];
-    const updatedQuestion = { ...newData[currentQuestionIndex] };
-    updatedQuestion.selectedAnswer = index;
-    newData[currentQuestionIndex] = updatedQuestion;
-    await updatePastQuizHistory({ token, dataId, quiz: [...newData] });
-    dispatch(setData(newData));
-    setQuizData({ ...quizData, quiz: newData });
-  };
-
-  const handleSubmit = async () => {
-    setQuizData({
-      ...quizData,
-      basicInfo: {
-        ...quizData.basicInfo,
-        submited: "submitted",
-        submittedTime: Timer,
-      },
+  const setSelectedAnswer = async (index) =>
+    await SetSelectedAnswer.setSelectedAnswer({
+      index,
+      quizData,
+      setQuizData,
+      currentQuestionIndex,
+      token,
+      dataId,
     });
-    clearInterval(interval);
-    try {
-      await updatePastQuizHistory({
-        token,
-        dataId,
-        submited: "submitted",
-        submittedTime: Timer,
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   const changeQuestion = (value) => {
     setCurrentQuestionIndex(currentQuestionIndex + value);
@@ -100,56 +69,6 @@ export const QuizArea = () => {
     });
   };
 
-  const startAssignment = async () => {
-    const startingDate = new Date();
-    const expirationTime = 5;
-    interval = setInterval(
-      () => calculateTime(startingDate, expirationTime),
-      100
-    );
-    await updatePastQuizHistory({
-      token,
-      dataId,
-      startingDate,
-      expirationTime,
-      submited: "not submitted",
-    });
-    setQuizData({
-      ...quizData,
-      basicInfo: { ...quizData.basicInfo, submited: "not submitted" },
-    });
-  };
-
-  const calculateTime = (startingDate, expirationTime) => {
-    const date = new Date(startingDate);
-    const newDate = new Date();
-    const Newtime = new Date(newDate - date);
-    const newTimeSeconds = Newtime.getTime();
-    const expirationTimeInMinutes = parseInt(expirationTime) * 60000;
-    const Difference = expirationTimeInMinutes - newTimeSeconds;
-    const minutes = Math.floor(Difference / 60000);
-    const seconds = Math.floor((Difference % 60000) / 1000);
-    const milliseconds = Math.floor((Difference % 60000) % 1000);
-    const data = [minutes, seconds, milliseconds];
-    if (Difference <= 0) {
-      clearInterval(interval);
-      handleSubmit();
-      dispatch(setTimer([0, 0, 0]));
-    } else dispatch(setTimer(data));
-  };
-
-  const calculateTimeDifference = (submittedTime, expirationTime) => {
-    const [min, sec, mil] = submittedTime.map(Number);
-    const date = new Date(2000, 11, 12, 0, min, sec, mil);
-    const date1 = new Date(2000, 11, 12, 0, parseInt(expirationTime), 0, 0);
-    const newDate = new Date(date1 - date);
-    console.log(date);
-    return [
-      newDate.getMinutes(),
-      newDate.getSeconds(),
-      newDate.getMilliseconds(),
-    ];
-  };
 
   if (!quizData.quiz) return;
 
@@ -174,7 +93,19 @@ export const QuizArea = () => {
         </div>
         <div className="upper-area-right">
           {quizData.basicInfo.submited == "not submitted" ? (
-            <AntdButton onClick={handleSubmit} width="150px" className="btn">
+            <AntdButton
+              onClick={() =>
+                HandleSubmit.handleSubmit({
+                  setQuizData,
+                  quizData,
+                  interval,
+                  token,
+                  dataId,
+                })
+              }
+              width="150px"
+              className="btn"
+            >
               Submit
             </AntdButton>
           ) : quizData.basicInfo.submited == "not started" ? (
@@ -182,7 +113,15 @@ export const QuizArea = () => {
               style={{ fontSize: "12px" }}
               width="150px"
               className="btn"
-              onClick={startAssignment}
+              onClick={() =>
+                Assignment.startAssignment({
+                  interval,
+                  token,
+                  dataId,
+                  quizData,
+                  setQuizData,
+                })
+              }
             >
               Start the Assignment
             </AntdButton>
