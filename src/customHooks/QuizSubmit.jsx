@@ -1,16 +1,28 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { updatePastQuizHistory } from "../apis/QuizHistory";
+import { setData } from "../store/quizStore";
 
 export const useHandleQuizSubmit = () => {
   const Timer = useSelector((e) => e.quizStore.timer);
+  const dispatch = useDispatch();
+
   const handleSubmit = async ({
     setQuizData,
     quizData,
-    interval,
     token,
     dataId,
+    stop,
   }) => {
+    stop();
+    dispatch(setData({
+      ...quizData,
+      basicInfo: {
+        ...quizData.basicInfo,
+        submited: "submitted",
+        submittedTime: Timer,
+      },
+    }));
     setQuizData({
       ...quizData,
       basicInfo: {
@@ -19,8 +31,6 @@ export const useHandleQuizSubmit = () => {
         submittedTime: Timer,
       },
     });
-    clearInterval(interval);
-    console.log("helo this is the custom hook");
     try {
       await updatePastQuizHistory({
         token,

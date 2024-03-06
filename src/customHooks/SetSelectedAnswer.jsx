@@ -19,7 +19,7 @@ export const useSetSelectedAnswer = () => {
     updatedQuestion.selectedAnswer = index;
     newData[currentQuestionIndex] = updatedQuestion;
     await updatePastQuizHistory({ token, dataId, quiz: [...newData] });
-    dispatch(setData(newData));
+    dispatch(setData({ ...quizData, quiz: newData }));
     setQuizData({ ...quizData, quiz: newData });
   };
 

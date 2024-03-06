@@ -21,7 +21,8 @@ export const Private = () => {
         const { basicInfo } = item;
         data.push(basicInfo);
       });
-      dispatch(setAllQuizData(data));
+      console.log(data, "this is teh past quiz Data");
+      dispatch(setAllQuizData(pastQuizData));
     })();
   }, []);
 
