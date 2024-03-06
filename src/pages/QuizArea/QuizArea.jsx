@@ -6,48 +6,74 @@ import { Boolean, MultipleChoice } from "../../Components";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { setTimer } from "../../store/quizStore";
+import { setData, setTimer } from "../../store/quizStore";
 import {
   useStartAssignmentData,
   useHandleQuizSubmit,
   useSetSelectedAnswer,
   useInitializeQuiz,
+  useSetInterval,
 } from "../../customHooks";
-
-let interval;
+import { WarningModal } from "../../utils/WarningModal/WarningModal";
 
 export const QuizArea = () => {
   const [quizData, setQuizData] = useState([]);
+  const [WarningOpen, setWarningOpen] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [pageChangeCount, setPageChangeCount] = useState(0);
 
   const Timer = useSelector((e) => e.quizStore.timer);
   const token = useSelector((e) => e.quizStore.userToken);
+  const data = useSelector((e) => e.quizStore.data);
   const Assignment = useStartAssignmentData();
   const HandleSubmit = useHandleQuizSubmit();
   const SetSelectedAnswer = useSetSelectedAnswer();
   const InitializeQuiz = useInitializeQuiz();
-
-  const { id: dataId, question } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const { id: dataId, question } = useParams();
+  const { start, stop } = useSetInterval();
+
+  const props = {
+    dataId,
+    token,
+    quizData,
+    setQuizData,
+    setCurrentQuestionIndex,
+    question,
+    start,
+    stop,
+  };
+
   useEffect(() => {
+    let data;
+    
     const initializeQuiz = async () => {
-      await InitializeQuiz.initializeQuiz({
-        dataId,
-        token,
-        quizData,
-        setQuizData,
-        interval,
-        setCurrentQuestionIndex,
-        question,
-      });
+      data = await InitializeQuiz.initializeQuiz(props);
     };
 
     initializeQuiz();
 
+    const handleVisibilityChange = () => {
+      if (
+        document.visibilityState === "hidden" &&
+        data.basicInfo.submited == "not submitted"
+      ) {
+        setPageChangeCount((prevCount) => prevCount + 1);
+        console.log(pageChangeCount);
+        setWarningOpen(true);
+      }
+    };
+
+    document.addEventListener("blur", () => {
+      document.addEventListener("focus", handleVisibilityChange);
+    });
+
     return () => {
-      clearInterval(interval);
+      document.removeEventListener("focus", handleVisibilityChange);
+
+      stop();
       dispatch(setTimer([0, 0, 0]));
     };
   }, []);
@@ -69,7 +95,6 @@ export const QuizArea = () => {
     });
   };
 
-
   if (!quizData.quiz) return;
 
   return (
@@ -81,7 +106,7 @@ export const QuizArea = () => {
           </div>
           <div className="right">
             <p>
-              {quizData.basicInfo.submited == "submitted"
+              {data.basicInfo.submited == "submitted"
                 ? "Quiz Completed In"
                 : "Time Remaining"}
             </p>
@@ -92,15 +117,15 @@ export const QuizArea = () => {
           </div>
         </div>
         <div className="upper-area-right">
-          {quizData.basicInfo.submited == "not submitted" ? (
+          {data.basicInfo.submited == "not submitted" ? (
             <AntdButton
               onClick={() =>
                 HandleSubmit.handleSubmit({
                   setQuizData,
                   quizData,
-                  interval,
                   token,
                   dataId,
+                  stop,
                 })
               }
               width="150px"
@@ -108,20 +133,14 @@ export const QuizArea = () => {
             >
               Submit
             </AntdButton>
-          ) : quizData.basicInfo.submited == "not started" ? (
+          ) : data.basicInfo.submited == "not started" ? (
             <AntdButton
               style={{ fontSize: "12px" }}
               width="150px"
               className="btn"
-              onClick={() =>
-                Assignment.startAssignment({
-                  interval,
-                  token,
-                  dataId,
-                  quizData,
-                  setQuizData,
-                })
-              }
+              onClick={() => {
+                Assignment.startAssignment(props);
+              }}
             >
               Start the Assignment
             </AntdButton>
@@ -140,16 +159,16 @@ export const QuizArea = () => {
       </div>
       <div className="mid-area">
         <p>
-          Question {currentQuestionIndex + 1} out of {quizData.quiz.length}
+          Question {currentQuestionIndex + 1} out of {data.quiz.length}
         </p>
-        {quizData.quiz[currentQuestionIndex].type !== "boolean" ? (
+        {data.quiz[currentQuestionIndex].type !== "boolean" ? (
           <MultipleChoice
-            data={quizData.quiz[currentQuestionIndex]}
+            data={data.quiz[currentQuestionIndex]}
             setSelectedAnswer={setSelectedAnswer}
           />
         ) : (
           <Boolean
-            data={quizData.quiz[currentQuestionIndex]}
+            data={data.quiz[currentQuestionIndex]}
             setSelectedAnswer={setSelectedAnswer}
           />
         )}
@@ -169,7 +188,7 @@ export const QuizArea = () => {
           <AntdButton
             width="auto"
             display={
-              currentQuestionIndex + 1 == quizData.quiz.length
+              currentQuestionIndex + 1 == data.quiz.length
                 ? "none"
                 : "initial"
             }
@@ -180,6 +199,12 @@ export const QuizArea = () => {
           </AntdButton>
         </div>
       </div>
+      <WarningModal
+        WarningNumber={pageChangeCount}
+        WarningOpen={WarningOpen}
+        setWarningOpen={setWarningOpen}
+        {...props}
+      ></WarningModal>
     </div>
   );
 };

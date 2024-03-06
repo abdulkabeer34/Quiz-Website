@@ -10,8 +10,8 @@ export const useCalculateTime = () => {
     expirationTime,
     setQuizData,
     quizData,
-    interval,
     token,
+    stop,
     dataId,
   }) => {
     const date = new Date(startingDate);
@@ -25,11 +25,10 @@ export const useCalculateTime = () => {
     const milliseconds = Math.floor((Difference % 60000) % 1000);
     const data = [minutes, seconds, milliseconds];
     if (Difference <= 0) {
-      clearInterval(interval);
+      stop();
       HandleSubmit.handleSubmit({
         setQuizData,
         quizData,
-        interval,
         token,
         dataId,
       });

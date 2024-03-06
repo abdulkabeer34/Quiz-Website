@@ -6,7 +6,7 @@ export const quizStoreSlice = createSlice({
     data: [],
     userToken: "",
     allQuizData: [],
-    timer:[5,0,0]
+    timer: [5, 0, 0]
   },
   reducers: {
     setData: (state, action) => {
@@ -21,11 +21,12 @@ export const quizStoreSlice = createSlice({
     setAllQuizData: (state, action) => {
       state.allQuizData = action.payload;
     },
-    setTimer :(state,action)=>{
-        state.timer = action.payload;
+    setTimer: (state, action) => {
+      state.timer = action.payload;
     }
   },
 });
 
-export const { setData, setUserToken, setAllQuizData,setTimer } = quizStoreSlice.actions;
+export const { setData, setUserToken, setAllQuizData, setTimer, setQuizData } =
+  quizStoreSlice.actions;
 export default quizStoreSlice.reducer;
