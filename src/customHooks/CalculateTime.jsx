@@ -8,8 +8,6 @@ export const useCalculateTime = () => {
   const calculateTime = ({
     startingDate,
     expirationTime,
-    setQuizData,
-    quizData,
     token,
     stop,
     dataId,
@@ -27,10 +25,9 @@ export const useCalculateTime = () => {
     if (Difference <= 0) {
       stop();
       HandleSubmit.handleSubmit({
-        setQuizData,
-        quizData,
         token,
         dataId,
+        stop,
       });
       dispatch(setTimer([0, 0, 0]));
     } else dispatch(setTimer(data));

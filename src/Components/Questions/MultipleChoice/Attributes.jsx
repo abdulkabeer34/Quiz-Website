@@ -11,8 +11,8 @@ export const setColors = (
 
     return { color: "black", backgroundColor: "white" };
   } else {
-    if (selectedAnswer == "undefined") {
-      return { color: "black", backgroundColor: "white" };
+    if (selectedAnswer == "undefined" && index == corectAnswerIndex) {
+      return { color: "#a16207", backgroundColor: "#fef9c3" };
     }
     if (index == corectAnswerIndex) {
       return { color: "#15803d", backgroundColor: "#dcfce7" };

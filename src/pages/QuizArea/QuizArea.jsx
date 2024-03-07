@@ -6,7 +6,7 @@ import { Boolean, MultipleChoice } from "../../Components";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { setData, setTimer } from "../../store/quizStore";
+import { setTimer } from "../../store/quizStore";
 import {
   useStartAssignmentData,
   useHandleQuizSubmit,
@@ -15,12 +15,10 @@ import {
   useSetInterval,
 } from "../../customHooks";
 import { WarningModal } from "../../utils/WarningModal/WarningModal";
+import { useWarningModal } from "../../customHooks/WarningModal";
 
 export const QuizArea = () => {
-  const [quizData, setQuizData] = useState([]);
-  const [WarningOpen, setWarningOpen] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [pageChangeCount, setPageChangeCount] = useState(0);
 
   const Timer = useSelector((e) => e.quizStore.timer);
   const token = useSelector((e) => e.quizStore.userToken);
@@ -29,6 +27,7 @@ export const QuizArea = () => {
   const HandleSubmit = useHandleQuizSubmit();
   const SetSelectedAnswer = useSetSelectedAnswer();
   const InitializeQuiz = useInitializeQuiz();
+  const WarningModal1 = useWarningModal();
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -38,8 +37,6 @@ export const QuizArea = () => {
   const props = {
     dataId,
     token,
-    quizData,
-    setQuizData,
     setCurrentQuestionIndex,
     question,
     start,
@@ -47,32 +44,14 @@ export const QuizArea = () => {
   };
 
   useEffect(() => {
-    let data;
-    
+    WarningModal1.activewarningState();
     const initializeQuiz = async () => {
-      data = await InitializeQuiz.initializeQuiz(props);
+      await InitializeQuiz.initializeQuiz(props);
     };
 
     initializeQuiz();
 
-    const handleVisibilityChange = () => {
-      if (
-        document.visibilityState === "hidden" &&
-        data.basicInfo.submited == "not submitted"
-      ) {
-        setPageChangeCount((prevCount) => prevCount + 1);
-        console.log(pageChangeCount);
-        setWarningOpen(true);
-      }
-    };
-
-    document.addEventListener("blur", () => {
-      document.addEventListener("focus", handleVisibilityChange);
-    });
-
     return () => {
-      document.removeEventListener("focus", handleVisibilityChange);
-
       stop();
       dispatch(setTimer([0, 0, 0]));
     };
@@ -81,8 +60,6 @@ export const QuizArea = () => {
   const setSelectedAnswer = async (index) =>
     await SetSelectedAnswer.setSelectedAnswer({
       index,
-      quizData,
-      setQuizData,
       currentQuestionIndex,
       token,
       dataId,
@@ -95,10 +72,11 @@ export const QuizArea = () => {
     });
   };
 
-  if (!quizData.quiz) return;
+  if (!data.quiz) return;
 
   return (
     <div className="quiz-area-main">
+      {data.basicInfo.submited == "not started" && <div className="area"></div>}
       <div className="upper-area">
         <div className="upper-area-left">
           <div className="left">
@@ -111,8 +89,12 @@ export const QuizArea = () => {
                 : "Time Remaining"}
             </p>
             <h2>
-              {Timer[0]} <span>:</span> <span>{Timer[1]}</span> <span>:</span>{" "}
-              {Timer[2]}
+              {Timer.map((item, index) => (
+                <span>
+                  {item}
+                  {index != 2 ? ":" : null}
+                </span>
+              ))}
             </h2>
           </div>
         </div>
@@ -121,8 +103,6 @@ export const QuizArea = () => {
             <AntdButton
               onClick={() =>
                 HandleSubmit.handleSubmit({
-                  setQuizData,
-                  quizData,
                   token,
                   dataId,
                   stop,
@@ -135,7 +115,7 @@ export const QuizArea = () => {
             </AntdButton>
           ) : data.basicInfo.submited == "not started" ? (
             <AntdButton
-              style={{ fontSize: "12px" }}
+              style={{ fontSize: "12px", zIndex: "1000" }}
               width="150px"
               className="btn"
               onClick={() => {
@@ -174,7 +154,7 @@ export const QuizArea = () => {
         )}
       </div>
       <div className="bottom-area">
-        <div>
+        <div style={{ zIndex: "1" }}>
           <AntdButton
             display={currentQuestionIndex == 0 ? "none" : "initial"}
             width="auto"
@@ -184,13 +164,11 @@ export const QuizArea = () => {
             Previous Question
           </AntdButton>
         </div>
-        <div>
+        <div style={{ zIndex: "1" }}>
           <AntdButton
             width="auto"
             display={
-              currentQuestionIndex + 1 == data.quiz.length
-                ? "none"
-                : "initial"
+              currentQuestionIndex + 1 == data.quiz.length ? "none" : "initial"
             }
             onClick={() => changeQuestion(1)}
             className="antd-btn"
@@ -199,12 +177,7 @@ export const QuizArea = () => {
           </AntdButton>
         </div>
       </div>
-      <WarningModal
-        WarningNumber={pageChangeCount}
-        WarningOpen={WarningOpen}
-        setWarningOpen={setWarningOpen}
-        {...props}
-      ></WarningModal>
+      <WarningModal {...props}></WarningModal>
     </div>
   );
 };

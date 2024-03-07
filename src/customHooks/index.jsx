@@ -4,3 +4,4 @@ export { useHandleQuizSubmit } from "./QuizSubmit";
 export { useInitializeQuiz } from "./InitializeQuiz";
 export { useSetSelectedAnswer } from "./SetSelectedAnswer";
 export {useSetInterval} from "./SetItervalCustom"
+export {useWarningModal} from "./WarningModal"

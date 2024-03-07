@@ -10,21 +10,21 @@ export const useInitializeQuiz = () => {
   const CalculateTime = useCalculateTime();
 
   const initializeQuiz = async (props) => {
-    const { dataId, setQuizData, setCurrentQuestionIndex, question, start,stop } = props;
+    const { dataId, setCurrentQuestionIndex, question, start, stop } = props;
 
     const { data } = await getPastQuizHistory();
     let currentQuiz = data.find((item) => item.dataId === dataId);
 
+    console.log(currentQuiz, "afdsadfasdfj");
     dispatch(setData(currentQuiz));
-    setQuizData(currentQuiz);
 
-    const { submittedTime, expirationTime, startingDate } = currentQuiz.basicInfo;
+    const { submittedTime, expirationTime, startingDate } =
+      currentQuiz.basicInfo;
 
     if (currentQuiz.basicInfo.submited == "submitted") {
       const difference = calculateTimeDifference(submittedTime, expirationTime);
       dispatch(setTimer(difference));
     } else if (currentQuiz.basicInfo.submited == "not submitted") {
-
       start({
         callback: CalculateTime.calculateTime,
         delay: 100,
@@ -32,11 +32,9 @@ export const useInitializeQuiz = () => {
         expirationTime,
         ...props,
       });
-      
-    }
+    } 
 
     setCurrentQuestionIndex(parseInt(question));
-    return currentQuiz;
   };
 
   return { initializeQuiz };

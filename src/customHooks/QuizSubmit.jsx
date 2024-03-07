@@ -5,32 +5,21 @@ import { setData } from "../store/quizStore";
 
 export const useHandleQuizSubmit = () => {
   const Timer = useSelector((e) => e.quizStore.timer);
+  const data = useSelector((e) => e.quizStore.data);
   const dispatch = useDispatch();
 
-  const handleSubmit = async ({
-    setQuizData,
-    quizData,
-    token,
-    dataId,
-    stop,
-  }) => {
+  const handleSubmit = async ({ token, dataId, stop }) => {
     stop();
-    dispatch(setData({
-      ...quizData,
-      basicInfo: {
-        ...quizData.basicInfo,
-        submited: "submitted",
-        submittedTime: Timer,
-      },
-    }));
-    setQuizData({
-      ...quizData,
-      basicInfo: {
-        ...quizData.basicInfo,
-        submited: "submitted",
-        submittedTime: Timer,
-      },
-    });
+    dispatch(
+      setData({
+        ...data,
+        basicInfo: {
+          ...data.basicInfo,
+          submited: "submitted",
+          submittedTime: Timer,
+        },
+      })
+    );
     try {
       await updatePastQuizHistory({
         token,
