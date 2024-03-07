@@ -39,7 +39,7 @@ export const HandleSubmit = async (formData, setLoading, userId) => {
     const dataId = Buffer.from(`${date}`, "utf-8").toString("base64");
     const newDataSet = createNewDataSet(results);
 
-    await setPastQuizHistory(
+    const data = await setPastQuizHistory(
       newDataSet,
       quizHistoryUrl,
       userId,
@@ -48,7 +48,7 @@ export const HandleSubmit = async (formData, setLoading, userId) => {
     );
 
     setLoading(false);
-    return { quizData: results, dataId };
+    return { quizData: data, dataId };
   } catch (error) {
     setLoading(false);
     console.log("cannot get the information");

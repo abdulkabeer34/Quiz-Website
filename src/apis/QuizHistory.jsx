@@ -40,7 +40,7 @@ export const setPastQuizHistory = async (
       `http://127.0.0.3:3003/quizPastHistory/${userId}`,
       { data: [...(pastData ?? []), data] }
     );
-    return true;
+    return data;
   } catch (error) {
     console.log(error);
     return false;
@@ -54,6 +54,7 @@ export const getPastQuizHistory = async () => {
       data: { data },
     } = await axios.get(` http://127.0.0.3:3003/quizPastHistory/${id}`);
 
+    // console.log(data);
     return { data, id };
   } catch (error) {
     return false;
