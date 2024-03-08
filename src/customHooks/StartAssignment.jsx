@@ -7,10 +7,11 @@ export const useStartAssignmentData = () => {
   const CalculateTime = useCalculateTime();
   const dispatch = useDispatch();
   const data = useSelector((e) => e.quizStore.data);
+  const expirationTime = useSelector((e) => e.quizStore.expirationTime);
 
   const startAssignment = async ({ token, dataId, start, stop }) => {
     const startingDate = new Date();
-    const expirationTime = 1;
+    // const expirationTime = 1;
 
     start({
       callback: CalculateTime.calculateTime,

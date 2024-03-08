@@ -1,5 +1,6 @@
 .quiz-area-main {
     padding: 0 50px;
+    position: relative;
 
     .area {
 
@@ -11,6 +12,16 @@
         background-color: #ffffffdb;
         backdrop-filter: blur(3.5px);
         z-index: 999;
+    }
+
+    .quiz-progress-bar{
+        height: 2px;
+        background-color:rgb(88, 169, 22);
+        position:absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        transition: width .5s ease;
     }
 
     @media(max-width:514px) {

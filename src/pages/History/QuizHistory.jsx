@@ -24,6 +24,11 @@ const columns = [
     dataIndex: "submited",
     key: "submited",
   },
+  {
+    title:"Button",
+    dataIndex:"button",
+    key:"button"
+  }
 ];
 
 export const QuizHistory = () => {
