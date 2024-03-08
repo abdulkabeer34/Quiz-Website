@@ -4,8 +4,9 @@ import { PrivatPages } from "../routes/pages";
 import { Navbar } from "../Components";
 import { useDispatch } from "react-redux";
 import { setAllQuizData, setUserToken } from "../store/quizStore";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Link, BrowserRouter as Router } from "react-router-dom";
 import { getPastQuizHistory } from "../apis";
+import { Button } from "antd";
 
 export const Private = () => {
   const dispatch = useDispatch();
@@ -18,10 +19,10 @@ export const Private = () => {
 
       let data = [];
       pastQuizData.map((item) => {
-        const { basicInfo } = item;
-        data.push(basicInfo);
+        const { basicInfo,dataId } = item;
+        data.push({...basicInfo,button:<Link to={`/quiz-area/${dataId}/0`}><Button>Open Quiz</Button></Link>});
       });
-      dispatch(setAllQuizData(data));
+      dispatch(setAllQuizData([...data]));
     })();
   }, []);
 

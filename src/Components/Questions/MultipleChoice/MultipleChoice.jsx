@@ -2,12 +2,7 @@ import React from "react";
 import "./MultipleChoice.scss";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { setColors } from "./Attributes";
-import { Link } from "react-router-dom";
-
-function decodeHtmlEntities(html) {
-  var doc = new DOMParser().parseFromString(html, "text/html");
-  return doc.documentElement.textContent;
-}
+import { decodeHtmlEntities } from "../../../utils";
 
 export const MultipleChoice = ({ data, setSelectedAnswer }) => {
   if (!data) {
@@ -20,14 +15,15 @@ export const MultipleChoice = ({ data, setSelectedAnswer }) => {
       <div className="question">
         <h3>{question}</h3>
         <p>
-          {setSelectedAnswer
-            ? ""
-            : selectedAnswer == "undefined"
+          {selectedAnswer == "undefined"
             ? "(Not Selected)"
+            : setSelectedAnswer
+            ? ""
             : selectedAnswer == corectAnswerIndex
             ? "(correct Answer)"
             : "(Incorrect Answer)"}
         </p>
+
         <div className="options">
           {shuffledAnswers.map((item, index) => {
             const { color, backgroundColor } = setColors(
@@ -36,6 +32,7 @@ export const MultipleChoice = ({ data, setSelectedAnswer }) => {
               setSelectedAnswer,
               corectAnswerIndex
             );
+            item = decodeHtmlEntities(item);
             return (
               <div
                 key={index}

@@ -131,8 +131,8 @@ export const AntdLoginTheme = {
 export const AntdRadio = styled(Radio)`
 gap: 37px;
   .ant-radio-checked .ant-radio-inner {
-    border-color: black;
-    background-color: black;
+    // border-color: black;
+    // background-color: black;
   }
 
   h3{

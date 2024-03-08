@@ -16,6 +16,11 @@ import {
 } from "../../customHooks";
 import { WarningModal } from "../../utils/WarningModal/WarningModal";
 import { useWarningModal } from "../../customHooks/WarningModal";
+import styled from "styled-components";
+
+const QuizAreaProgressBar = styled.div`
+  width: ${(props) => (100 / props.total) * (props.current + 1)}% !important;
+`;
 
 export const QuizArea = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -76,6 +81,12 @@ export const QuizArea = () => {
 
   return (
     <div className="quiz-area-main">
+      <QuizAreaProgressBar
+        current={currentQuestionIndex}
+        total={data.quiz.length}
+        className="quiz-progress-bar"
+      ></QuizAreaProgressBar>
+
       {data.basicInfo.submited == "not started" && <div className="area"></div>}
       <div className="upper-area">
         <div className="upper-area-left">
@@ -101,13 +112,7 @@ export const QuizArea = () => {
         <div className="upper-area-right">
           {data.basicInfo.submited == "not submitted" ? (
             <AntdButton
-              onClick={() =>
-                HandleSubmit.handleSubmit({
-                  token,
-                  dataId,
-                  stop,
-                })
-              }
+              onClick={() => HandleSubmit.handleSubmit(props)}
               width="150px"
               className="btn"
             >

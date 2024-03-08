@@ -23,7 +23,6 @@ export const useCalculateTime = () => {
     const milliseconds = Math.floor((Difference % 60000) % 1000);
     const data = [minutes, seconds, milliseconds];
     if (Difference <= 0) {
-      stop();
       HandleSubmit.handleSubmit({
         token,
         dataId,
