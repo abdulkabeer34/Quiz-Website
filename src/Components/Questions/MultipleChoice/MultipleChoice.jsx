@@ -3,6 +3,7 @@ import "./MultipleChoice.scss";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { setColors } from "./Attributes";
 import { decodeHtmlEntities } from "../../../utils";
+import { Button } from "antd";
 
 export const MultipleChoice = ({ data, setSelectedAnswer }) => {
   if (!data) {
@@ -34,7 +35,8 @@ export const MultipleChoice = ({ data, setSelectedAnswer }) => {
             );
             item = decodeHtmlEntities(item);
             return (
-              <div
+              <Button
+              // loading
                 key={index}
                 style={{
                   color: color,
@@ -48,7 +50,7 @@ export const MultipleChoice = ({ data, setSelectedAnswer }) => {
                   <IoMdCheckmarkCircleOutline />
                 )}
                 {item}
-              </div>
+              </Button>
             );
           })}
         </div>

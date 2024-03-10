@@ -67,6 +67,8 @@ export const verifyData = () => {
       openNotification({ ...notifications.signupSuccesful, api });
       localStorage.setItem("token", token);
       await SetUpUserQuizPastHistory(token);
+      window.location.reload();
+
     } catch (error) {
       openNotification({ ...notifications.error, api });
     }

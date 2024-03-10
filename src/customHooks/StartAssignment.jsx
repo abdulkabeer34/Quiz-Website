@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { updatePastQuizHistory } from "../apis/QuizHistory";
 import { useCalculateTime } from "./CalculateTime";
-import { setData } from "../store/quizStore";
+import { SetInterval, setData } from "../store/quizStore";
 
 export const useStartAssignmentData = () => {
   const CalculateTime = useCalculateTime();
@@ -9,19 +9,16 @@ export const useStartAssignmentData = () => {
   const data = useSelector((e) => e.quizStore.data);
   const expirationTime = useSelector((e) => e.quizStore.expirationTime);
 
-  const startAssignment = async ({ token, dataId, start, stop }) => {
+  const startAssignment = async ({ token, dataId }) => {
     const startingDate = new Date();
-    // const expirationTime = 1;
 
-    start({
-      callback: CalculateTime.calculateTime,
-      delay: 100,
-      startingDate,
-      expirationTime,
-      token,
-      stop,
-      dataId,
-    });
+    dispatch(
+      SetInterval({
+        callback: CalculateTime.calculateTime,
+        delay: 100,
+        props: { startingDate, expirationTime, token, dataId },
+      })
+    );
 
     await updatePastQuizHistory({
       token,

@@ -75,7 +75,7 @@ export const Home = () => {
             <FormItem className="form-item" width="50%">
               <p>Number of Questions:</p>
               <Form.Item name="amount">
-                <InputNumber min={1} max={7} />
+                <InputNumber min={1} max={100} />
               </Form.Item>
             </FormItem>
             <FormItem width="40%">
