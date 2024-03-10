@@ -10,6 +10,7 @@ export const quizStoreSlice = createSlice({
     warningModal: false,
     warningNumber: 0,
     expirationTime: 5,
+    interval: null,
   },
   reducers: {
     setData: (state, action) => {
@@ -39,6 +40,15 @@ export const quizStoreSlice = createSlice({
     setExpirationTime: (state, action) => {
       state.expirationTime = [...action.payload];
     },
+    SetInterval: (state, action) => {
+      state.interval = setInterval(
+        ()=>action.payload.callback(action.payload.props),
+        action.payload.delay
+      );
+    },
+    RemoveInterval: (state) => {
+      clearInterval(state.interval);
+    },
   },
 });
 
@@ -50,5 +60,7 @@ export const {
   setWarningModal,
   setWarningNumber,
   resetWarningNumber,
+  SetInterval,
+  RemoveInterval,
 } = quizStoreSlice.actions;
 export default quizStoreSlice.reducer;

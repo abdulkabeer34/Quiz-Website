@@ -6,17 +6,16 @@ import { Boolean, MultipleChoice } from "../../Components";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { setTimer } from "../../store/quizStore";
+import { RemoveInterval, setTimer } from "../../store/quizStore";
 import {
   useStartAssignmentData,
   useHandleQuizSubmit,
   useSetSelectedAnswer,
   useInitializeQuiz,
-  useSetInterval,
+  useWarningModal,
 } from "../../customHooks";
-import { WarningModal } from "../../utils/WarningModal/WarningModal";
-import { useWarningModal } from "../../customHooks/WarningModal";
 import styled from "styled-components";
+import { WarningModal } from "../../utils";
 
 const QuizAreaProgressBar = styled.div`
   width: ${(props) => (100 / props.total) * (props.current + 1)}% !important;
@@ -37,15 +36,12 @@ export const QuizArea = () => {
   const dispatch = useDispatch();
 
   const { id: dataId, question } = useParams();
-  const { start, stop } = useSetInterval();
 
   const props = {
     dataId,
     token,
     setCurrentQuestionIndex,
     question,
-    start,
-    stop,
   };
 
   useEffect(() => {
@@ -57,7 +53,7 @@ export const QuizArea = () => {
     initializeQuiz();
 
     return () => {
-      stop();
+      dispatch(RemoveInterval());
       dispatch(setTimer([0, 0, 0]));
     };
   }, []);
