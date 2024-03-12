@@ -4,7 +4,7 @@ import { Boolean, MultipleChoice } from "../../Components";
 import { useSelector } from "react-redux";
 import { getPastQuizHistory } from "../../apis/QuizHistory";
 import { useParams } from "react-router-dom";
-import { Empty } from "antd";
+import { ConfigProvider, Empty } from "antd";
 
 export const QuizResult = () => {
   const data = useSelector((e) => e.quizStore.data);
@@ -22,6 +22,8 @@ export const QuizResult = () => {
   if (!result) return <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />;
   return (
     <div className="quiz-result-main">
+      <ConfigProvider theme={{ token: { colorPrimary: "black" } }}>
+
       <div className="upper-area">
         <h2>Your Quiz Result:</h2>
       </div>
@@ -29,7 +31,7 @@ export const QuizResult = () => {
         const { type } = item;
 
         return (
-          <div style={{ marginTop: "50px" }}>
+          <div style={{ marginTop: "50px" }} key={index}>
             <h3>Question {index + 1}.</h3>
             {type == "boolean" ? (
               <Boolean key={index} data={item} setSelectedAnswer={false} />
@@ -43,6 +45,7 @@ export const QuizResult = () => {
           </div>
         );
       })}
+      </ConfigProvider>
     </div>
   );
 };

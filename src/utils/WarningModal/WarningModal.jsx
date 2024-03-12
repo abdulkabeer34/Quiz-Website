@@ -12,11 +12,13 @@ export const WarningModal = ({ ...props }) => {
   const HandleSubmit = useHandleQuizSubmit();
   const warningModal = useSelector((e) => e.quizStore.warningModal);
   const warningNumber = useSelector((e) => e.quizStore.warningNumber);
+  const Timer = useSelector((e) => e.quizStore.Timer);
   const dispatch = useDispatch();
 
+
   useEffect(() => {
-    if (warningNumber == 3 ) {
-      HandleSubmit.handleSubmit(props);
+    if (warningNumber == 3) {
+      HandleSubmit.handleSubmit({...props,Timer});
     }
   }, [warningNumber]);
 

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { updatePastQuizHistory } from "../apis/QuizHistory";
 import { useCalculateTime } from "./CalculateTime";
-import { SetInterval, setData } from "../store/quizStore";
+import { SetInterval, setData, setQuizAreaButtonLoading } from "../store/quizStore";
 
 export const useStartAssignmentData = () => {
   const CalculateTime = useCalculateTime();
@@ -19,21 +19,24 @@ export const useStartAssignmentData = () => {
         props: { startingDate, expirationTime, token, dataId },
       })
     );
-
-    await updatePastQuizHistory({
-      token,
-      dataId,
-      startingDate,
-      expirationTime,
-      submited: "not submitted",
-    });
-
-    dispatch(
-      setData({
-        ...data,
-        basicInfo: { ...data.basicInfo, submited: "not submitted" },
-      })
-    );
-  };
-  return { startAssignment };
-};
+    dispatch(setQuizAreaButtonLoading(true))
+   
+      await updatePastQuizHistory({
+        token,
+        dataId,
+        startingDate,
+        expirationTime,
+        submited: "not submitted",
+      });
+      
+      dispatch(
+        setData({
+          ...data,
+          basicInfo: { ...data.basicInfo, submited: "not submitted" },
+        })
+        );
+        dispatch(setQuizAreaButtonLoading(false))
+      };
+      return { startAssignment };
+    };
+    
