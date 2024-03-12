@@ -38,6 +38,7 @@
 
         img {
             width: 24px;
+
         }
 
     }
@@ -53,6 +54,16 @@
         img {
             width: 50px;
             border-radius: 50%;
+
+            
+            @media (max-width:670px) {
+                width: 40px;
+            }
+            
+            @media (max-width:290px) {
+                // font-size: 12px;
+                width: 30px;
+            }
         }
     }
 }

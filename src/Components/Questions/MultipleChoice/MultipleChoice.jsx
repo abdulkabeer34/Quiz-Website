@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MultipleChoice.scss";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { setColors } from "./Attributes";
 import { decodeHtmlEntities } from "../../../utils";
 import { Button } from "antd";
+import { useSelector } from "react-redux";
 
-export const MultipleChoice = ({ data, setSelectedAnswer }) => {
+export const MultipleChoice = ({ data, setSelectedAnswer ,setLoading,loading}) => {
+  const quizOptionLoading = useSelector((e) => e.quizStore.quizOptionLoading);
+
+
   if (!data) {
     return;
   }
@@ -36,7 +40,8 @@ export const MultipleChoice = ({ data, setSelectedAnswer }) => {
             item = decodeHtmlEntities(item);
             return (
               <Button
-              // loading
+                disabled={quizOptionLoading > 0 && quizOptionLoading < 4}
+                loading={index == quizOptionLoading}
                 key={index}
                 style={{
                   color: color,
@@ -47,7 +52,7 @@ export const MultipleChoice = ({ data, setSelectedAnswer }) => {
                 className="option1"
               >
                 {index == selectedAnswer && setSelectedAnswer && (
-                  <IoMdCheckmarkCircleOutline />
+                  <IoMdCheckmarkCircleOutline  className="icon"/>
                 )}
                 {item}
               </Button>

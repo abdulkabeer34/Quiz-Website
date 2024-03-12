@@ -11,13 +11,12 @@ export const quizStoreSlice = createSlice({
     warningNumber: 0,
     expirationTime: 5,
     interval: null,
+    quizOptionLoading: -1,
+    quizAreaButtonLoading: false,
   },
   reducers: {
     setData: (state, action) => {
       state.data = action.payload;
-    },
-    setAllPastQuizez: (state, action) => {
-      state.allPastQuizes = [...action.payload];
     },
     setUserToken: (state, action) => {
       state.userToken = action.payload;
@@ -31,23 +30,29 @@ export const quizStoreSlice = createSlice({
     setWarningModal: (state, action) => {
       state.warningModal = action.payload;
     },
-    setWarningNumber: (state) => {
-      state.warningNumber = state.warningNumber + 1;
+    setWarningNumber: (state,action) => {
+      state.warningNumber = action.payload;
     },
     resetWarningNumber: (state) => {
-      state.warningNumber = 0;
+      state.warningNumber = -1;
     },
     setExpirationTime: (state, action) => {
       state.expirationTime = [...action.payload];
     },
     SetInterval: (state, action) => {
       state.interval = setInterval(
-        ()=>action.payload.callback(action.payload.props),
+        () => action.payload.callback(action.payload.props),
         action.payload.delay
       );
     },
     RemoveInterval: (state) => {
       clearInterval(state.interval);
+    },
+    setQuizOptionLoading: (state, action) => {
+      state.quizOptionLoading = action.payload;
+    },
+    setQuizAreaButtonLoading: (state, action) => {
+      state.quizAreaButtonLoading = action.payload;
     },
   },
 });
@@ -62,5 +67,7 @@ export const {
   resetWarningNumber,
   SetInterval,
   RemoveInterval,
+  setQuizOptionLoading,
+  setQuizAreaButtonLoading
 } = quizStoreSlice.actions;
 export default quizStoreSlice.reducer;

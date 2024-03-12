@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { updatePastQuizHistory } from "../apis/QuizHistory";
-import { setData } from "../store/quizStore";
+import { setData, setQuizOptionLoading } from "../store/quizStore";
 
 export const useSetSelectedAnswer = () => {
   const data = useSelector((e) => e.quizStore.data);
@@ -12,7 +12,9 @@ export const useSetSelectedAnswer = () => {
     token,
     dataId,
   }) => {
-    if (data.basicInfo.submited != "not submitted") return;
+    if (data.basicInfo.submited != "not submitted" || data.quiz[currentQuestionIndex].selectedAnswer == index) return;
+
+    dispatch(setQuizOptionLoading(index))
 
     let newData = [...data.quiz];
     const updatedQuestion = { ...newData[currentQuestionIndex] };
@@ -20,6 +22,7 @@ export const useSetSelectedAnswer = () => {
     newData[currentQuestionIndex] = updatedQuestion;
     await updatePastQuizHistory({ token, dataId, quiz: [...newData] });
     dispatch(setData({ ...data, quiz: newData }));
+    dispatch(setQuizOptionLoading(-1))
   };
 
   return { setSelectedAnswer };

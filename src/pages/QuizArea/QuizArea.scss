@@ -14,10 +14,10 @@
         z-index: 999;
     }
 
-    .quiz-progress-bar{
+    .quiz-progress-bar {
         height: 2px;
-        background-color:rgb(88, 169, 22);
-        position:absolute;
+        background-color: rgb(88, 169, 22);
+        position: absolute;
         left: 0;
         top: 0;
         width: 100%;
@@ -77,6 +77,13 @@
             }
 
         }
+        .ant-btn {
+            :hover {
+                color: white !important;
+            }
+            color: white !important;
+        }
+
 
         .upper-area-right {
             .btn {
@@ -89,6 +96,7 @@
                     font-size: 13px !important;
                 }
 
+              
                 :hover {
                     color: white !important;
                 }

@@ -33,6 +33,7 @@ export const setPastQuizHistory = async (
         expirationTime: 5,
         startingDate: "null",
         submittedTime: "null",
+        websiteLeaved: "null",
       },
       dataId,
     };
@@ -69,6 +70,7 @@ export const updatePastQuizHistory = async ({
   startingDate,
   expirationTime,
   submittedTime,
+  websiteLeaved,
 }) => {
   const { data } = await getPastQuizHistory();
   const newData = data.map((item) => {
@@ -83,6 +85,7 @@ export const updatePastQuizHistory = async ({
         startingDate: startingDate ?? item.basicInfo.startingDate,
         expirationTime: expirationTime ?? item.basicInfo.expirationTime,
         submittedTime: submittedTime ?? item.basicInfo.submittedTime,
+        websiteLeaved: websiteLeaved ?? item.basicInfo.websiteLeaved,
       },
     };
   });

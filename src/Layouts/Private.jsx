@@ -17,12 +17,9 @@ export const Private = () => {
     (async () => {
       const { data: pastQuizData } = await getPastQuizHistory();
 
-      let data = [];
-      pastQuizData.map((item) => {
-        const { basicInfo,dataId } = item;
-        data.push({...basicInfo,button:<Link to={`/quiz-area/${dataId}/0`}><Button>Open Quiz</Button></Link>});
-      });
-      dispatch(setAllQuizData([...data]));
+      // const data = [];
+     const newData  =  JSON.parse(JSON.stringify(pastQuizData));
+      dispatch(setAllQuizData([...newData]));
     })();
   }, []);
 
