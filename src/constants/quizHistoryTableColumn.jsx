@@ -15,8 +15,8 @@ export const columns = [
     key: "category",
   },
   {
-    title: "Submited",
-    dataIndex: "submited",
-    key: "submited",
+    title: "State",
+    dataIndex: "state",
+    key: "state",
   },
 ];

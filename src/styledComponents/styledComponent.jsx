@@ -61,15 +61,14 @@ export const AntdForm = styled(Form)`
 `;
 
 export const AntdButton = styled(Button)`
-  width: ${props=>props.width || '100%'}!important;
-  display: ${props=>props.display || 'initial'}!important;
+  display: ${(props) => props.display || "initial"}!important;
   background-color: #15803d;
   color: white;
   margin-top: 16px;
   height: 40px;
-  font-size: 16px;
+  font-size: 12px;
+  z-index:999;
 `;
-
 
 export const CustomModalAntd = styled(Modal)`
   .ant-modal-content {
@@ -81,7 +80,6 @@ export const CustomModalAntd = styled(Modal)`
       font-size: 20px;
       text-align: center;
     }
-    
 
     .form-items {
       display: flex !important;
@@ -90,8 +88,6 @@ export const CustomModalAntd = styled(Modal)`
       flex-wrap: wrap;
       margin-top: 30px;
       gap: 20px;
-
-      
     }
 
     .submit-btn {
@@ -107,15 +103,13 @@ export const CustomModalAntd = styled(Modal)`
 
 export const AntdCascader = styled(Cascader)`
   width::100%;
-`
-
+`;
 
 export const FormItem = styled.div`
   display: flex;
-  width: ${props=>props.width || '40%'};
+  width: ${(props) => props.width || "40%"};
   flex-direction: column;
 `;
-
 
 export const AntdLoginTheme = {
   components: {
@@ -126,32 +120,32 @@ export const AntdLoginTheme = {
   },
 };
 
-
+export const QuizAreaProgressBar = styled.div`
+  width: ${(props) => (100 / props.$total) * (props.$current + 1)}% !important;
+`;
 
 export const AntdRadio = styled(Radio)`
-gap: 37px;
+  gap: 37px;
   .ant-radio-checked .ant-radio-inner {
     // border-color: black;
     // background-color: black;
   }
 
-  h3{
-    margin-top:0;
-    font-size:20px;
-    font-weight:500;
+  h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 500;
   }
 `;
-
 
 export const AntdMenu = styled(Menu)`
   padding: 30px 20px !important;
   width: 95vw !important;
   min-height: 75vh !important;
   display: flex;
-  align-item:flex-start;
+  align-item: flex-start;
   justify-content: center;
   // gap: 20px;
   flex-wrap: wrap;
-  font-size:15px;
+  font-size: 15px;
 `;
-

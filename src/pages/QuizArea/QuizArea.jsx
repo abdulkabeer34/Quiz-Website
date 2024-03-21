@@ -1,16 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaRegClock } from "react-icons/fa";
 import "./QuizArea.scss";
-import { AntdButton } from "../../styledComponents/styledComponent";
+import {
+  AntdButton,
+  QuizAreaProgressBar,
+} from "../../styledComponents/styledComponent";
 import { Boolean, MultipleChoice } from "../../Components";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import {
-  RemoveInterval,
-  setQuizOptionLoading,
-  setTimer,
-} from "../../store/quizStore";
+import { setData, setTimer, setWarningNumber } from "../../store/quizStore";
 import {
   useStartAssignmentData,
   useHandleQuizSubmit,
@@ -18,63 +16,49 @@ import {
   useInitializeQuiz,
   useWarningModal,
 } from "../../customHooks";
-import styled from "styled-components";
-import { WarningModal } from "../../utils";
+import { AntdModal } from "../../utils";
 import { ConfigProvider } from "antd";
-
-const QuizAreaProgressBar = styled.div`
-  width: ${(props) => (100 / props.$total) * (props.$current + 1)}% !important;
-
-  
-`;
-
-
-
+import { QuizAreaContext } from "../../store/ContextApiStore";
 export const QuizArea = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const quizOptionLoading = useSelector((e) => e.quizStore.quizOptionLoading);
   const [loading, setLoading] = useState(1);
 
   const Timer = useSelector((e) => e.quizStore.timer);
+  const quizOptionLoading = useSelector((e) => e.quizStore.quizOptionLoading);
   const quizAreaButtonLoading = useSelector(
     (e) => e.quizStore.quizAreaButtonLoading
   );
-  const token = useSelector((e) => e.quizStore.userToken);
+  const token = localStorage.getItem("token");
   const data = useSelector((e) => e.quizStore.data);
   const Assignment = useStartAssignmentData();
   const HandleSubmit = useHandleQuizSubmit();
   const SetSelectedAnswer = useSetSelectedAnswer();
-  const InitializeQuiz = useInitializeQuiz();
+  const { StopInterval } = useContext(QuizAreaContext);
+  const quizAreaModal = useSelector((e) => e.quizAreaStore.ModalInfo);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  
+
   const { id: dataId, question } = useParams();
-  
-  const props = {
-    dataId,
-    token,
-    setCurrentQuestionIndex,
-    question,
-  };
-  
-  const WarningModal1 = useWarningModal(props);
+
+  const props = { dataId, token, setCurrentQuestionIndex, question };
+  const WarningModalLogic = useWarningModal({ ...props });
+  const InitializeQuiz = useInitializeQuiz({ ...props });
 
   useEffect(() => {
-    const initializeQuiz = async () => {
-      await InitializeQuiz.initializeQuiz(props);
-    };
-    
-    initializeQuiz();
-    WarningModal1.activewarningState(props);
+    (async () => await InitializeQuiz.initializeQuiz(props))();
+     (async () => await WarningModalLogic.checkWebsiteReloaded())();
 
     return () => {
-      dispatch(RemoveInterval());
-      dispatch(setTimer([0, 0, 0]));
+      StopInterval();
+      dispatch(setTimer([5, 0]));
+      StopInterval();
+      dispatch(setData({}));
+      dispatch(setWarningNumber(0));
     };
   }, []);
 
   const setSelectedAnswer = async (index) =>
-  
     await SetSelectedAnswer.setSelectedAnswer({
       index,
       currentQuestionIndex,
@@ -118,8 +102,8 @@ export const QuizArea = () => {
               <h2>
                 {Timer.map((item, index) => (
                   <span key={index}>
-                    {item}
-                    {index != 2 ? ":" : null}
+                    {index != 2 && item}
+                    {index == 0 ? ":" : null}
                   </span>
                 ))}
               </h2>
@@ -130,7 +114,6 @@ export const QuizArea = () => {
               <AntdButton
                 loading={quizAreaButtonLoading}
                 onClick={() => HandleSubmit.handleSubmit(props)}
-                width="150px"
                 className="btn"
               >
                 Submit
@@ -138,24 +121,14 @@ export const QuizArea = () => {
             ) : data.basicInfo.submited == "not started" ? (
               <AntdButton
                 loading={quizAreaButtonLoading}
-                style={{ fontSize: "12px", zIndex: "1000" }}
-                width="150px"
+                onClick={() => Assignment.startAssignment(props)}
                 className="btn"
-                onClick={() => {
-                  Assignment.startAssignment(props);
-                }}
               >
                 Start the Assignment
               </AntdButton>
             ) : (
               <Link to={`/quiz-result/${dataId}`}>
-                <AntdButton
-                  style={{ fontSize: "12px" }}
-                  width="150px"
-                  className="btn"
-                >
-                  See Results
-                </AntdButton>
+                <AntdButton className="btn">See Results</AntdButton>
               </Link>
             )}
           </div>
@@ -204,7 +177,7 @@ export const QuizArea = () => {
             </AntdButton>
           </div>
         </div>
-        <WarningModal {...props}></WarningModal>
+        <AntdModal {...quizAreaModal} centered />
       </ConfigProvider>
     </div>
   );

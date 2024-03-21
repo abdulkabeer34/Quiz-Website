@@ -13,30 +13,9 @@ export const flattenObjectValues = (data) => {
   return newObject;
 };
 
-export const setPastQuizHistory = async (
-  data,
-  url,
-  userId,
-  formData,
-  dataId
-) => {
+export const setPastQuizHistory = async ({ data, userId }) => {
   try {
-    formData = flattenObjectValues(formData);
-
     const { data: pastData } = await getPastQuizHistory(userId);
-    console.log(data);
-    data = {
-      quiz: data,
-      basicInfo: {
-        ...formData,
-        submited: "not started",
-        expirationTime: 5,
-        startingDate: "null",
-        submittedTime: "null",
-        websiteLeaved: "null",
-      },
-      dataId,
-    };
     const respnose = await axios.patch(
       `http://127.0.0.3:3003/quizPastHistory/${userId}`,
       { data: [...(pastData ?? []), data] }
@@ -56,7 +35,7 @@ export const getPastQuizHistory = async () => {
     } = await axios.get(` http://127.0.0.3:3003/quizPastHistory/${id}`);
 
     // console.log(data);
-    return { data, id };
+    return { data };
   } catch (error) {
     return false;
   }

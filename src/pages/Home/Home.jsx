@@ -27,13 +27,8 @@ export const Home = () => {
 
   const startQuiz = async (e) => {
     const { quizData, dataId } = await HandleSubmit(e, setLoading, userId);
-    // console.log(dataId);
     dispatch(setData(quizData));
-    let newData = [
-      ...allQuizData,
-      { ...flattenObjectValues(e), submited: "not submitted" },
-    ];
-    newData = JSON.parse(JSON.stringify(newData));
+    let newData = [...allQuizData, { ...quizData }];
     dispatch(setAllQuizData([...newData]));
     navigate(`/quiz-area/${dataId}/0`);
   };
