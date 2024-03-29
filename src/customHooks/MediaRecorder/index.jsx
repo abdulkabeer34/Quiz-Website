@@ -1,14 +1,20 @@
-import React, { useContext, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setRecorder, setRecoredVideo } from "../../store/quizStore";
+import { useContext } from "react";
 import { QuizAreaContext } from "../../store/ContextApiStore";
+import { useState } from "react";
 
-export const useMediaRecorder = () => {
-  const dispatch = useDispatch();
-  // const recorder = useSelector((e) => e.quizStore.recorder);
-  const { recorder, setRecorder, setRecordedVideo } =
-    useContext(QuizAreaContext);
-  let chunks = [];
+export const useMediaRecorder = (props) => {
+  let videoChunks = [];
+  let audioChunks = [];
+  const {
+    recorder,
+    setRecorder,
+    setScreenRecordedVideo,
+    setRecordedVideo,
+    audioStream,
+    setAudioStream,
+    videoStream,
+    setVideoStream,
+  } = props;
 
   // its will be use to check the available devices on the devices
   const checkRequiredDevices = async () => {
@@ -24,40 +30,70 @@ export const useMediaRecorder = () => {
   //  it will get teh device access from the user browsser
   const getDevicesAccess = async () => {
     try {
-      const permissions = { video: true, audio: true };
-      const stream = await navigator.mediaDevices.getUserMedia(permissions);
-      return stream;
+      const audioPermission = { video: true, audio: true };
+      const videoStream = await navigator.mediaDevices.getDisplayMedia();
+      const audioStream = await navigator.mediaDevices.getUserMedia(
+        audioPermission
+      );
+      setVideoStream(videoStream);
+      setAudioStream(audioStream);
+      return { videoStream, audioStream };
     } catch (error) {
       console.log(error);
-      throw new Error("You Denied The Acces Cant Start The Assignment Right Now")
+      throw new Error(
+        "You Denied The Acces Cant Start The Assignment Right Now"
+      );
       // return false;
     }
   };
 
   // this function is triggered when the click on the start assigment and its takes the camera and audio  permission form the user
-  const startRecording = async (stream) => {
-    if (stream != false) {
-      const recorder = new MediaRecorder(stream);
+  const startRecording = async ({ audioStream, videoStream }) => {
+    if (audioStream != false && videoStream != false) {
+      const audioRecorder = new MediaRecorder(audioStream);
+      const videoRecorder = new MediaRecorder(videoStream);
 
-      recorder.ondataavailable = (e) => {
+      audioRecorder.ondataavailable = (e) => {
         if (e.data.size > 0) {
-          chunks.push(e.data);
+          audioChunks.push(e.data);
         }
       };
-      recorder.onstop = (e) => {
-        const blob = new Blob(chunks, { type: "video/webm" });
+
+      videoRecorder.ondataavailable = (e) => {
+        if (e.data.size > 0) {
+          videoChunks.push(e.data);
+        }
+      };
+
+      videoRecorder.onstop = (e) => {
+        const blob = new Blob(videoChunks, { type: "video/webm" });
+        const url = URL.createObjectURL(blob);
+        setScreenRecordedVideo(url);
+      };
+
+      audioRecorder.onstop = (e) => {
+        const blob = new Blob(audioChunks, { type: "video/webm" });
         const url = URL.createObjectURL(blob);
         setRecordedVideo(url);
       };
 
-      setRecorder(recorder);
-      recorder.start();
+      setRecorder({ audioRecorder, videoRecorder });
+      audioRecorder.start();
+      videoRecorder.start();
     }
   };
 
   const stopAndSaveRecording = () => {
-    recorder && recorder.stop();
+    console.log("hello this is stop and save recrding ");
+    recorder && recorder.audioRecorder.stop();
+    recorder && recorder.videoRecorder.stop();
+
+    if (audioStream) audioStream.getTracks().forEach((track) => track.stop());
+
+    if (videoStream) videoStream.getTracks().forEach((track) => track.stop());
+    console.log("hello world12p90");
   };
+
   return {
     checkRequiredDevices,
     getDevicesAccess,

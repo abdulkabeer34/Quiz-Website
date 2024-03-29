@@ -17,12 +17,6 @@ export const useInitializeQuiz = (props) => {
   const UpdateTime = useUpdateTime();
   const { StartInterval } = useContext(QuizAreaContext);
   const { dataId, setCurrentQuestionIndex, question, token } = props;
-  const {
-    checkRequiredDevices,
-    getDevicesAccess,
-    startRecording,
-    stopAndSaveRecording,
-  } = useMediaRecorder();
 
   // initializing the quiz if already made quiz is rendered again or the page is reloaded
   const initializeQuiz = async () => {

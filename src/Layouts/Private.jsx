@@ -20,7 +20,7 @@ export const Private = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{minheight:"100vh"}}>
       <Navbar />
       <RouterReturn pages={PrivatPages} />
     </div>

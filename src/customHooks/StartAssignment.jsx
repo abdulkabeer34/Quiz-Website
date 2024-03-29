@@ -17,13 +17,13 @@ export const useStartAssignmentData = () => {
   const allQuizData = useSelector((e) => e.quizStore.allQuizData);
   const data = useSelector((e) => e.quizStore.data);
   const expirationTime = useSelector((e) => e.quizStore.expirationTime);
-  const { StartInterval } = useContext(QuizAreaContext);
   const {
+    StartInterval,
     checkRequiredDevices,
     getDevicesAccess,
     startRecording,
     stopAndSaveRecording,
-  } = useMediaRecorder();
+  } = useContext(QuizAreaContext);
 
   const startAssignment = async ({ token, dataId }) => {
     const resposne = await checkRequiredDevices();
@@ -33,7 +33,7 @@ export const useStartAssignmentData = () => {
         ToggleModal({
           open: true,
           message:
-            "before starting the assignment you have to give us the acces of you camera and microphone",
+            "before starting the assignment you have to give us the acces of you camera and microphone erro3",
           confirmLoading: true,
           type: "media access",
           footerMessage: "Processing",
@@ -41,8 +41,8 @@ export const useStartAssignmentData = () => {
       );
 
       try {
-        const stream = await getDevicesAccess();
-        await startRecording(stream);
+        const { audioStream, videoStream } = await getDevicesAccess();
+        await startRecording({ audioStream, videoStream });
         dispatch(
           ToggleModal({
             open: false,
@@ -50,10 +50,12 @@ export const useStartAssignmentData = () => {
           })
         );
       } catch (error) {
+        console.log(error);
         dispatch(
           ToggleModal({
             open: true,
-            message: "acces failed cannot get the assignment  started plz try starting the assignment again ",
+            message:
+              "acces failed cannot get the assignment  started plz try starting the assignment again error2",
 
             confirmLoading: false,
             footerMessage: "ok",
@@ -65,17 +67,14 @@ export const useStartAssignmentData = () => {
       dispatch(
         ToggleModal({
           open: true,
-          message: "acces failed cannot get the assignment  started plz try starting the assignment again ",
+          message:
+            "acces failed cannot get the assignment  started plz try starting the assignment again error1",
           confirmLoading: false,
           footerMessage: "ok",
         })
       );
       return;
     }
-
-
-
-
 
     const startingDate = JSON.parse(JSON.stringify(new Date()));
 

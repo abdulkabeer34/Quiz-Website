@@ -1,4 +1,4 @@
-import { Home, Login, QuizArea, QuizHistory, QuizResult } from "../pages";
+import { CreateQuiz, Home, Login, QuizArea, QuizHistory, QuizResult } from "../pages";
 import { paths } from "./paths";
 
 export const PrivatPages = [
@@ -6,6 +6,7 @@ export const PrivatPages = [
   { path: paths.QuizArea, component: QuizArea },
   { path: paths.QuizResult, component: QuizResult },
   { path: paths.QuizHistory, component: QuizHistory },
+  { path: paths.createQuiz, component: CreateQuiz },
 ];
 
 export const Publicpages = [{ path: ["/", paths.Login], component: Login }];

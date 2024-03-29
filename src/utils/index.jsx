@@ -1,3 +1,4 @@
+export { FloatingButtonAntd } from "./FloatingButton";
 export { AntdModal } from "./Modal";
 export { createNewDataSet } from "./createNewDataSet";
 export { openNotification } from "./OpenNotification";

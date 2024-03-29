@@ -35,6 +35,7 @@ export const HandleSubmit = async (formData, setLoading, userId) => {
   try {
     const { results } = await apiRequest(url, params);
     const date = new Date();
+    console.log(results);
     const dataId = Buffer.from(`${date}`, "utf-8").toString("base64");
     const newDataSet = createNewDataSet(results);
 
@@ -53,12 +54,18 @@ export const HandleSubmit = async (formData, setLoading, userId) => {
       dataId,
     };
 
+    if (results.length == 0) return false;
+
+
     await setPastQuizHistory({ data, userId });
 
-    setLoading(false);
+    // setLoading(false);
     return { quizData: data, dataId };
   } catch (error) {
-    setLoading(false);
+    // setLoading(false);
     console.log("cannot get the information");
+  }
+  finally{
+    setLoading(false);
   }
 };

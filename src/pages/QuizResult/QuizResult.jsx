@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./QuizResult.scss";
 import { Boolean, MultipleChoice } from "../../Components";
-import { useSelector } from "react-redux";
 import { getPastQuizHistory } from "../../apis/QuizHistory";
 import { useParams } from "react-router-dom";
 import { ConfigProvider, Empty } from "antd";
@@ -11,7 +10,7 @@ export const QuizResult = () => {
   const { id: dataId } = useParams();
   // const recordedVideo = useSelector((e) => e.quizStore.recordedVideo);
   const [result, setResult] = useState(null);
-  const { recordedVideo } = useContext(QuizAreaContext);
+  const { recordedVideo ,screenRecording} = useContext(QuizAreaContext);
 
   useEffect(() => {
     const getData = async () => {
@@ -51,6 +50,13 @@ export const QuizResult = () => {
           <video
             style={{ position: "relative",marginTop:"40px", right:0 , bottom: 0,width:"40vw" }}
             src={recordedVideo}
+            controls
+          ></video>
+        )}
+        {screenRecording && (
+          <video
+            style={{ position: "relative",marginTop:"40px", right:0 , bottom: 0,width:"40vw" }}
+            src={screenRecording}
             controls
           ></video>
         )}

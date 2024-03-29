@@ -19,8 +19,9 @@ import {
 import { AntdModal } from "../../utils";
 import { ConfigProvider } from "antd";
 import { QuizAreaContext } from "../../store/ContextApiStore";
+import { CreateQuiz } from "../CreateQuiz/CreateQuiz";
 export const QuizArea = () => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(3);
   const [loading, setLoading] = useState(1);
 
   const Timer = useSelector((e) => e.quizStore.timer);
@@ -47,7 +48,7 @@ export const QuizArea = () => {
 
   useEffect(() => {
     (async () => await InitializeQuiz.initializeQuiz(props))();
-     (async () => await WarningModalLogic.checkWebsiteReloaded())();
+    (async () => await WarningModalLogic.checkWebsiteReloaded())();
 
     return () => {
       StopInterval();
@@ -58,6 +59,47 @@ export const QuizArea = () => {
     };
   }, []);
 
+  const changeQuestion = (value) => {
+    if (
+      quizOptionLoading >= 0 ||
+      (currentQuestionIndex == data.quiz.length - 1 && value == 1) ||
+      (currentQuestionIndex == 0 && value == -1)
+    )
+      return;
+    console.log(currentQuestionIndex, value);
+    setCurrentQuestionIndex(currentQuestionIndex + value);
+    navigate(`/quiz-area/${dataId}/${currentQuestionIndex + value}`, {
+      replace: true,
+    });
+  };
+
+  const triggerEvent = (event) => {
+    const changeQuestion = (value) => {
+      if (
+        quizOptionLoading >= 0 ||
+        (currentQuestionIndex == data.quiz.length - 1 && value == 1) ||
+        (currentQuestionIndex == 0 && value == -1)
+      )
+        return;
+      console.log(currentQuestionIndex, value);
+      setCurrentQuestionIndex(currentQuestionIndex + value);
+      navigate(`/quiz-area/${dataId}/${currentQuestionIndex + value}`, {
+        replace: true,
+      });
+    };
+    if (event.key === "ArrowLeft") {
+      changeQuestion(-1);
+    } else if (event.key === "ArrowRight") {
+      changeQuestion(1);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", triggerEvent);
+
+    return () => document.removeEventListener("keydown", triggerEvent);
+  }, [currentQuestionIndex,data]);
+
   const setSelectedAnswer = async (index) =>
     await SetSelectedAnswer.setSelectedAnswer({
       index,
@@ -66,18 +108,11 @@ export const QuizArea = () => {
       dataId,
     });
 
-  const changeQuestion = (value) => {
-    if (quizOptionLoading >= 0) return;
-    setCurrentQuestionIndex(currentQuestionIndex + value);
-    navigate(`/quiz-area/${dataId}/${currentQuestionIndex + value}`, {
-      replace: true,
-    });
-  };
-
-  if (!data.quiz) return;
+  if (!data.quiz || !data || !data.quiz[currentQuestionIndex]) return;
 
   return (
     <div className="quiz-area-main">
+      {/* <CreateQuiz/> */}
       <ConfigProvider theme={{ token: { colorPrimary: "black" } }}>
         <QuizAreaProgressBar
           $current={currentQuestionIndex}
