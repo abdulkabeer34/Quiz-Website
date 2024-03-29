@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Home.scss";
-import { Button, ConfigProvider, Form, InputNumber } from "antd";
+import { Button, ConfigProvider, Form, InputNumber, message } from "antd";
 import {
   AntdCascader,
   CustomModalAntd,
@@ -24,22 +24,50 @@ export const Home = () => {
   const allQuizData = useSelector((e) => e.quizStore.allQuizData);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [messageApi, contextHolder] = message.useMessage();
+
+  const success = ({ content }) => {
+    messageApi.open({
+      type: "success",
+      content,
+    });
+  };
+
+  const error = ({ content }) => {
+    messageApi.open({
+      type: "error",
+      content,
+    });
+  };
+
+  const warning = ({ content }) => {
+    messageApi.open({
+      type: "warning",
+      content,
+    });
+  };
 
   const startQuiz = async (e) => {
-    const { quizData, dataId } = await HandleSubmit(e, setLoading, userId);
-    // console.log(dataId);
+    const props = await HandleSubmit(e, setLoading, userId);
+    console.log(props);
+    if (!props) {
+      warning({
+        content:
+          "interval server error , try selecting different options instead",
+      });
+      return;
+    }
+    const { quizData, dataId } = props;
+    // return;
     dispatch(setData(quizData));
-    let newData = [
-      ...allQuizData,
-      { ...flattenObjectValues(e), submited: "not submitted" },
-    ];
-    newData = JSON.parse(JSON.stringify(newData));
+    let newData = [...allQuizData, { ...quizData }];
     dispatch(setAllQuizData([...newData]));
     navigate(`/quiz-area/${dataId}/0`);
   };
 
   return (
     <div className="home-main">
+      {contextHolder}
       <ConfigProvider theme={{ token: { colorPrimary: "black" } }}>
         <div className="center">
           <h1>My Quiz App</h1>
@@ -59,7 +87,8 @@ export const Home = () => {
           centered
           footer={false}
           open={open}
-          onCancel={() => setOpen(false)}
+
+          onCancel={() =>!loading &&  setOpen(false)}
           width={500}
         >
           <h1>Enter the Quiz data</h1>

@@ -1,10 +1,10 @@
-import logger from "redux-logger";
+import quizAreaStore from "./quizAreaStore";
 import quizStoreReducer from "./quizStore";
-import { configureStore,middleware } from "@reduxjs/toolkit";
-
+import { configureStore } from "@reduxjs/toolkit";
 
 export default configureStore({
   reducer: {
     quizStore: quizStoreReducer,
+    quizAreaStore:quizAreaStore
   },
 });

@@ -1,50 +1,71 @@
-import React from "react";
+import { useContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updatePastQuizHistory } from "../apis/QuizHistory";
 import {
-  RemoveInterval,
+  setAllQuizData,
   setData,
   setQuizAreaButtonLoading,
   setTimer,
 } from "../store/quizStore";
 import { calculateTimeDifference } from "./TimeDifference";
-
+import { QuizAreaContext } from "../store/ContextApiStore";
+import { calculateQuizTimeDifference } from "./CalculateTime";
+// this custom hook  wil handl ethe quiz submit
 export const useHandleQuizSubmit = () => {
-  const Timer = useSelector((e) => e.quizStore.timer);
   const data = useSelector((e) => e.quizStore.data);
   const expirationTime = useSelector((e) => e.quizStore.expirationTime);
+  const { StopInterval } = useContext(QuizAreaContext);
+  const allQuizData = useSelector((e) => e.quizStore.allQuizData);
+  const { recorder,stopAndSaveRecording } = useContext(QuizAreaContext);
 
   const dispatch = useDispatch();
 
   const handleSubmit = async ({ token, dataId }) => {
-    dispatch(RemoveInterval());
+    if (!data || !data.basicInfo) return;
+    // stop the recoding of the screen and of the camera
+    // recorder && recorder.audioRecorder.stop();
+    // recorder && recorder.videoRecorder.stop();
+    stopAndSaveRecording();
+
     dispatch(setQuizAreaButtonLoading(true));
+    const startingDate = data.basicInfo.startingDate;
+
+    // caluating the time in which the quiz was submitted
+    const { data: Timer } = calculateQuizTimeDifference({
+      startingDate,
+      expirationTime,
+    });
 
     const timeTaken = calculateTimeDifference(Timer, expirationTime);
-    dispatch(setTimer(timeTaken));
+    dispatch(setTimer([...timeTaken]));
+    StopInterval();
 
-    // try {
-      await updatePastQuizHistory({
-        token,
-        dataId,
+    const newData = {
+      ...data,
+      basicInfo: {
+        ...data.basicInfo,
         submited: "submitted",
         submittedTime: Timer,
-      });
-      dispatch(
-        setData({
-          ...data,
-          basicInfo: {
-            ...data.basicInfo,
-            submited: "submitted",
-            submittedTime: Timer,
-          },
-        })
-      );
-      dispatch(setQuizAreaButtonLoading(false));
-    // } catch (error) {
-    //   console.log(error)
-    //   return false;
-    // }
+      },
+    };
+
+    await updatePastQuizHistory({
+      token,
+      dataId,
+      submited: "submitted",
+      submittedTime: Timer,
+    });
+
+    const newAllQuizData = allQuizData.map((item) => {
+      if (item.dataId == dataId) {
+        return newData;
+      }
+      return item;
+    });
+
+    dispatch(setAllQuizData(newAllQuizData));
+    dispatch(setData(newData));
+    dispatch(setQuizAreaButtonLoading(false));
   };
 
   return { handleSubmit };

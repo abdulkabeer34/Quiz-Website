@@ -6,9 +6,8 @@ import { decodeHtmlEntities } from "../../../utils";
 import { Button } from "antd";
 import { useSelector } from "react-redux";
 
-export const MultipleChoice = ({ data, setSelectedAnswer ,setLoading,loading}) => {
+export const MultipleChoice = ({ data, setSelectedAnswer }) => {
   const quizOptionLoading = useSelector((e) => e.quizStore.quizOptionLoading);
-
 
   if (!data) {
     return;
@@ -52,7 +51,7 @@ export const MultipleChoice = ({ data, setSelectedAnswer ,setLoading,loading}) =
                 className="option1"
               >
                 {index == selectedAnswer && setSelectedAnswer && (
-                  <IoMdCheckmarkCircleOutline  className="icon"/>
+                  <IoMdCheckmarkCircleOutline className="icon" />
                 )}
                 {item}
               </Button>

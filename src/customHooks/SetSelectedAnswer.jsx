@@ -12,17 +12,25 @@ export const useSetSelectedAnswer = () => {
     token,
     dataId,
   }) => {
-    if (data.basicInfo.submited != "not submitted" || data.quiz[currentQuestionIndex].selectedAnswer == index) return;
+    if (
+      data.basicInfo.submited != "not submitted" 
+      // data.quiz[currentQuestionIndex].selectedAnswer == index
+    )
+      return;
 
-    dispatch(setQuizOptionLoading(index))
+    dispatch(setQuizOptionLoading(index));
 
     let newData = [...data.quiz];
     const updatedQuestion = { ...newData[currentQuestionIndex] };
-    updatedQuestion.selectedAnswer = index;
+    if (index == parseInt(updatedQuestion.selectedAnswer)) {
+      updatedQuestion.selectedAnswer = -1;
+    } else {
+      updatedQuestion.selectedAnswer = index;
+    }
     newData[currentQuestionIndex] = updatedQuestion;
     await updatePastQuizHistory({ token, dataId, quiz: [...newData] });
     dispatch(setData({ ...data, quiz: newData }));
-    dispatch(setQuizOptionLoading(-1))
+    dispatch(setQuizOptionLoading(-1));
   };
 
   return { setSelectedAnswer };

@@ -6,13 +6,16 @@ export const quizStoreSlice = createSlice({
     data: {},
     userToken: "",
     allQuizData: [],
-    timer: [5, 0, 0],
+    timer: [5, 0],
     warningModal: false,
     warningNumber: 0,
     expirationTime: 5,
     interval: null,
     quizOptionLoading: -1,
     quizAreaButtonLoading: false,
+    mediaAccess: false,
+    recordedVideo: null,
+    recorder: null,
   },
   reducers: {
     setData: (state, action) => {
@@ -30,7 +33,7 @@ export const quizStoreSlice = createSlice({
     setWarningModal: (state, action) => {
       state.warningModal = action.payload;
     },
-    setWarningNumber: (state,action) => {
+    setWarningNumber: (state, action) => {
       state.warningNumber = action.payload;
     },
     resetWarningNumber: (state) => {
@@ -39,20 +42,20 @@ export const quizStoreSlice = createSlice({
     setExpirationTime: (state, action) => {
       state.expirationTime = [...action.payload];
     },
-    SetInterval: (state, action) => {
-      state.interval = setInterval(
-        () => action.payload.callback(action.payload.props),
-        action.payload.delay
-      );
-    },
-    RemoveInterval: (state) => {
-      clearInterval(state.interval);
-    },
     setQuizOptionLoading: (state, action) => {
       state.quizOptionLoading = action.payload;
     },
     setQuizAreaButtonLoading: (state, action) => {
       state.quizAreaButtonLoading = action.payload;
+    },
+    setMediaAccess: (state, action) => {
+      state.mediaAccess = action.payload;
+    },
+    setRecoredVideo: (state, action) => {
+      state.recordedVideo = action.payload;
+    },
+    setRecorder: (state, action) => {
+      state.recorder = action.payload;
     },
   },
 });
@@ -65,9 +68,9 @@ export const {
   setWarningModal,
   setWarningNumber,
   resetWarningNumber,
-  SetInterval,
-  RemoveInterval,
   setQuizOptionLoading,
-  setQuizAreaButtonLoading
+  setRecorder,
+  setQuizAreaButtonLoading,
+  setRecoredVideo,
 } = quizStoreSlice.actions;
 export default quizStoreSlice.reducer;

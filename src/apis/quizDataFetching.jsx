@@ -1,5 +1,5 @@
 import axios from "axios";
-import { setPastQuizHistory } from "./QuizHistory";
+import { flattenObjectValues, setPastQuizHistory } from "./QuizHistory";
 import { Buffer } from "buffer";
 import { createNewDataSet } from "../utils";
 
@@ -34,23 +34,38 @@ export const HandleSubmit = async (formData, setLoading, userId) => {
 
   try {
     const { results } = await apiRequest(url, params);
-    const quizHistoryUrl = "http://127.0.0.3:3003/users";
     const date = new Date();
+    console.log(results);
     const dataId = Buffer.from(`${date}`, "utf-8").toString("base64");
     const newDataSet = createNewDataSet(results);
 
-    const data = await setPastQuizHistory(
-      newDataSet,
-      quizHistoryUrl,
-      userId,
-      formData,
-      dataId
-    );
+    const flattenFormData = flattenObjectValues(formData);
 
-    setLoading(false);
+    const data = {
+      quiz: newDataSet,
+      basicInfo: {
+        ...flattenFormData,
+        submited: "not started",
+        expirationTime: 5,
+        startingDate: "null",
+        submittedTime: "null",
+        websiteLeaved: "null",
+      },
+      dataId,
+    };
+
+    if (results.length == 0) return false;
+
+
+    await setPastQuizHistory({ data, userId });
+
+    // setLoading(false);
     return { quizData: data, dataId };
   } catch (error) {
-    setLoading(false);
+    // setLoading(false);
     console.log("cannot get the information");
+  }
+  finally{
+    setLoading(false);
   }
 };

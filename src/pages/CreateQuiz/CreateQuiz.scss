@@ -1,0 +1,37 @@
+.create-quiz-main {
+    height: auto;
+    background-color: rgb(232, 230, 230);
+    width: auto;
+    padding: 2vw;
+
+
+    .quizez {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .box {
+
+            .center {
+                padding: 20px 30px;
+
+                .question {
+                    display: flex;
+                    gap: 30px;
+                    width: 100%;
+
+                    // width: 100%;
+
+
+                    .question-input {
+                        margin-top: 0;
+
+                        :hover{
+                            background-color: transparent !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Table } from "antd";
 import "./History.scss";
 import { useSelector } from "react-redux";
@@ -9,12 +9,17 @@ export const QuizHistory = () => {
 
   
   let pastQuizData = useSelector((e) => e.quizStore.allQuizData);
-  let data  = [];
-
-  pastQuizData.map((item,index) => {
-    const { basicInfo,dataId } = item;
-    data.push({...basicInfo,dataId,button:<Link key={index} to={`/quiz-area/${dataId}/0`}><Button>Open Quiz</Button></Link>});
-  });
+  const [newData,setNewData] = useState([])
+  
+  useEffect(() => {
+    let data  = [];
+    pastQuizData.map((item,index) => {
+      const { basicInfo,dataId ,basicInfo:{submited}} = item;
+      data.push({...basicInfo,dataId,state:<Link key={index} to={`/quiz-area/${dataId}/0`}><Button>{submited=="not submitted"?"Not Submitted":submited=="not started"?"Not Started":"Submitted"}</Button></Link>});
+    });
+    setNewData([...data]);
+  }, [pastQuizData])
+  
    
 
    
@@ -24,7 +29,7 @@ export const QuizHistory = () => {
       <div className="upper-area">
         <h2>Your Past Quiz History:</h2>
       </div>
-      <Table columns={Columns} rowKey={e=>e.dataId} dataSource={data} />;
+      <Table columns={Columns} rowKey={e=>e.dataId} dataSource={newData} />;
     </div>
   );
 };
