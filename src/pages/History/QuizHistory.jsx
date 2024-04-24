@@ -14,6 +14,7 @@ export const QuizHistory = () => {
   useEffect(() => {
     let data  = [];
     pastQuizData.map((item,index) => {
+      console.log(item)
       const { basicInfo,dataId ,basicInfo:{submited}} = item;
       data.push({...basicInfo,dataId,state:<Link key={index} to={`/quiz-area/${dataId}/0`}><Button>{submited=="not submitted"?"Not Submitted":submited=="not started"?"Not Started":"Submitted"}</Button></Link>});
     });

@@ -1,3 +1,4 @@
+export { useCreateQuizHandler } from "./CreateQuizHandler";
 export { useMediaRecorder } from "./MediaRecorder";
 export { useStartAssignmentData } from "./StartAssignment";
 export { calculateTimeDifference } from "./TimeDifference";

@@ -8,6 +8,61 @@ export const LoginMain = styled.div`
   display: flex;
 `;
 
+
+
+export const Box = styled.div`
+width: calc(85vw - 20px);
+  min-height: 230px;
+  max-width: 1300px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  margin-top: 30px;
+
+  .cross-icon {
+    position: absolute;
+    right: -1%;
+    top: -4%;
+    transform: rotate(43deg);
+    font-size: 13px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    padding: 7px;
+    cursor: pointer;
+    z-index: 99;
+  }
+
+  .options {
+    // width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 264px);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    justify-content: space-between;
+    gap: 21px 30px;
+    margin-top: 23px;
+    display: flex;
+    flex-direction: column;
+
+    .center1 {
+      position: relative;
+      width: 100%;
+      .option1 {
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        border: 2px solid;
+        // border-radius: 10px;
+        display: flex;
+        font-size: 17px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        text-align: center;
+      }
+    }
+  }
+`;
+
 export const Left = styled.div`
   width: 50%;
   height: 100%;

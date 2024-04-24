@@ -1,42 +1,31 @@
 import { Button, ConfigProvider, Modal } from "antd";
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { ToggleModal } from "../../store/quizAreaStore";
+import React from "react";
 
 export const AntdModal = ({
   message,
-  open: Open,
+  open,
   confirmLoading,
+  header,
   footerMessage,
+  closeModal,
+  ...restProps
 }) => {
-  const dispatch = useDispatch();
-  const open = false;
-  const [modalFooterMesage, setModalFooterMessage] = useState();
-
-  useEffect(() => {
-    setModalFooterMessage(footerMessage);
-    console.log("hello world");
-  }, [footerMessage]);
-
   return (
     <Modal
-      // onCancel={() => dispatch(ToggleModal({ open: false }))}
-      open={Open}
+      open={open}
+      {...restProps}
       cancelText={false}
       closeIcon={null}
       centered
       footer={
         <ConfigProvider theme={{ token: { colorPrimary: "black" } }}>
-          <Button
-            type="primary"
-            onClick={() => dispatch(ToggleModal({ open: false }))}
-            loading={confirmLoading}
-          >
-            {modalFooterMesage}
+          <Button type="primary" onClick={closeModal} loading={confirmLoading}>
+            {footerMessage}
           </Button>
         </ConfigProvider>
       }
     >
+      {header && header}
       {message}
     </Modal>
   );

@@ -1,8 +1,23 @@
 .create-quiz-main {
     height: auto;
-    background-color: rgb(232, 230, 230);
+    // background-color: rgb(232, 230, 230);
     width: auto;
     padding: 2vw;
+
+
+    .ant-modal-content{
+        height: 93vh;
+    }
+
+    .floating-icon{
+        z-index: 100;
+        @media(max-width:534px){
+            right: 7% !important;
+            bottom: 7% !important;
+            width: 50px;
+            height: 50px;
+        }
+    }
 
 
     .quizez {
@@ -11,14 +26,21 @@
         flex-direction: column;
 
         .box {
+            position: relative;
 
             .center {
-                padding: 20px 30px;
+                padding: 20px 1.7vw;
 
                 .question {
                     display: flex;
                     gap: 30px;
                     width: 100%;
+
+
+                    @media(max-width: 534px){
+                        flex-direction: column;
+                    }
+
 
                     // width: 100%;
 
@@ -26,7 +48,7 @@
                     .question-input {
                         margin-top: 0;
 
-                        :hover{
+                        :hover {
                             background-color: transparent !important;
                         }
                     }

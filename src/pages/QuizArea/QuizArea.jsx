@@ -1,10 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { FaRegClock } from "react-icons/fa";
 import "./QuizArea.scss";
-import {
-  AntdButton,
-  QuizAreaProgressBar,
-} from "../../styledComponents/styledComponent";
+import { AntdButton, QuizAreaProgressBar } from "../../styledComponents";
 import { Boolean, MultipleChoice } from "../../Components";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -19,7 +16,8 @@ import {
 import { AntdModal } from "../../utils";
 import { ConfigProvider } from "antd";
 import { QuizAreaContext } from "../../store/ContextApiStore";
-import { CreateQuiz } from "../CreateQuiz/CreateQuiz";
+import { ToggleModal } from "../../store/quizAreaStore";
+
 export const QuizArea = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(3);
   const [loading, setLoading] = useState(1);
@@ -98,7 +96,7 @@ export const QuizArea = () => {
     document.addEventListener("keydown", triggerEvent);
 
     return () => document.removeEventListener("keydown", triggerEvent);
-  }, [currentQuestionIndex,data]);
+  }, [currentQuestionIndex, data]);
 
   const setSelectedAnswer = async (index) =>
     await SetSelectedAnswer.setSelectedAnswer({
@@ -212,7 +210,11 @@ export const QuizArea = () => {
             </AntdButton>
           </div>
         </div>
-        <AntdModal {...quizAreaModal} centered />
+        <AntdModal
+          closeModal={() => dispatch(ToggleModal({ open: false }))}
+          {...quizAreaModal}
+          centered
+        />
       </ConfigProvider>
     </div>
   );

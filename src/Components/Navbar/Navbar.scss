@@ -45,21 +45,56 @@
 
 
     .profile {
-        width: 30%;
+        width: 40%;
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
+        gap: 18px;
+
+        svg {
+            font-size: 25px !important;
+            color: black;
+
+            :hover {
+                color: black;
+            }
+        }
+      
+
+        .notification {
+            // font-size: 30px !important;
+            cursor:pointer;
+
+
+            // @media (max-width:534px) {
+            //     font-size: 17px;
+            //     // width: 30px;
+            // }
+        }
+
+        .history {
+            p {
+                color: black;
+                text-decoration: none !important;
+                  
+
+                :hover {
+                    color: black;
+                }
+            }
+        
+        }
 
         img {
             width: 50px;
             border-radius: 50%;
 
-            
+
             @media (max-width:670px) {
                 width: 40px;
             }
-            
+
             @media (max-width:290px) {
                 // font-size: 12px;
                 width: 30px;
