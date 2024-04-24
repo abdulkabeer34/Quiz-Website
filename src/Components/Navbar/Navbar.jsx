@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
+import { FaHistory } from "react-icons/fa";
 import React from "react";
+import { IoNotificationsOutline } from "react-icons/io5";
 
 export const Navbar = () => {
   return (
@@ -11,14 +13,15 @@ export const Navbar = () => {
           <h1>My Quiz App</h1>
         </div>
 
-       <Link to="/quiz-history">
-       <div className="profile">
-          <img
-            src="https://avatars.githubusercontent.com/u/136903101?v=4"
-            alt=""
-          />
+        <div className="profile">
+          <IoNotificationsOutline className="notification" />
+          <Link className="history" to="/quiz-history">
+            <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"10px"}}>
+              <FaHistory />
+              <p>history</p>
+            </div>
+          </Link>
         </div>
-       </Link>
       </header>
     </div>
   );

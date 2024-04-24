@@ -15,6 +15,19 @@ const SetUpUserQuizPastHistory = async (token) => {
   }
 };
 
+
+const setUpNotifications  = async (token)=>{
+  try {
+    await axios.post("http://127.0.0.3:3003/notifications/", {
+      id: token,
+      data: [],
+    });
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
 const fetchData = async () => {
   try {
     const { data } = await axios.get("http://127.0.0.3:3003/users");
@@ -67,8 +80,8 @@ export const verifyData = () => {
       openNotification({ ...notifications.signupSuccesful, api });
       localStorage.setItem("token", token);
       await SetUpUserQuizPastHistory(token);
+      await setUpNotifications(token);
       window.location.reload();
-
     } catch (error) {
       openNotification({ ...notifications.error, api });
     }

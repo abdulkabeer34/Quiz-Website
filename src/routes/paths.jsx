@@ -6,4 +6,5 @@ export const paths = {
   QuizHistory: "/quiz-history",
   createQuiz:"/create-quiz",
   Webcam: "/webcam",
+  Notifications:"notifications"
 };

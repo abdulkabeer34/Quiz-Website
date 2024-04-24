@@ -5,11 +5,11 @@ import {
   AntdCascader,
   CustomModalAntd,
   FormItem,
-} from "../../styledComponents/styledComponent";
+} from "../../styledComponents";
 
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { HandleSubmit, flattenObjectValues } from "../../apis";
+import { HandleSubmit } from "../../apis";
 import { setAllQuizData, setData } from "../../store/quizStore";
 import {
   CategoriesDataSet,
@@ -25,20 +25,6 @@ export const Home = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [messageApi, contextHolder] = message.useMessage();
-
-  const success = ({ content }) => {
-    messageApi.open({
-      type: "success",
-      content,
-    });
-  };
-
-  const error = ({ content }) => {
-    messageApi.open({
-      type: "error",
-      content,
-    });
-  };
 
   const warning = ({ content }) => {
     messageApi.open({
@@ -58,7 +44,6 @@ export const Home = () => {
       return;
     }
     const { quizData, dataId } = props;
-    // return;
     dispatch(setData(quizData));
     let newData = [...allQuizData, { ...quizData }];
     dispatch(setAllQuizData([...newData]));
@@ -87,8 +72,7 @@ export const Home = () => {
           centered
           footer={false}
           open={open}
-
-          onCancel={() =>!loading &&  setOpen(false)}
+          onCancel={() => !loading && setOpen(false)}
           width={500}
         >
           <h1>Enter the Quiz data</h1>
