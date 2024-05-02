@@ -3,14 +3,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 10px 40px;
+
+
+    a {
+        text-decoration: none;
+        text-transform: none;
+        color:black;
+    }
 
     @media (max-width:370px) {
         padding: 0 10px;
     }
 
     .logo {
-        width: 30%;
+        // width: 30%;
         height: 100%;
         display: flex;
         align-items: center;
@@ -19,7 +26,7 @@
         gap: 10px;
 
         @media (max-width:670px) {
-            width: 50%;
+            // width: 50%;
             justify-content: initial;
         }
 
@@ -43,14 +50,39 @@
 
     }
 
+    .mid-section {
+        display: flex;
+        /* gap: 40px; */
+        align-items: center;
+        width: 40%;
+        justify-content: space-around;
+
+
+        @media(max-width:760px) {
+            width: 60%;
+        }
+
+
+        a {
+            text-decoration: none;
+            text-transform: none;
+            color: black;
+            font-weight: 500;
+        }
+    }
+
 
     .profile {
-        width: 40%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        gap: 18px;
+        margin-bottom: 0;
+
+
+        a {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
 
         svg {
             font-size: 25px !important;
@@ -60,45 +92,7 @@
                 color: black;
             }
         }
-      
-
-        .notification {
-            // font-size: 30px !important;
-            cursor:pointer;
 
 
-            // @media (max-width:534px) {
-            //     font-size: 17px;
-            //     // width: 30px;
-            // }
-        }
-
-        .history {
-            p {
-                color: black;
-                text-decoration: none !important;
-                  
-
-                :hover {
-                    color: black;
-                }
-            }
-        
-        }
-
-        img {
-            width: 50px;
-            border-radius: 50%;
-
-
-            @media (max-width:670px) {
-                width: 40px;
-            }
-
-            @media (max-width:290px) {
-                // font-size: 12px;
-                width: 30px;
-            }
-        }
     }
 }

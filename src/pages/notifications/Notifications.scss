@@ -1,0 +1,112 @@
+.notifications-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    margin-top: 17px;
+
+    @media(max-width:520px){
+       padding: 0 13px ;
+    }
+
+
+    .center {
+        width: 760px;
+
+        @media(max-width:520px){
+            width: 100%;
+        }
+
+
+        .heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:0 19px;
+
+            @media(max-width:520px){
+                padding:0 0;
+            }
+
+
+
+            h1 {
+                font-size: 25px;
+                font-weight: 600;
+                display: flex;
+            }
+
+            svg {
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+
+
+        .notifications {
+
+            margin-top: 55px !important;
+
+            .notification {
+                height: 80px;
+                cursor:pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: .5px solid #e4e4e7;
+                padding:0 19px;
+
+                @media(max-width:520px){
+                    padding:0 0;
+                }
+
+                .left {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+
+
+                    .image {
+                        img {
+                            width: 45px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .content {
+                        h1 {
+                            display: flex;
+                            font-size: 15px;
+                            gap: 10px;
+
+                            span{
+                                display: flex;
+                            }
+
+                            div{
+                                display: flex;
+                                align-items: center;;
+                                gap: 5px;
+                            }
+                        }
+
+                        .details {
+                            font-size: 11px;
+                            color: rgb(146, 141, 141);
+                        }
+                    }
+                }
+
+                .right {
+                    svg {
+                        cursor: pointer;
+                    }
+
+                }
+            }
+        }
+    }
+
+
+}

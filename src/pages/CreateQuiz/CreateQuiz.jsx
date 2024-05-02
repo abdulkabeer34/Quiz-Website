@@ -13,10 +13,9 @@ import axios from "axios";
 import { sendNotifications } from "../../apis/notificationApis";
 
 export const CreateQuiz = () => {
-  const date = new Date();
-  const dataId = Buffer.from(`${date}`, "utf-8").toString("base64");
 
-  const [questions, setQuestion] = useState({ quiz: [], basicInfo, dataId });
+
+  const [questions, setQuestion] = useState({ quiz: [], basicInfo, dataId:"" });
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
 
@@ -35,17 +34,23 @@ export const CreateQuiz = () => {
   }, []);
 
   const sendALl = async () => {
+    setConfirmLoading(true);
     const request = contactList.map(async (item) => {
-      await sendNotifications(item.id, questions);
+      await sendNotifications({ token: item.id, data:questions, setConfirmLoading });
     });
-    Promise.all(request);
+    Promise.all(request).then(() => setConfirmLoading(false));
   };
 
   return (
     <div className="create-quiz-main">
       <CreateQuizConfigProvider>
         <AntdModal
-          message={<ContactList questions={questions} />}
+          message={
+            <ContactList
+              confirmLoading={confirmLoading}
+              questions={questions}
+            />
+          }
           closeModal={async () => await sendALl()}
           open={open}
           style={{ heigth: "80vw" }}
