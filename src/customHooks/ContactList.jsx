@@ -1,20 +1,32 @@
 import { Button } from "antd";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useSelector } from "react-redux";
 import { sendNotifications } from "../apis/notificationApis";
 
-export const ContactList = ({ questions }) => {
+export const ContactList = ({ questions,confirmLoading }) => {
   const [contactList, setContactList] = useState([]);
   const token = useSelector((e) => e.quizStore.userToken);
+  const [buttonsLoading,setButtonsLoading] = useState([]);
+  const [data,setData] = useState([]);
+  
 
   useEffect(() => {
     const getLogins = async () => {
       const { data } = await axios.get("http://127.0.0.3:3003/users");
+      setButtonsLoading(Array(data.length).fill(false));
       setContactList(data);
     };
     getLogins();
   }, []);
+
+  useEffect(() => {
+    setData(questions)
+  }, [questions])
+  
+
+
+ 
 
   if (!contactList) return;
   return (
@@ -30,7 +42,7 @@ export const ContactList = ({ questions }) => {
     >
       <div style={{ display: "grid", gap: "24px", padding: "24px" }}>
         {contactList.map((item, index) => {
-          console.log(token, item.id);
+          // setButtonLoading([...Array(contactList.length).fill(true)]);
           if (token == item.id) return;
           return (
             <div
@@ -64,8 +76,9 @@ export const ContactList = ({ questions }) => {
               </div>
               <div>
                 <Button
+                  loading={buttonsLoading[index] || confirmLoading}
                   onClick={async () =>
-                    await sendNotifications(item.id, questions)
+                    await sendNotifications({token:item.id, data,index,buttonsLoading,setButtonsLoading})
                   }
                 >
                   Send

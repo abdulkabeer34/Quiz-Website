@@ -19,12 +19,16 @@ export const useCreateQuizHandler = ({
     data.quiz.push(newQuestion);
 
     setQuestion({ ...data });
+    console.log(data)
+
   };
 
   const UpdateQuiz = (value, index) => {
     let data = questions;
     data.quiz[index].question = value;
     setQuestion({ ...data });
+    console.log(data)
+
   };
 
   const warning = (content) => {
@@ -53,6 +57,8 @@ export const useCreateQuizHandler = ({
       "",
     ];
     setQuestion({ ...data });
+    console.log(data)
+
   };
 
   const UpdateOpt = (index, subIndex, value) => {
@@ -63,12 +69,14 @@ export const useCreateQuizHandler = ({
   };
 
   const DeleteOpt = (index, subIndex) => {
+    
     let data = questions;
     const shuffledAnswers = data.quiz[index].shuffledAnswers;
     data.quiz[index].shuffledAnswers = shuffledAnswers.filter(
       (i, index) => index != subIndex
     );
     setQuestion({ ...data });
+    console.log(data)
   };
 
   return { AddOpt, AddQuiz, DeleteData, DeleteOpt, UpdateOpt, UpdateQuiz };
