@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { setWarningNumber } from "../store/quizStore";
+import { setWarningNumber } from "../Store/QuizStore";
 import { useDispatch, useSelector } from "react-redux";
-import { getPastQuizHistory, updatePastQuizHistory } from "../apis/QuizHistory";
-import { ToggleModal } from "../store/quizAreaStore";
+import { getPastQuizHistory, updatePastQuizHistory } from "../Apis/QuizHistory";
+import { ToggleModal } from "../Store/QuizAreaStore";
 import { useHandleQuizSubmit } from "./QuizSubmit";
 
 const createModalMessage = (num, warn) => {

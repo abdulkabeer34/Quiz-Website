@@ -3,7 +3,7 @@ import { Button, Table } from "antd";
 import "./History.scss";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { Columns } from "../../constants";
+import { Columns } from "../../Constants";
 
 export const QuizHistory = () => {
 

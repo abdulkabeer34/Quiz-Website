@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { getPastQuizHistory } from "../apis/QuizHistory";
+import { getPastQuizHistory } from "../Apis/QuizHistory";
 import { useDispatch } from "react-redux";
 import { useUpdateTime } from "./CalculateTime";
 import { calculateTimeDifference } from "./TimeDifference";
-import { setData, setTimer } from "../store/quizStore";
-import { QuizAreaContext } from "../store/ContextApiStore";
-import { ToggleModal } from "../store/quizAreaStore";
+import { setData, setTimer } from "../Store/QuizStore";
+import { QuizAreaContext } from "../Store/ContextApiStore";
+import { ToggleModal } from "../Store/QuizAreaStore";
 import { useMediaRecorder } from "./MediaRecorder";
 
 export const useInitializeQuiz = (props) => {

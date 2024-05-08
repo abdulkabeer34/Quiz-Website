@@ -1,16 +1,14 @@
 import { PlusOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
-import { AntdModal, FloatingButtonAntd } from "../../utils";
+import { AntdModal, FloatingButtonAntd } from "../../Utils";
 import "./CreateQuiz.scss";
-import { Buffer } from "buffer";
 import { Button, Input, message } from "antd";
-import { CreateQuizConfigProvider } from "../../constants";
-import { useCreateQuizHandler } from "../../customHooks";
-import { basicInfo } from "../../constants";
-import { Box, AntdInput } from "../../styledComponents";
-import { ContactList } from "../../customHooks/ContactList";
+import { CreateQuizConfigProvider, basicInfo} from "../../Constants";
+import { useCreateQuizHandler } from "../../CustomHooks";
+import { Box, AntdInput } from "./StyledComponents";
+import { ContactList } from "../../CustomHooks/ContactList";
 import axios from "axios";
-import { sendNotifications } from "../../apis/notificationApis";
+import { sendNotifications } from "../../Apis/notificationApis";
 
 export const CreateQuiz = () => {
 

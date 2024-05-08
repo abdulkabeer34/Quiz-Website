@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import { useMediaRecorder } from "../customHooks/MediaRecorder";
+import { useMediaRecorder } from "../CustomHooks/MediaRecorder";
 export const QuizAreaContext = createContext();
 
 let interval;

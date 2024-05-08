@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./MultipleChoice.scss";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { setColors } from "./Attributes";
-import { decodeHtmlEntities } from "../../../utils";
+import { decodeHtmlEntities } from "../../../Utils";
 import { Button } from "antd";
 import { useSelector } from "react-redux";
 

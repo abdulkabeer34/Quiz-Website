@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./QuizResult.scss";
 import { Boolean, MultipleChoice } from "../../Components";
-import { getPastQuizHistory } from "../../apis/QuizHistory";
+import { getPastQuizHistory } from "../../Apis/QuizHistory";
 import { useParams } from "react-router-dom";
 import { ConfigProvider, Empty } from "antd";
-import { QuizAreaContext } from "../../store/ContextApiStore";
+import { QuizAreaContext } from "../../Store/ContextApiStore";
 
 export const QuizResult = () => {
   const { id: dataId } = useParams();

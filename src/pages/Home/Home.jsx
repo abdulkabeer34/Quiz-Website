@@ -1,21 +1,17 @@
 import React, { useState } from "react";
 import "./Home.scss";
 import { Button, ConfigProvider, Form, InputNumber, message } from "antd";
-import {
-  AntdCascader,
-  CustomModalAntd,
-  FormItem,
-} from "../../styledComponents";
+import { AntdCascader, CustomModalAntd, FormItem } from "./StyledComponents";
 
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { HandleSubmit } from "../../apis";
-import { setAllQuizData, setData } from "../../store/quizStore";
+import { HandleSubmit } from "../../Apis";
+import { setAllQuizData, setData } from "../../Store/QuizStore";
 import {
   CategoriesDataSet,
   DifficultyDataSet,
   TypeDataSet,
-} from "../../constants";
+} from "../../Constants";
 
 export const Home = () => {
   const [open, setOpen] = useState(false);

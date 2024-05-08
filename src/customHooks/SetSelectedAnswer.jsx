@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updatePastQuizHistory } from "../apis/QuizHistory";
-import { setData, setQuizOptionLoading } from "../store/quizStore";
+import { updatePastQuizHistory } from "../Apis/QuizHistory";
+import { setData, setQuizOptionLoading } from "../Store/QuizStore";
 
 export const useSetSelectedAnswer = () => {
   const data = useSelector((e) => e.quizStore.data);

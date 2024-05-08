@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Buffer } from "buffer";
-import { notifications } from "../constants";
-import { openNotification } from "../utils";
+import { notifications } from "../Constants";
+import { openNotification } from "../Utils";
 
 const SetUpUserQuizPastHistory = async (token) => {
   try {

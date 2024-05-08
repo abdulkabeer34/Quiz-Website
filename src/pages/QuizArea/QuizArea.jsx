@@ -1,22 +1,23 @@
 import React, { useContext, useEffect, useState } from "react";
 import { FaRegClock } from "react-icons/fa";
 import "./QuizArea.scss";
-import { AntdButton, QuizAreaProgressBar } from "../../styledComponents";
+import { AntdButton, QuizAreaProgressBar } from "./StyledComponents";
 import { Boolean, MultipleChoice } from "../../Components";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { setData, setTimer, setWarningNumber } from "../../store/quizStore";
+import { setData, setTimer, setWarningNumber } from "../../Store/QuizStore";
 import {
   useStartAssignmentData,
   useHandleQuizSubmit,
   useSetSelectedAnswer,
   useInitializeQuiz,
   useWarningModal,
-} from "../../customHooks";
-import { AntdModal } from "../../utils";
+} from "../../CustomHooks";
+
+import { AntdModal } from "../../Utils";
 import { ConfigProvider } from "antd";
-import { QuizAreaContext } from "../../store/ContextApiStore";
-import { ToggleModal } from "../../store/quizAreaStore";
+import { QuizAreaContext } from "../../Store/ContextApiStore";
+import { ToggleModal } from "../../Store/QuizAreaStore";
 
 export const QuizArea = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(3);
@@ -106,7 +107,7 @@ export const QuizArea = () => {
       dataId,
     });
 
-  if (!data.quiz || !data || !data.quiz[currentQuestionIndex]) return;
+  if ( !data  || !data.quiz || data.basicInfo  || !data.quiz[currentQuestionIndex]) return;
 
   return (
     <div className="quiz-area-main">

@@ -375,6 +375,2943 @@
             "websiteLeaved": "null"
           },
           "dataId": "V2VkIE1heSAwMSAyMDI0IDE0OjQ2OjAwIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Music",
+              "question": "Which of these Johns was murdered by gunshots outside the Dakota in New York in 1980?",
+              "correct_answer": "John Lennon",
+              "incorrect_answers": [
+                "Johnny Thunders",
+                "John Denver",
+                "John Cascella"
+              ],
+              "shuffledAnswers": [
+                "Johnny Thunders",
+                "John Denver",
+                "John Cascella",
+                "John Lennon"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Music",
+              "question": "Which of these songs did Jimi Hendrix cover?",
+              "correct_answer": "All of these songs",
+              "incorrect_answers": [
+                "Sgt. Pepper&#039;s Lonely Hearts Club Band",
+                "All Along the Watchtower",
+                "House of the Rising Sun"
+              ],
+              "shuffledAnswers": [
+                "Sgt. Pepper&#039;s Lonely Hearts Club Band",
+                "All of these songs",
+                "All Along the Watchtower",
+                "House of the Rising Sun"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Music",
+              "question": "Which band had hits in 1975 with the songs, &#039;One Of These Nights&#039; &amp; &#039;Lyin Eyes&#039;?",
+              "correct_answer": "The Eagles",
+              "incorrect_answers": [
+                "Fools Gold",
+                "The Doobie Brothers",
+                "Fleetwood Mac"
+              ],
+              "shuffledAnswers": [
+                "The Eagles",
+                "Fools Gold",
+                "The Doobie Brothers",
+                "Fleetwood Mac"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            }
+          ],
+          "basicInfo": {
+            "amount": 3,
+            "category": 12,
+            "difficulty": "any",
+            "type": "any",
+            "submited": "not started",
+            "expirationTime": 5,
+            "startingDate": "null",
+            "submittedTime": "null",
+            "websiteLeaved": "null"
+          },
+          "dataId": "VGh1IE1heSAwMiAyMDI0IDE4OjI4OjQ0IEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Books",
+              "question": "What position does Harry Potter play in Quidditch?",
+              "correct_answer": "Seeker",
+              "incorrect_answers": [
+                "Beater",
+                "Chaser",
+                "Keeper"
+              ],
+              "shuffledAnswers": [
+                "Beater",
+                "Chaser",
+                "Keeper",
+                "Seeker"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": 0
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "Which of the following is NOT a work done by Shakespeare?",
+              "correct_answer": "Trial of Temperance",
+              "incorrect_answers": [
+                "Measure For Measure",
+                "Titus Andronicus",
+                "Cymbeline"
+              ],
+              "shuffledAnswers": [
+                "Measure For Measure",
+                "Trial of Temperance",
+                "Titus Andronicus",
+                "Cymbeline"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": 3
+            },
+            {
+              "type": "multiple",
+              "difficulty": "easy",
+              "category": "Entertainment: Books",
+              "question": "Who wrote the novel &#039;Fear And Loathing In Las Vegas&#039;?",
+              "correct_answer": "Hunter S. Thompson",
+              "incorrect_answers": [
+                "F. Scott Fitzgerald",
+                "Henry Miller",
+                "William S. Burroughs"
+              ],
+              "shuffledAnswers": [
+                "F. Scott Fitzgerald",
+                "Henry Miller",
+                "Hunter S. Thompson",
+                "William S. Burroughs"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": 2
+            },
+            {
+              "type": "multiple",
+              "difficulty": "easy",
+              "category": "Entertainment: Books",
+              "question": "How many Harry Potter books are there?",
+              "correct_answer": "7",
+              "incorrect_answers": [
+                "8",
+                "5",
+                "6"
+              ],
+              "shuffledAnswers": [
+                "8",
+                "5",
+                "7",
+                "6"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In which classic novel by Mark Twain did a beggar and Prince of Wales switch clothes, and learn about social class inequality?",
+              "correct_answer": "The Prince and the Pauper",
+              "incorrect_answers": [
+                "Hamlet",
+                "Wealthy Boy and the Schmuck",
+                "A Modern Twain Story"
+              ],
+              "shuffledAnswers": [
+                "Hamlet",
+                "Wealthy Boy and the Schmuck",
+                "The Prince and the Pauper",
+                "A Modern Twain Story"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "easy",
+              "category": "Entertainment: Books",
+              "question": "Which of the following is the world&#039;s best-selling book?",
+              "correct_answer": "The Lord of the Rings",
+              "incorrect_answers": [
+                "The Little Prince",
+                "Harry Potter and the Philosopher&#039;s Stone",
+                "The Da Vinci Code"
+              ],
+              "shuffledAnswers": [
+                "The Little Prince",
+                "Harry Potter and the Philosopher&#039;s Stone",
+                "The Lord of the Rings",
+                "The Da Vinci Code"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "easy",
+              "category": "Entertainment: Books",
+              "question": "What is the name of the three headed dog in Harry Potter and the Sorcerer&#039;s Stone?",
+              "correct_answer": "Fluffy",
+              "incorrect_answers": [
+                "Spike",
+                "Poofy",
+                "Spot"
+              ],
+              "shuffledAnswers": [
+                "Fluffy",
+                "Spike",
+                "Poofy",
+                "Spot"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Books",
+              "question": "By what nickname is Jack Dawkins known in the Charles Dickens novel, &#039;Oliver Twist&#039;?",
+              "correct_answer": "The Artful Dodger",
+              "incorrect_answers": [
+                "Fagin",
+                "Bull&rsquo;s-eye",
+                "Mr. Fang"
+              ],
+              "shuffledAnswers": [
+                "Fagin",
+                "Bull&rsquo;s-eye",
+                "Mr. Fang",
+                "The Artful Dodger"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In the book series &quot;Odd Thomas&quot;, Danny Jessup has what genetic disease? ",
+              "correct_answer": " Osteogenesis Imperfecta",
+              "incorrect_answers": [
+                "Spinocerebellar ataxia",
+                "Adrenoleukodystrophy",
+                "Cystic Fibrosis"
+              ],
+              "shuffledAnswers": [
+                " Osteogenesis Imperfecta",
+                "Spinocerebellar ataxia",
+                "Adrenoleukodystrophy",
+                "Cystic Fibrosis"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Books",
+              "question": "According to The Hitchhiker&#039;s Guide to the Galaxy book, the answer to life, the universe and everything else is...",
+              "correct_answer": "42",
+              "incorrect_answers": [
+                "Loving everyone around you",
+                "Chocolate",
+                "Death"
+              ],
+              "shuffledAnswers": [
+                "Loving everyone around you",
+                "Chocolate",
+                "Death",
+                "42"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "easy",
+              "category": "Entertainment: Books",
+              "question": "Who wrote &quot;A Tale of Two Cities&quot;?",
+              "correct_answer": "Charles Dickens",
+              "incorrect_answers": [
+                "Charles Darwin",
+                "Mark Twain",
+                "Roald Dahl"
+              ],
+              "shuffledAnswers": [
+                "Charles Darwin",
+                "Mark Twain",
+                "Charles Dickens",
+                "Roald Dahl"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Books",
+              "question": "In Romance of the Three Kingdoms, who was not a member of the Peach Garden Oath?",
+              "correct_answer": "Zhao Yun",
+              "incorrect_answers": [
+                "Liu Bei",
+                "Guan Yu",
+                "Zhang Fei"
+              ],
+              "shuffledAnswers": [
+                "Zhao Yun",
+                "Liu Bei",
+                "Guan Yu",
+                "Zhang Fei"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            }
+          ],
+          "basicInfo": {
+            "amount": 12,
+            "category": 10,
+            "difficulty": "any",
+            "type": "multiple",
+            "submited": "submitted",
+            "expirationTime": 5,
+            "startingDate": "2024-05-02T13:29:24.558Z",
+            "submittedTime": [
+              4,
+              17
+            ],
+            "websiteLeaved": "null"
+          },
+          "dataId": "VGh1IE1heSAwMiAyMDI0IDE4OjI5OjAyIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "boolean",
+              "difficulty": "easy",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Kiznaiver is an adaptation of a manga.",
+              "correct_answer": "False",
+              "incorrect_answers": [
+                "True"
+              ],
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "boolean",
+              "difficulty": "easy",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "No Game No Life first aired in 2014.",
+              "correct_answer": "True",
+              "incorrect_answers": [
+                "False"
+              ],
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "boolean",
+              "difficulty": "easy",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In Pok&eacute;mon, Ash&#039;s Pikachu refuses to go into a pokeball.",
+              "correct_answer": "True",
+              "incorrect_answers": [
+                "False"
+              ],
+              "selectedAnswer": "undefined"
+            }
+          ],
+          "basicInfo": {
+            "amount": 3,
+            "category": 31,
+            "difficulty": "easy",
+            "type": "boolean",
+            "submited": "not started",
+            "expirationTime": 5,
+            "startingDate": "null",
+            "submittedTime": "null",
+            "websiteLeaved": "null"
+          },
+          "dataId": "TW9uIE1heSAwNiAyMDI0IDE1OjE2OjI2IEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Animals",
+              "question": "&quot;Decapods&quot; are an order of ten-footed crustaceans.  Which of these are NOT decapods?",
+              "correct_answer": "Krill",
+              "incorrect_answers": [
+                "Lobsters",
+                "Shrimp",
+                "Crabs"
+              ],
+              "shuffledAnswers": [
+                "Krill",
+                "Lobsters",
+                "Shrimp",
+                "Crabs"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": 1
+            },
+            {
+              "type": "boolean",
+              "difficulty": "medium",
+              "category": "Entertainment: Video Games",
+              "question": "In the video game &quot;Transistor&quot;, &quot;Red&quot; is the name of the main character.",
+              "correct_answer": "True",
+              "incorrect_answers": [
+                "False"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": 1
+            },
+            {
+              "type": "boolean",
+              "difficulty": "hard",
+              "category": "Vehicles",
+              "question": "The term &quot;GTO&quot; was originated by Ferrari?",
+              "correct_answer": "True",
+              "incorrect_answers": [
+                "False"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": 0
+            }
+          ],
+          "basicInfo": {
+            "amount": 3,
+            "category": "any",
+            "difficulty": "any",
+            "type": "any",
+            "submited": "submitted",
+            "expirationTime": 5,
+            "startingDate": "2024-05-06T10:18:33.415Z",
+            "submittedTime": [
+              4,
+              3
+            ],
+            "websiteLeaved": "null"
+          },
+          "dataId": "TW9uIE1heSAwNiAyMDI0IDE1OjE3OjMyIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Originally another word for poppy, coquelicot is a shade of what?",
+              "correct_answer": "Red",
+              "incorrect_answers": [
+                "Green",
+                "Blue",
+                "Pink"
+              ],
+              "shuffledAnswers": [
+                "Green",
+                "Red",
+                "Blue",
+                "Pink"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which one of these Swedish companies was founded in 1943?",
+              "correct_answer": "IKEA",
+              "incorrect_answers": [
+                "H &amp; M",
+                "Lindex",
+                "Clas Ohlson"
+              ],
+              "shuffledAnswers": [
+                "IKEA",
+                "H &amp; M",
+                "Lindex",
+                "Clas Ohlson"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "The word &quot;abulia&quot; means which of the following?",
+              "correct_answer": "The inability to make decisions",
+              "incorrect_answers": [
+                "The inability to stand up",
+                "The inability to concentrate on anything",
+                "A feverish desire to rip one&#039;s clothes off"
+              ],
+              "shuffledAnswers": [
+                "The inability to stand up",
+                "The inability to concentrate on anything",
+                "The inability to make decisions",
+                "A feverish desire to rip one&#039;s clothes off"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "The Swedish word &quot;Grunka&quot; means what in English?",
+              "correct_answer": "Thing",
+              "incorrect_answers": [
+                "People",
+                "Place",
+                "Pineapple"
+              ],
+              "shuffledAnswers": [
+                "People",
+                "Place",
+                "Pineapple",
+                "Thing"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which church&#039;s interior in Vatican City was designed in 1503 by renaissance architects including Bramante, Michelangelo and Bernini?",
+              "correct_answer": "St. Peter&#039;s Basilica",
+              "incorrect_answers": [
+                "Catania Cathedral",
+                "St. Mark&rsquo;s Basilica",
+                "The Duomo of Florence"
+              ],
+              "shuffledAnswers": [
+                "Catania Cathedral",
+                "St. Peter&#039;s Basilica",
+                "St. Mark&rsquo;s Basilica",
+                "The Duomo of Florence"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "When was &quot;YouTube&quot; founded?",
+              "correct_answer": "February 14, 2005",
+              "incorrect_answers": [
+                "May 22, 2004",
+                "September 12, 2005",
+                "July 19, 2009"
+              ],
+              "shuffledAnswers": [
+                "February 14, 2005",
+                "May 22, 2004",
+                "September 12, 2005",
+                "July 19, 2009"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Before the 19th Century, the &quot;Living Room&quot; was originally called the...",
+              "correct_answer": "Parlor",
+              "incorrect_answers": [
+                "Open Room",
+                "Sitting Room",
+                "Loft"
+              ],
+              "shuffledAnswers": [
+                "Parlor",
+                "Open Room",
+                "Sitting Room",
+                "Loft"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "How long did it take the motorized window washers of the original World Trade Center to clean the entire exterior of the building?",
+              "correct_answer": "1 Month",
+              "incorrect_answers": [
+                "3 Weeks",
+                "1 Week",
+                "2 Months"
+              ],
+              "shuffledAnswers": [
+                "3 Weeks",
+                "1 Month",
+                "1 Week",
+                "2 Months"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which of the following  British Monarchs never appeared on a circulated pound sterling coin?",
+              "correct_answer": "Edward VIII",
+              "incorrect_answers": [
+                "Victoria",
+                "George VI",
+                "Charles II"
+              ],
+              "shuffledAnswers": [
+                "Victoria",
+                "George VI",
+                "Edward VIII",
+                "Charles II"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What is the romanized Chinese word for &quot;airplane&quot;?",
+              "correct_answer": "Feiji",
+              "incorrect_answers": [
+                "Qiche",
+                "Zongxian",
+                "Huojian"
+              ],
+              "shuffledAnswers": [
+                "Feiji",
+                "Qiche",
+                "Zongxian",
+                "Huojian"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "The word &quot;astasia&quot; means which of the following?",
+              "correct_answer": "The inability to stand up",
+              "incorrect_answers": [
+                "The inability to make decisions",
+                "The inability to concentrate on anything",
+                "A feverish desire to rip one&#039;s clothes off"
+              ],
+              "shuffledAnswers": [
+                "The inability to make decisions",
+                "The inability to concentrate on anything",
+                "The inability to stand up",
+                "A feverish desire to rip one&#039;s clothes off"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What type of dog is &#039;Handsome Dan&#039;, the mascot of Yale University?",
+              "correct_answer": "Bulldog",
+              "incorrect_answers": [
+                "Yorkshire Terrier",
+                "Boxer",
+                "Pug"
+              ],
+              "shuffledAnswers": [
+                "Yorkshire Terrier",
+                "Boxer",
+                "Pug",
+                "Bulldog"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Electronic music producer Kygo&#039;s popularity skyrocketed after a certain remix. Which song did he remix?",
+              "correct_answer": "Ed Sheeran - I See Fire",
+              "incorrect_answers": [
+                "Marvin Gaye - Sexual Healing",
+                "Coldplay - Midnight",
+                "a-ha - Take On Me"
+              ],
+              "shuffledAnswers": [
+                "Ed Sheeran - I See Fire",
+                "Marvin Gaye - Sexual Healing",
+                "Coldplay - Midnight",
+                "a-ha - Take On Me"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Sciophobia is the fear of what?",
+              "correct_answer": "Shadows",
+              "incorrect_answers": [
+                "Eating",
+                "Bright lights",
+                "Transportation"
+              ],
+              "shuffledAnswers": [
+                "Eating",
+                "Bright lights",
+                "Shadows",
+                "Transportation"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which of the following languages does NOT use gender as a part of its grammar?",
+              "correct_answer": "Turkish",
+              "incorrect_answers": [
+                "German",
+                "Danish",
+                "Polish"
+              ],
+              "shuffledAnswers": [
+                "German",
+                "Danish",
+                "Polish",
+                "Turkish"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which film star has his statue in Leicester Square?",
+              "correct_answer": "Charlie Chaplin",
+              "incorrect_answers": [
+                "Paul Newman",
+                "Rowan Atkinson ",
+                "Alfred Hitchcock"
+              ],
+              "shuffledAnswers": [
+                "Paul Newman",
+                "Rowan Atkinson ",
+                "Charlie Chaplin",
+                "Alfred Hitchcock"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Who founded the Khan Academy?",
+              "correct_answer": "Sal Khan",
+              "incorrect_answers": [
+                "Ben Khan",
+                "Kitt Khan",
+                "Adel Khan"
+              ],
+              "shuffledAnswers": [
+                "Sal Khan",
+                "Ben Khan",
+                "Kitt Khan",
+                "Adel Khan"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What year was Queen Elizabeth II born?",
+              "correct_answer": "1926",
+              "incorrect_answers": [
+                "1923",
+                "1929",
+                "1930"
+              ],
+              "shuffledAnswers": [
+                "1923",
+                "1926",
+                "1929",
+                "1930"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "In flight systems, what does the initialism &quot;TCAS&quot; stand for?",
+              "correct_answer": "Traffic Collision Avoidance System",
+              "incorrect_answers": [
+                "Traffic Communication Alert System",
+                "Traffic Configuration Alignment System",
+                "Traffic Call-sign Abbreviation System"
+              ],
+              "shuffledAnswers": [
+                "Traffic Communication Alert System",
+                "Traffic Configuration Alignment System",
+                "Traffic Collision Avoidance System",
+                "Traffic Call-sign Abbreviation System"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Nephelococcygia is the practice of doing what?",
+              "correct_answer": "Finding shapes in clouds",
+              "incorrect_answers": [
+                "Sleeping with your eyes open",
+                "Breaking glass with your voice",
+                "Swimming in freezing water"
+              ],
+              "shuffledAnswers": [
+                "Sleeping with your eyes open",
+                "Breaking glass with your voice",
+                "Swimming in freezing water",
+                "Finding shapes in clouds"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What is the romanized Arabic word for &quot;moon&quot;?",
+              "correct_answer": "Qamar",
+              "incorrect_answers": [
+                "Najma",
+                "Kawkab",
+                "Shams"
+              ],
+              "shuffledAnswers": [
+                "Najma",
+                "Kawkab",
+                "Qamar",
+                "Shams"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "How many calories are in a 355 ml can of Pepsi Cola?",
+              "correct_answer": "150",
+              "incorrect_answers": [
+                "200",
+                "100",
+                "155"
+              ],
+              "shuffledAnswers": [
+                "200",
+                "150",
+                "100",
+                "155"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "If you planted the seeds of Quercus robur, what would grow?",
+              "correct_answer": "Trees",
+              "incorrect_answers": [
+                "Grains",
+                "Vegetables",
+                "Flowers"
+              ],
+              "shuffledAnswers": [
+                "Grains",
+                "Vegetables",
+                "Flowers",
+                "Trees"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What is the romanized Korean word for &quot;heart&quot;?",
+              "correct_answer": "Simjang",
+              "incorrect_answers": [
+                "Aejeong",
+                "Jeongsin",
+                "Segseu"
+              ],
+              "shuffledAnswers": [
+                "Aejeong",
+                "Jeongsin",
+                "Simjang",
+                "Segseu"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "In the MMO RPG &quot;Realm of the Mad God&quot;, what dungeon is widely considered to be the most difficult?",
+              "correct_answer": "The Shatter&#039;s",
+              "incorrect_answers": [
+                "Snake Pit",
+                "The Tomb of the Acient&#039;s",
+                "The Puppet Master&#039;s Theater"
+              ],
+              "shuffledAnswers": [
+                "The Shatter&#039;s",
+                "Snake Pit",
+                "The Tomb of the Acient&#039;s",
+                "The Puppet Master&#039;s Theater"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What is the airspeed velocity of an unladen swallow?",
+              "correct_answer": "24 MPH",
+              "incorrect_answers": [
+                "15 MPH",
+                "20 MPH",
+                "200 MPH"
+              ],
+              "shuffledAnswers": [
+                "15 MPH",
+                "24 MPH",
+                "20 MPH",
+                "200 MPH"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which product did Nokia, the telecommunications company, originally sell?",
+              "correct_answer": "Paper",
+              "incorrect_answers": [
+                "Phones",
+                "Computers",
+                "Processors"
+              ],
+              "shuffledAnswers": [
+                "Phones",
+                "Computers",
+                "Paper",
+                "Processors"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "In &quot;Battle Cats&quot;, what is Moneko / MISS Moneko&#039;s critical percentage rate?",
+              "correct_answer": "15%",
+              "incorrect_answers": [
+                "20%",
+                "10%",
+                "25%"
+              ],
+              "shuffledAnswers": [
+                "15%",
+                "20%",
+                "10%",
+                "25%"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What was Bank of America originally established as?",
+              "correct_answer": "Bank of Italy",
+              "incorrect_answers": [
+                "Bank of Long Island",
+                "Bank of Pennsylvania",
+                "Bank of Charlotte"
+              ],
+              "shuffledAnswers": [
+                "Bank of Long Island",
+                "Bank of Italy",
+                "Bank of Pennsylvania",
+                "Bank of Charlotte"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Disney&#039;s Haunted Mansion is home to a trio of Hitchhiking Ghosts. Which of these is NOT one of them?",
+              "correct_answer": "Harry",
+              "incorrect_answers": [
+                "Gus",
+                "Phineas",
+                "Ezra"
+              ],
+              "shuffledAnswers": [
+                "Gus",
+                "Harry",
+                "Phineas",
+                "Ezra"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "The words &quot;bungalow&quot; and &quot;shampoo&quot; originate from the languages of which country?",
+              "correct_answer": "India",
+              "incorrect_answers": [
+                "Papua New Guinea",
+                "Ethiopia",
+                "China"
+              ],
+              "shuffledAnswers": [
+                "Papua New Guinea",
+                "Ethiopia",
+                "India",
+                "China"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "How many notes are there on a standard grand piano?",
+              "correct_answer": "88",
+              "incorrect_answers": [
+                "98",
+                "108",
+                "78"
+              ],
+              "shuffledAnswers": [
+                "98",
+                "88",
+                "108",
+                "78"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which of the following is not another name for the eggplant?",
+              "correct_answer": "Potimarron",
+              "incorrect_answers": [
+                "Brinjal",
+                "Guinea Squash",
+                "Melongene"
+              ],
+              "shuffledAnswers": [
+                "Brinjal",
+                "Potimarron",
+                "Guinea Squash",
+                "Melongene"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What is the weight of a Gold Bar in Fallout: New Vegas?",
+              "correct_answer": "35 Pounds",
+              "incorrect_answers": [
+                "30 Pounds",
+                "40 Pounds",
+                "32.50 Pounds"
+              ],
+              "shuffledAnswers": [
+                "30 Pounds",
+                "40 Pounds",
+                "32.50 Pounds",
+                "35 Pounds"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which of these banks are NOT authorized to issue currency notes in Hong Kong?",
+              "correct_answer": "OCBC",
+              "incorrect_answers": [
+                "HSBC",
+                "Standard Chartered",
+                "Bank of China"
+              ],
+              "shuffledAnswers": [
+                "HSBC",
+                "Standard Chartered",
+                "Bank of China",
+                "OCBC"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which musician has collaborated with American producer Porter Robinson and released the 2016 song &quot;Shelter&quot;?",
+              "correct_answer": "Madeon",
+              "incorrect_answers": [
+                "Mat Zo",
+                "deadmau5",
+                "Zedd"
+              ],
+              "shuffledAnswers": [
+                "Mat Zo",
+                "deadmau5",
+                "Madeon",
+                "Zedd"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What year was the RoboSapien toy robot released?",
+              "correct_answer": "2004",
+              "incorrect_answers": [
+                "2000",
+                "2001",
+                "2006"
+              ],
+              "shuffledAnswers": [
+                "2004",
+                "2000",
+                "2001",
+                "2006"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "According to the 2014-2015 Australian Bureau of Statistics, what percentage of Australians were born overseas?",
+              "correct_answer": "28%",
+              "incorrect_answers": [
+                "13%",
+                "20%",
+                "7%"
+              ],
+              "shuffledAnswers": [
+                "13%",
+                "28%",
+                "20%",
+                "7%"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Where is Apple Inc. headquartered?",
+              "correct_answer": "Cupertino, California",
+              "incorrect_answers": [
+                "Redwood City, California",
+                "Redmond, Washington",
+                "Santa Monica, CA"
+              ],
+              "shuffledAnswers": [
+                "Cupertino, California",
+                "Redwood City, California",
+                "Redmond, Washington",
+                "Santa Monica, CA"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What is the most commonly used noun in the English language?",
+              "correct_answer": "Time",
+              "incorrect_answers": [
+                "Home",
+                "Water",
+                "Man"
+              ],
+              "shuffledAnswers": [
+                "Home",
+                "Time",
+                "Water",
+                "Man"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Located in Chile, El Teniente is the world&#039;s largest underground mine for what metal?",
+              "correct_answer": "Copper",
+              "incorrect_answers": [
+                "Iron",
+                "Nickel",
+                "Silver"
+              ],
+              "shuffledAnswers": [
+                "Copper",
+                "Iron",
+                "Nickel",
+                "Silver"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "The Quadrangularis Reversum is best described as which of the following?",
+              "correct_answer": "A percussion instrument",
+              "incorrect_answers": [
+                "A building in Oxford University",
+                "A chess move",
+                "A geometric theorem"
+              ],
+              "shuffledAnswers": [
+                "A building in Oxford University",
+                "A chess move",
+                "A geometric theorem",
+                "A percussion instrument"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Virtual reality company Oculus VR lost which of it&#039;s co-founders in a freak car accident in 2013?",
+              "correct_answer": "Andrew Scott Reisse",
+              "incorrect_answers": [
+                "Nate Mitchell",
+                "Jack McCauley",
+                "Palmer Luckey"
+              ],
+              "shuffledAnswers": [
+                "Andrew Scott Reisse",
+                "Nate Mitchell",
+                "Jack McCauley",
+                "Palmer Luckey"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "De Eemhof, Port Zelande and Het Heijderbos are holiday villas owned by what company?",
+              "correct_answer": "Center Parcs",
+              "incorrect_answers": [
+                "Yelloh Village",
+                "Keycamp",
+                "Villa Plus"
+              ],
+              "shuffledAnswers": [
+                "Yelloh Village",
+                "Keycamp",
+                "Villa Plus",
+                "Center Parcs"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which of the following chemicals are found in eggplant seeds?",
+              "correct_answer": "Nicotine",
+              "incorrect_answers": [
+                "Mescaline",
+                "Cyanide",
+                "Psilocybin"
+              ],
+              "shuffledAnswers": [
+                "Mescaline",
+                "Cyanide",
+                "Nicotine",
+                "Psilocybin"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "If someone said &quot;you are olid&quot;, what would they mean?",
+              "correct_answer": "You smell extremely unpleasant.",
+              "incorrect_answers": [
+                "You are out of shape/weak.",
+                "Your appearance is repulsive.",
+                "You are incomprehensible/an idiot."
+              ],
+              "shuffledAnswers": [
+                "You are out of shape/weak.",
+                "Your appearance is repulsive.",
+                "You smell extremely unpleasant.",
+                "You are incomprehensible/an idiot."
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "In &quot;Resident Evil 3&quot;, how many inventory slots does Jill have at the start of the game?",
+              "correct_answer": "10",
+              "incorrect_answers": [
+                "6",
+                "8",
+                "12"
+              ],
+              "shuffledAnswers": [
+                "10",
+                "6",
+                "8",
+                "12"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What does the Latin phrase &quot;Veni, vidi, vici&quot; translate into English?",
+              "correct_answer": "I came, I saw, I conquered",
+              "incorrect_answers": [
+                "See no evil, hear no evil, speak no evil",
+                "Life, liberty, and happiness",
+                "Past, present, and future"
+              ],
+              "shuffledAnswers": [
+                "See no evil, hear no evil, speak no evil",
+                "Life, liberty, and happiness",
+                "I came, I saw, I conquered",
+                "Past, present, and future"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which of the following is an existing family in &quot;The Sims&quot;?",
+              "correct_answer": "The Goth Family",
+              "incorrect_answers": [
+                "The Family",
+                "The Simoleon Family",
+                "The Proud Family"
+              ],
+              "shuffledAnswers": [
+                "The Goth Family",
+                "The Family",
+                "The Simoleon Family",
+                "The Proud Family"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Named after the mallow flower, mauve is a shade of what?",
+              "correct_answer": "Purple",
+              "incorrect_answers": [
+                "Red",
+                "Brown",
+                "Pink"
+              ],
+              "shuffledAnswers": [
+                "Purple",
+                "Red",
+                "Brown",
+                "Pink"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": 1
+            }
+          ],
+          "basicInfo": {
+            "amount": 50,
+            "category": 9,
+            "difficulty": "hard",
+            "type": "multiple",
+            "submited": "submitted",
+            "expirationTime": 5,
+            "startingDate": "2024-05-06T10:22:23.928Z",
+            "submittedTime": [
+              null,
+              null
+            ],
+            "websiteLeaved": "null"
+          },
+          "dataId": "TW9uIE1heSAwNiAyMDI0IDE1OjIxOjQ0IEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "shuffledAnswers": [],
+              "question": null,
+              "correctAnswer": null,
+              "correctAnswerIndex": null,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "shuffledAnswers": [],
+              "question": null,
+              "correctAnswer": null,
+              "correctAnswerIndex": null,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "shuffledAnswers": [],
+              "question": null,
+              "correctAnswer": null,
+              "correctAnswerIndex": null,
+              "selectedAnswer": "undefined"
+            }
+          ],
+          "basicInfo": {
+            "amount": 3,
+            "category": "any",
+            "difficulty": "any",
+            "type": "multiple",
+            "submited": "not started",
+            "startingDate": "null",
+            "submittedTime": "null",
+            "websiteLeaved": null
+          },
+          "dataId": "TW9uIE1heSAwNiAyMDI0IDE1OjQwOjQxIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Which JoJo&#039;s Bizarre Adventure character possesses the Stand named Silver Chariot?",
+              "correct_answer": "Jean Pierre Polnareff",
+              "incorrect_answers": [
+                "Noriaki Kakyoin",
+                "Hol Horse",
+                "Hermes Costello"
+              ],
+              "shuffledAnswers": [
+                "Noriaki Kakyoin",
+                "Hol Horse",
+                "Jean Pierre Polnareff",
+                "Hermes Costello"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "How does the character Dragowizard, Qinus Axia&#039;s from the anime &quot;Buddyfight&quot; differ between the Japanese and English dubs?",
+              "correct_answer": "Different Gender",
+              "incorrect_answers": [
+                "Different Body Proportions",
+                "Different Backstory",
+                "Different Appearance"
+              ],
+              "shuffledAnswers": [
+                "Different Body Proportions",
+                "Different Backstory",
+                "Different Gender",
+                "Different Appearance"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Aoi Miyamori is the production manager of what anime in &quot;Shirobako&quot;?",
+              "correct_answer": "The Third Aerial Girls Squad",
+              "incorrect_answers": [
+                "Exodus!",
+                "Andes Chucky",
+                "Angel Beats!"
+              ],
+              "shuffledAnswers": [
+                "Exodus!",
+                "Andes Chucky",
+                "The Third Aerial Girls Squad",
+                "Angel Beats!"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "What was the reason for the banning of episode 35 of the &quot;Pok&eacute;mon Original Series&quot; Anime?",
+              "correct_answer": "Gun Usage",
+              "incorrect_answers": [
+                "Flashing Images",
+                "Jynx",
+                "Strong Violence"
+              ],
+              "shuffledAnswers": [
+                "Flashing Images",
+                "Jynx",
+                "Gun Usage",
+                "Strong Violence"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In &quot;JoJo&#039;s Bizarre Adventure&quot;, which of the following Stands does NOT have a time-based ability?",
+              "correct_answer": "20th Century Boy",
+              "incorrect_answers": [
+                "Made in Heaven",
+                "Star Platinum",
+                "The World"
+              ],
+              "shuffledAnswers": [
+                "Made in Heaven",
+                "Star Platinum",
+                "The World",
+                "20th Century Boy"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Which of the stands from &quot;JoJo&#039;s Bizarre Adventure&quot; mimics the likeness of a tomato?",
+              "correct_answer": "Pearl Jam",
+              "incorrect_answers": [
+                "Red Hot Chili Pepper",
+                "Cream Starter",
+                "Nut King Call"
+              ],
+              "shuffledAnswers": [
+                "Pearl Jam",
+                "Red Hot Chili Pepper",
+                "Cream Starter",
+                "Nut King Call"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In &quot;Toriko&quot;, which of the following Heavenly Kings has an enhanced sense of Hearing?",
+              "correct_answer": "Zebra",
+              "incorrect_answers": [
+                "Coco",
+                "Sunny",
+                "Toriko"
+              ],
+              "shuffledAnswers": [
+                "Coco",
+                "Zebra",
+                "Sunny",
+                "Toriko"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In the anime Assassination Classroom what is the class that Korosensei teaches?",
+              "correct_answer": "Class 3-E",
+              "incorrect_answers": [
+                "Class 3-A",
+                "Class 3-B",
+                "Class 3-D"
+              ],
+              "shuffledAnswers": [
+                "Class 3-A",
+                "Class 3-E",
+                "Class 3-B",
+                "Class 3-D"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In &quot;To Love-Ru&quot;, who is the first to hear of Yami&#039;s past from her?",
+              "correct_answer": "Rito",
+              "incorrect_answers": [
+                "Mikan",
+                "Lala",
+                "Haruna"
+              ],
+              "shuffledAnswers": [
+                "Mikan",
+                "Lala",
+                "Haruna",
+                "Rito"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Which studio animated Soul Eater?",
+              "correct_answer": "Bones",
+              "incorrect_answers": [
+                "Kyoto Animation",
+                "xebec",
+                "Production I.G"
+              ],
+              "shuffledAnswers": [
+                "Bones",
+                "Kyoto Animation",
+                "xebec",
+                "Production I.G"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "What year did the anime &quot;Himouto! Umaru-chan&quot; air?",
+              "correct_answer": "2015",
+              "incorrect_answers": [
+                "2014",
+                "2012",
+                "2013"
+              ],
+              "shuffledAnswers": [
+                "2014",
+                "2012",
+                "2015",
+                "2013"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In &quot;Shakugan no Shana&quot; what was the Shana usually referred as?",
+              "correct_answer": "Flame-Haired Burning-Eyed Hunter",
+              "incorrect_answers": [
+                "Flame Haze",
+                "Flame-Haired Burning-Eyed Haze",
+                "Shana"
+              ],
+              "shuffledAnswers": [
+                "Flame Haze",
+                "Flame-Haired Burning-Eyed Haze",
+                "Shana",
+                "Flame-Haired Burning-Eyed Hunter"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In &quot;Puella Magi Madoka Magica&quot;, what is the first name of Madoka&#039;s younger brother?",
+              "correct_answer": "Tatsuya",
+              "incorrect_answers": [
+                "Montoya",
+                "Tomohisa",
+                "Minato"
+              ],
+              "shuffledAnswers": [
+                "Tatsuya",
+                "Montoya",
+                "Tomohisa",
+                "Minato"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Which studio made Cowboy Bebop?",
+              "correct_answer": "Sunrise",
+              "incorrect_answers": [
+                "Bones",
+                "Madhouse",
+                "Pierriot"
+              ],
+              "shuffledAnswers": [
+                "Bones",
+                "Madhouse",
+                "Sunrise",
+                "Pierriot"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "What studio animated Fullmetal Alchemist?",
+              "correct_answer": "Bones",
+              "incorrect_answers": [
+                "Trigger",
+                "Pierrot",
+                "xebec"
+              ],
+              "shuffledAnswers": [
+                "Bones",
+                "Trigger",
+                "Pierrot",
+                "xebec"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In the anime, &quot;Super Sonico&quot;, what is Super Sonico&#039;s favorite food?",
+              "correct_answer": "Macroons",
+              "incorrect_answers": [
+                "Ice Cream",
+                "Pizza",
+                "Chips"
+              ],
+              "shuffledAnswers": [
+                "Ice Cream",
+                "Pizza",
+                "Chips",
+                "Macroons"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "What is the name of the device that allows for infinite energy in the anime &quot;Dimension W&quot;?",
+              "correct_answer": "Coils",
+              "incorrect_answers": [
+                "Wires",
+                "Collectors",
+                "Tesla"
+              ],
+              "shuffledAnswers": [
+                "Coils",
+                "Wires",
+                "Collectors",
+                "Tesla"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In JoJo&#039;s Bizarre Adventure, who says &quot;Yare yare daze&quot;?",
+              "correct_answer": "Jotaro Kujo",
+              "incorrect_answers": [
+                "Joseph Joestar",
+                "Jolyne Cujoh",
+                "Koichi Hirose"
+              ],
+              "shuffledAnswers": [
+                "Joseph Joestar",
+                "Jolyne Cujoh",
+                "Koichi Hirose",
+                "Jotaro Kujo"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "The heroine of &quot;Humanity Has Declined&quot; is a mediator between humans and what?",
+              "correct_answer": "Fairies",
+              "incorrect_answers": [
+                "Elves",
+                "The Earth",
+                "Animals"
+              ],
+              "shuffledAnswers": [
+                "Elves",
+                "The Earth",
+                "Animals",
+                "Fairies"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In JoJo&#039;s Bizarre Adventure, winch character is able to accelerate time?",
+              "correct_answer": "Enrico Pucci",
+              "incorrect_answers": [
+                "Jotaro Kujo",
+                "Jolyne Cujoh",
+                "Kujo Jotaro"
+              ],
+              "shuffledAnswers": [
+                "Jotaro Kujo",
+                "Jolyne Cujoh",
+                "Enrico Pucci",
+                "Kujo Jotaro"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Which animation studio animated the 2016 anime &quot;Mob Psycho 100&quot;?",
+              "correct_answer": "Bones",
+              "incorrect_answers": [
+                "A-1 Pictures",
+                "Shaft",
+                "Madhouse"
+              ],
+              "shuffledAnswers": [
+                "A-1 Pictures",
+                "Shaft",
+                "Madhouse",
+                "Bones"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Which of the following anime of the mecha genre began airing in 1982?",
+              "correct_answer": "The Super Dimension Fortress Macross",
+              "incorrect_answers": [
+                "Mobile Suit Gundam",
+                "Armored Trooper VOTOMS",
+                "Neon Genesis Evangelion"
+              ],
+              "shuffledAnswers": [
+                "The Super Dimension Fortress Macross",
+                "Mobile Suit Gundam",
+                "Armored Trooper VOTOMS",
+                "Neon Genesis Evangelion"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In &quot;Highschool DxD&quot;, Koneko Toujou is from what race?",
+              "correct_answer": "Nekomata",
+              "incorrect_answers": [
+                "Kitsune",
+                "Human",
+                "Kappa"
+              ],
+              "shuffledAnswers": [
+                "Nekomata",
+                "Kitsune",
+                "Human",
+                "Kappa"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Which of the following films was NOT directed by Hayao Miyazaki?",
+              "correct_answer": "Wolf Children",
+              "incorrect_answers": [
+                "Princess Mononoke",
+                "Spirited Away",
+                "Kiki&#039;s Delivery Service"
+              ],
+              "shuffledAnswers": [
+                "Princess Mononoke",
+                "Wolf Children",
+                "Spirited Away",
+                "Kiki&#039;s Delivery Service"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In &quot;Toriko&quot;, which of the following foods is knowingly compatible with Toriko?",
+              "correct_answer": "Poison Potato",
+              "incorrect_answers": [
+                "Mors Oil",
+                "Alpacookie",
+                "Parmesansho Fruit"
+              ],
+              "shuffledAnswers": [
+                "Mors Oil",
+                "Alpacookie",
+                "Poison Potato",
+                "Parmesansho Fruit"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Who voices &quot;Shou Suzuki&quot; in the English dub of &quot;Mob Psycho 100&quot;?",
+              "correct_answer": "Casey Mongillo",
+              "incorrect_answers": [
+                "Ben Diskin",
+                "Chris Niosi",
+                "David Naughton"
+              ],
+              "shuffledAnswers": [
+                "Casey Mongillo",
+                "Ben Diskin",
+                "Chris Niosi",
+                "David Naughton"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In Pok&eacute;mon Chronicles, why was Misty afraid of Gyarados?",
+              "correct_answer": "She crawled into it&#039;s mouth as a baby.",
+              "incorrect_answers": [
+                "She found it scary.",
+                "She was badly injured from it.",
+                "It is part Bug."
+              ],
+              "shuffledAnswers": [
+                "She found it scary.",
+                "She crawled into it&#039;s mouth as a baby.",
+                "She was badly injured from it.",
+                "It is part Bug."
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "The main protagonist of the fifth part of JoJo&#039;s Bizarre Adventure is which of the following?",
+              "correct_answer": "Giorno Giovanna",
+              "incorrect_answers": [
+                "Guido Mista",
+                "Jonathan Joestar",
+                "Joey JoJo"
+              ],
+              "shuffledAnswers": [
+                "Giorno Giovanna",
+                "Guido Mista",
+                "Jonathan Joestar",
+                "Joey JoJo"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In &quot;Highschool DxD&quot;, what is the name of the item some humans are born with?",
+              "correct_answer": "Sacred Gear",
+              "incorrect_answers": [
+                "Imperial Arm",
+                "Hallowed Relic",
+                "Blessed Artifact"
+              ],
+              "shuffledAnswers": [
+                "Imperial Arm",
+                "Sacred Gear",
+                "Hallowed Relic",
+                "Blessed Artifact"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "What colour hair does the main character of the Yu-Gi-Oh! original anime series have?",
+              "correct_answer": "Red, black and yellow",
+              "incorrect_answers": [
+                "Red, yellow and green",
+                "Red, black and green",
+                "Red, purple and blue"
+              ],
+              "shuffledAnswers": [
+                "Red, yellow and green",
+                "Red, black and green",
+                "Red, black and yellow",
+                "Red, purple and blue"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "What year does Part 7 of &quot;JoJo&#039;s Bizarre Adventure&quot; take place in?",
+              "correct_answer": "1890",
+              "incorrect_answers": [
+                "1888",
+                "1999",
+                "2003"
+              ],
+              "shuffledAnswers": [
+                "1888",
+                "1999",
+                "1890",
+                "2003"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In &quot;JoJo&#039;s Bizzare Adventure: Stardust Crusaders&quot;, what is the last name of the protagonist Jotaro?",
+              "correct_answer": "Kujo",
+              "incorrect_answers": [
+                "Cujoh",
+                "Joestar",
+                "Higashikata"
+              ],
+              "shuffledAnswers": [
+                "Cujoh",
+                "Joestar",
+                "Higashikata",
+                "Kujo"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "What year did &quot;Attack on Titan&quot; Season 2 begin airing?",
+              "correct_answer": "2017",
+              "incorrect_answers": [
+                "2018",
+                "2019",
+                "2020"
+              ],
+              "shuffledAnswers": [
+                "2017",
+                "2018",
+                "2019",
+                "2020"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Which one of these Manga titles was not created by Urasawa Naoki?",
+              "correct_answer": "My Father&#039;s Journal",
+              "incorrect_answers": [
+                "Billy Bat",
+                "20th Century Boys",
+                "Monster"
+              ],
+              "shuffledAnswers": [
+                "My Father&#039;s Journal",
+                "Billy Bat",
+                "20th Century Boys",
+                "Monster"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In &quot;To Love-Ru: Darkness&quot;, which of the girls attempt making a harem for Rito Yuuki?",
+              "correct_answer": "Momo Deviluke",
+              "incorrect_answers": [
+                "Yami (Golden Darkness)",
+                "Haruna Sairenji",
+                "Mea Kurosaki"
+              ],
+              "shuffledAnswers": [
+                "Momo Deviluke",
+                "Yami (Golden Darkness)",
+                "Haruna Sairenji",
+                "Mea Kurosaki"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In Dragon Ball Z, who was the first character to go Super Saiyan 2?",
+              "correct_answer": "Gohan",
+              "incorrect_answers": [
+                "Goku",
+                "Vegeta",
+                "Trunks"
+              ],
+              "shuffledAnswers": [
+                "Goku",
+                "Vegeta",
+                "Trunks",
+                "Gohan"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In the &quot;Sailor Moon&quot; series, what is Sailor Jupiter&#039;s civilian name?",
+              "correct_answer": "Makoto Kino",
+              "incorrect_answers": [
+                "Minako Aino",
+                "Usagi Tsukino",
+                "Rei Hino"
+              ],
+              "shuffledAnswers": [
+                "Makoto Kino",
+                "Minako Aino",
+                "Usagi Tsukino",
+                "Rei Hino"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Who is the main character in One Piece?",
+              "correct_answer": "Luffy",
+              "incorrect_answers": [
+                "Shanks",
+                "Zoro",
+                "Smoker"
+              ],
+              "shuffledAnswers": [
+                "Luffy",
+                "Shanks",
+                "Zoro",
+                "Smoker"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Ikki Kurogane is known by what nickname at the beginning of &quot;Chivalry of a Failed Knight&quot;?",
+              "correct_answer": "Worst One",
+              "incorrect_answers": [
+                "Another One",
+                "Blazer",
+                "Princess"
+              ],
+              "shuffledAnswers": [
+                "Another One",
+                "Blazer",
+                "Princess",
+                "Worst One"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In &quot;Love Live: School Idol Project&quot; what pseudonym does Kotori Minami use in her job as a maid?",
+              "correct_answer": "Minalinsky",
+              "incorrect_answers": [
+                "Stanoytchev",
+                "Kuznetsov",
+                "Aqours"
+              ],
+              "shuffledAnswers": [
+                "Stanoytchev",
+                "Kuznetsov",
+                "Aqours",
+                "Minalinsky"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "What sport is being played in the Anime Eyeshield 21?",
+              "correct_answer": "American Football",
+              "incorrect_answers": [
+                "Baseball",
+                "Football",
+                "Basketball"
+              ],
+              "shuffledAnswers": [
+                "American Football",
+                "Baseball",
+                "Football",
+                "Basketball"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In the &quot;Re:Zero&quot; manga series, which of the following Sin Archbishops eats Rem&#039;s existence?",
+              "correct_answer": "Ley Batenkaitos",
+              "incorrect_answers": [
+                "Roy Alphard",
+                "Petelgeuse Romanee-Conti",
+                "Louis Arneb"
+              ],
+              "shuffledAnswers": [
+                "Roy Alphard",
+                "Petelgeuse Romanee-Conti",
+                "Ley Batenkaitos",
+                "Louis Arneb"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Who wrote and directed the animated movie &quot;Spirited Away&quot; (2001)?",
+              "correct_answer": "Hayao Miyazaki",
+              "incorrect_answers": [
+                "Isao Takahata",
+                "Mamoru Hosoda",
+                "Hidetaka Miyazaki"
+              ],
+              "shuffledAnswers": [
+                "Isao Takahata",
+                "Hayao Miyazaki",
+                "Mamoru Hosoda",
+                "Hidetaka Miyazaki"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "What was studio Trigger&#039;s first original long-form animated series for television?",
+              "correct_answer": "Kill la Kill",
+              "incorrect_answers": [
+                "Kiznaiver",
+                "Inferno Cop",
+                "Gurren Lagann"
+              ],
+              "shuffledAnswers": [
+                "Kiznaiver",
+                "Kill la Kill",
+                "Inferno Cop",
+                "Gurren Lagann"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In the 2011 TV anime series, &quot;THE iDOLM@STER&quot;, what was the name of Iori&#039;s stuffed toy bunny?",
+              "correct_answer": "Charles",
+              "incorrect_answers": [
+                "Bubsy",
+                "Kero",
+                "Usagi"
+              ],
+              "shuffledAnswers": [
+                "Bubsy",
+                "Charles",
+                "Kero",
+                "Usagi"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Which Japanese music group was formed to produce theme music for the anime &quot;Guilty Crown&quot;?",
+              "correct_answer": "Egoist",
+              "incorrect_answers": [
+                "Goose house",
+                "Babymetal",
+                "Garnidelia"
+              ],
+              "shuffledAnswers": [
+                "Egoist",
+                "Goose house",
+                "Babymetal",
+                "Garnidelia"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In the series JoJo&#039;s Bizarre Adventure, which main character makes the greatest number of recurring appearances?",
+              "correct_answer": "Jotaro Kujo",
+              "incorrect_answers": [
+                "Giorno Giovanna",
+                "Joseph Joestar",
+                "Josuke Higashikata"
+              ],
+              "shuffledAnswers": [
+                "Jotaro Kujo",
+                "Giorno Giovanna",
+                "Joseph Joestar",
+                "Josuke Higashikata"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In the ADV (English) Dub of the anime &quot;Ghost Stories&quot;, which character is portrayed as a Pentacostal Christian?",
+              "correct_answer": "Momoko Koigakubo",
+              "incorrect_answers": [
+                "Hajime Aoyama",
+                "Satsuki Miyanoshita",
+                "Mio Itai"
+              ],
+              "shuffledAnswers": [
+                "Momoko Koigakubo",
+                "Hajime Aoyama",
+                "Satsuki Miyanoshita",
+                "Mio Itai"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "The main protagonist of the fourth part of JoJo&#039;s Bizarre Adventure is which of the following?",
+              "correct_answer": "Josuke Higashikata",
+              "incorrect_answers": [
+                "Yoshikage kira",
+                "Koichi Hirose",
+                "Joey JoJo"
+              ],
+              "shuffledAnswers": [
+                "Yoshikage kira",
+                "Josuke Higashikata",
+                "Koichi Hirose",
+                "Joey JoJo"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Which band name isn&#039;t a Stand in &quot;JoJo&#039;s Bizzare Adventure&quot;?",
+              "correct_answer": "AC/DC",
+              "incorrect_answers": [
+                "Green Day",
+                "Survivor",
+                "Red Hot Chili Peppers"
+              ],
+              "shuffledAnswers": [
+                "Green Day",
+                "Survivor",
+                "AC/DC",
+                "Red Hot Chili Peppers"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            }
+          ],
+          "basicInfo": {
+            "amount": 50,
+            "category": 31,
+            "difficulty": "medium",
+            "type": "multiple",
+            "submited": "not started",
+            "expirationTime": 5,
+            "startingDate": "null",
+            "submittedTime": "null",
+            "websiteLeaved": "null"
+          },
+          "dataId": "V2VkIE1heSAwOCAyMDI0IDE1OjI0OjExIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "What is Hermione Granger&#039;s middle name?",
+              "correct_answer": "Jean",
+              "incorrect_answers": [
+                "Jane",
+                "Emma",
+                "Jo"
+              ],
+              "shuffledAnswers": [
+                "Jane",
+                "Jean",
+                "Emma",
+                "Jo"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In Margaret Atwood&#039;s &quot;The Handmaid&#039;s Tale&quot;, what is Offred&#039;s real name is implied to be?",
+              "correct_answer": "June",
+              "incorrect_answers": [
+                "August",
+                "April",
+                "May"
+              ],
+              "shuffledAnswers": [
+                "June",
+                "August",
+                "April",
+                "May"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In the book series &quot;Odd Thomas&quot;, Danny Jessup has what genetic disease? ",
+              "correct_answer": " Osteogenesis Imperfecta",
+              "incorrect_answers": [
+                "Spinocerebellar ataxia",
+                "Adrenoleukodystrophy",
+                "Cystic Fibrosis"
+              ],
+              "shuffledAnswers": [
+                " Osteogenesis Imperfecta",
+                "Spinocerebellar ataxia",
+                "Adrenoleukodystrophy",
+                "Cystic Fibrosis"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "Who wrote the novel &quot;Moby-Dick&quot;?",
+              "correct_answer": "Herman Melville",
+              "incorrect_answers": [
+                "William Golding",
+                "William Shakespeare",
+                "J. R. R. Tolkien"
+              ],
+              "shuffledAnswers": [
+                "Herman Melville",
+                "William Golding",
+                "William Shakespeare",
+                "J. R. R. Tolkien"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In the Magic: The Gathering universe, the Fallen Empires expansion takes place on which continent?",
+              "correct_answer": "Sarpadia",
+              "incorrect_answers": [
+                "Otaria",
+                "Terisiare",
+                "Shiv"
+              ],
+              "shuffledAnswers": [
+                "Otaria",
+                "Sarpadia",
+                "Terisiare",
+                "Shiv"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "Which of the following is NOT a work done by Shakespeare?",
+              "correct_answer": "Trial of Temperance",
+              "incorrect_answers": [
+                "Measure For Measure",
+                "Titus Andronicus",
+                "Cymbeline"
+              ],
+              "shuffledAnswers": [
+                "Measure For Measure",
+                "Titus Andronicus",
+                "Trial of Temperance",
+                "Cymbeline"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "Which fictional English county was the setting for Thomas Hardy&#039;s novels?",
+              "correct_answer": "Wessex",
+              "incorrect_answers": [
+                "Barsetshire",
+                "Fulchester",
+                "Ambridge"
+              ],
+              "shuffledAnswers": [
+                "Barsetshire",
+                "Wessex",
+                "Fulchester",
+                "Ambridge"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In which classic novel is there a character named Homer Simpson?",
+              "correct_answer": "The Day of the Locust",
+              "incorrect_answers": [
+                "Catch-22",
+                "Of Mice and Men",
+                "A Separate Peace"
+              ],
+              "shuffledAnswers": [
+                "Catch-22",
+                "Of Mice and Men",
+                "A Separate Peace",
+                "The Day of the Locust"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In the &quot;Harry Potter&quot; series, what is Headmaster Dumbledore&#039;s full name?",
+              "correct_answer": "Albus Percival Wulfric Brian Dumbledore",
+              "incorrect_answers": [
+                "Albus Valum Jetta Mobius Dumbledore",
+                "Albus James Lunae Otto Dumbledore",
+                "Albus Valencium Horatio Kul Dumbledore"
+              ],
+              "shuffledAnswers": [
+                "Albus Valum Jetta Mobius Dumbledore",
+                "Albus James Lunae Otto Dumbledore",
+                "Albus Valencium Horatio Kul Dumbledore",
+                "Albus Percival Wulfric Brian Dumbledore"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In which classic novel by Mark Twain did a beggar and Prince of Wales switch clothes, and learn about social class inequality?",
+              "correct_answer": "The Prince and the Pauper",
+              "incorrect_answers": [
+                "Hamlet",
+                "Wealthy Boy and the Schmuck",
+                "A Modern Twain Story"
+              ],
+              "shuffledAnswers": [
+                "Hamlet",
+                "The Prince and the Pauper",
+                "Wealthy Boy and the Schmuck",
+                "A Modern Twain Story"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "What is Ron Weasley&#039;s middle name?",
+              "correct_answer": "Bilius",
+              "incorrect_answers": [
+                "Arthur",
+                "John",
+                "Dominic"
+              ],
+              "shuffledAnswers": [
+                "Arthur",
+                "John",
+                "Dominic",
+                "Bilius"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "Abel Magwitch is a character from which Charles Dickens novel?",
+              "correct_answer": "Great Expectations",
+              "incorrect_answers": [
+                "The Pickwick Papers",
+                "Nicholas Nickleby",
+                "Oliver Twist"
+              ],
+              "shuffledAnswers": [
+                "The Pickwick Papers",
+                "Nicholas Nickleby",
+                "Oliver Twist",
+                "Great Expectations"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In the Harry Potter universe, who does Draco Malfoy end up marrying?",
+              "correct_answer": "Astoria Greengrass",
+              "incorrect_answers": [
+                "Pansy Parkinson",
+                "Millicent Bulstrode",
+                "Hermione Granger"
+              ],
+              "shuffledAnswers": [
+                "Pansy Parkinson",
+                "Millicent Bulstrode",
+                "Hermione Granger",
+                "Astoria Greengrass"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "What is the name of the town in which Lily and James Potter are buried?",
+              "correct_answer": "Godric&#039;s Hollow",
+              "incorrect_answers": [
+                "Hogsmeade",
+                "Ottery St. Catchpole",
+                "Little Hangleton"
+              ],
+              "shuffledAnswers": [
+                "Hogsmeade",
+                "Godric&#039;s Hollow",
+                "Ottery St. Catchpole",
+                "Little Hangleton"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In the Magic: The Gathering universe, which plane does the Homelands expansion take place in?",
+              "correct_answer": "Ulgrotha",
+              "incorrect_answers": [
+                "Bant",
+                "Llanowar",
+                "Tazeem"
+              ],
+              "shuffledAnswers": [
+                "Bant",
+                "Llanowar",
+                "Tazeem",
+                "Ulgrotha"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In The Lies Of Locke Lamora, what does &quot;Lamora&quot; mean in Throne Therin?",
+              "correct_answer": "Shadow",
+              "incorrect_answers": [
+                "Thievery",
+                "Justice",
+                "Chaos"
+              ],
+              "shuffledAnswers": [
+                "Thievery",
+                "Shadow",
+                "Justice",
+                "Chaos"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "Which author co-wrote &quot;The Communist Manifesto&quot; alongside Karl Marx?",
+              "correct_answer": "Friedrich Engels",
+              "incorrect_answers": [
+                "Robert Owen",
+                "Alexander Kerensky",
+                "Paul Lafargue"
+              ],
+              "shuffledAnswers": [
+                "Robert Owen",
+                "Friedrich Engels",
+                "Alexander Kerensky",
+                "Paul Lafargue"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In the Harry Potter universe, what is Cornelius Fudge&#039;s middle name?",
+              "correct_answer": "Oswald",
+              "incorrect_answers": [
+                "James",
+                "Harold",
+                "Christopher"
+              ],
+              "shuffledAnswers": [
+                "James",
+                "Harold",
+                "Oswald",
+                "Christopher"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "Where does the book &quot;The Silence of the Lambs&quot; get its title from?",
+              "correct_answer": "The main character&#039;s trauma in childhood",
+              "incorrect_answers": [
+                "The relation it has with killing the innocents",
+                "The villain&#039;s favourite meal",
+                "The voice of innocent people being shut by the powerful"
+              ],
+              "shuffledAnswers": [
+                "The relation it has with killing the innocents",
+                "The villain&#039;s favourite meal",
+                "The voice of innocent people being shut by the powerful",
+                "The main character&#039;s trauma in childhood"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "The novel &quot;Jane Eyre&quot; was written by what author? ",
+              "correct_answer": "Charlotte Bront&euml;",
+              "incorrect_answers": [
+                "Emily Bront&euml;",
+                "Jane Austen",
+                "Louisa May Alcott"
+              ],
+              "shuffledAnswers": [
+                "Emily Bront&euml;",
+                "Jane Austen",
+                "Charlotte Bront&euml;",
+                "Louisa May Alcott"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            }
+          ],
+          "basicInfo": {
+            "amount": 20,
+            "category": 10,
+            "difficulty": "hard",
+            "type": "multiple",
+            "submited": "not started",
+            "expirationTime": 5,
+            "startingDate": "null",
+            "submittedTime": "null",
+            "websiteLeaved": "null"
+          },
+          "dataId": "V2VkIE1heSAwOCAyMDI0IDE2OjM4OjMyIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
         }
       ]
     },
@@ -670,24 +3607,1546 @@
           "quiz": [
             {
               "type": "multiple",
-              "shuffledAnswers": [
-                "",
-                "",
-                ""
+              "difficulty": "easy",
+              "category": "General Knowledge",
+              "question": "What is the Zodiac symbol for Gemini?",
+              "correct_answer": "Twins",
+              "incorrect_answers": [
+                "Fish",
+                "Scales",
+                "Maiden"
               ],
-              "question": null,
-              "correctAnswer": null,
-              "correctAnswerIndex": null,
+              "shuffledAnswers": [
+                "Fish",
+                "Scales",
+                "Twins",
+                "Maiden"
+              ],
+              "corectAnswerIndex": 2,
               "selectedAnswer": "undefined"
             },
             {
               "type": "multiple",
-              "shuffledAnswers": [],
-              "question": null,
-              "correctAnswer": null,
-              "correctAnswerIndex": null,
+              "difficulty": "medium",
+              "category": "Entertainment: Music",
+              "question": "Which of these is NOT the name of an album released by Miami-based producer DJ Khaled?",
+              "correct_answer": "Don&#039;t Ever Play Yourself",
+              "incorrect_answers": [
+                "Major Key",
+                "Suffering From Success",
+                "I Changed A Lot"
+              ],
+              "shuffledAnswers": [
+                "Major Key",
+                "Suffering From Success",
+                "Don&#039;t Ever Play Yourself",
+                "I Changed A Lot"
+              ],
+              "corectAnswerIndex": 2,
               "selectedAnswer": "undefined"
             },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Video Games",
+              "question": "In Forza Motorsport 6, which of these track-exclusive cars was NOT featured in the game, either originally with the game or added as DLC?",
+              "correct_answer": "Aston Martin Vulcan",
+              "incorrect_answers": [
+                "Ferrari FXX-K",
+                "McLaren P1 GTR",
+                "Lotus E23"
+              ],
+              "shuffledAnswers": [
+                "Ferrari FXX-K",
+                "McLaren P1 GTR",
+                "Lotus E23",
+                "Aston Martin Vulcan"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            }
+          ],
+          "basicInfo": {
+            "amount": 3,
+            "category": "any",
+            "difficulty": "any",
+            "type": "multiple",
+            "submited": "not started",
+            "expirationTime": 5,
+            "startingDate": "null",
+            "submittedTime": "null",
+            "websiteLeaved": "null"
+          },
+          "dataId": "V2VkIE1heSAwMSAyMDI0IDE0OjQ2OjAwIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Music",
+              "question": "Which of these Johns was murdered by gunshots outside the Dakota in New York in 1980?",
+              "correct_answer": "John Lennon",
+              "incorrect_answers": [
+                "Johnny Thunders",
+                "John Denver",
+                "John Cascella"
+              ],
+              "shuffledAnswers": [
+                "Johnny Thunders",
+                "John Denver",
+                "John Cascella",
+                "John Lennon"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Music",
+              "question": "Which of these songs did Jimi Hendrix cover?",
+              "correct_answer": "All of these songs",
+              "incorrect_answers": [
+                "Sgt. Pepper&#039;s Lonely Hearts Club Band",
+                "All Along the Watchtower",
+                "House of the Rising Sun"
+              ],
+              "shuffledAnswers": [
+                "Sgt. Pepper&#039;s Lonely Hearts Club Band",
+                "All of these songs",
+                "All Along the Watchtower",
+                "House of the Rising Sun"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Music",
+              "question": "Which band had hits in 1975 with the songs, &#039;One Of These Nights&#039; &amp; &#039;Lyin Eyes&#039;?",
+              "correct_answer": "The Eagles",
+              "incorrect_answers": [
+                "Fools Gold",
+                "The Doobie Brothers",
+                "Fleetwood Mac"
+              ],
+              "shuffledAnswers": [
+                "The Eagles",
+                "Fools Gold",
+                "The Doobie Brothers",
+                "Fleetwood Mac"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            }
+          ],
+          "basicInfo": {
+            "amount": 3,
+            "category": 12,
+            "difficulty": "any",
+            "type": "any",
+            "submited": "not started",
+            "expirationTime": 5,
+            "startingDate": "null",
+            "submittedTime": "null",
+            "websiteLeaved": "null"
+          },
+          "dataId": "VGh1IE1heSAwMiAyMDI0IDE4OjI4OjQ0IEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Books",
+              "question": "What position does Harry Potter play in Quidditch?",
+              "correct_answer": "Seeker",
+              "incorrect_answers": [
+                "Beater",
+                "Chaser",
+                "Keeper"
+              ],
+              "shuffledAnswers": [
+                "Beater",
+                "Chaser",
+                "Keeper",
+                "Seeker"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": 0
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "Which of the following is NOT a work done by Shakespeare?",
+              "correct_answer": "Trial of Temperance",
+              "incorrect_answers": [
+                "Measure For Measure",
+                "Titus Andronicus",
+                "Cymbeline"
+              ],
+              "shuffledAnswers": [
+                "Measure For Measure",
+                "Trial of Temperance",
+                "Titus Andronicus",
+                "Cymbeline"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": 3
+            },
+            {
+              "type": "multiple",
+              "difficulty": "easy",
+              "category": "Entertainment: Books",
+              "question": "Who wrote the novel &#039;Fear And Loathing In Las Vegas&#039;?",
+              "correct_answer": "Hunter S. Thompson",
+              "incorrect_answers": [
+                "F. Scott Fitzgerald",
+                "Henry Miller",
+                "William S. Burroughs"
+              ],
+              "shuffledAnswers": [
+                "F. Scott Fitzgerald",
+                "Henry Miller",
+                "Hunter S. Thompson",
+                "William S. Burroughs"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": 2
+            },
+            {
+              "type": "multiple",
+              "difficulty": "easy",
+              "category": "Entertainment: Books",
+              "question": "How many Harry Potter books are there?",
+              "correct_answer": "7",
+              "incorrect_answers": [
+                "8",
+                "5",
+                "6"
+              ],
+              "shuffledAnswers": [
+                "8",
+                "5",
+                "7",
+                "6"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In which classic novel by Mark Twain did a beggar and Prince of Wales switch clothes, and learn about social class inequality?",
+              "correct_answer": "The Prince and the Pauper",
+              "incorrect_answers": [
+                "Hamlet",
+                "Wealthy Boy and the Schmuck",
+                "A Modern Twain Story"
+              ],
+              "shuffledAnswers": [
+                "Hamlet",
+                "Wealthy Boy and the Schmuck",
+                "The Prince and the Pauper",
+                "A Modern Twain Story"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "easy",
+              "category": "Entertainment: Books",
+              "question": "Which of the following is the world&#039;s best-selling book?",
+              "correct_answer": "The Lord of the Rings",
+              "incorrect_answers": [
+                "The Little Prince",
+                "Harry Potter and the Philosopher&#039;s Stone",
+                "The Da Vinci Code"
+              ],
+              "shuffledAnswers": [
+                "The Little Prince",
+                "Harry Potter and the Philosopher&#039;s Stone",
+                "The Lord of the Rings",
+                "The Da Vinci Code"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "easy",
+              "category": "Entertainment: Books",
+              "question": "What is the name of the three headed dog in Harry Potter and the Sorcerer&#039;s Stone?",
+              "correct_answer": "Fluffy",
+              "incorrect_answers": [
+                "Spike",
+                "Poofy",
+                "Spot"
+              ],
+              "shuffledAnswers": [
+                "Fluffy",
+                "Spike",
+                "Poofy",
+                "Spot"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Books",
+              "question": "By what nickname is Jack Dawkins known in the Charles Dickens novel, &#039;Oliver Twist&#039;?",
+              "correct_answer": "The Artful Dodger",
+              "incorrect_answers": [
+                "Fagin",
+                "Bull&rsquo;s-eye",
+                "Mr. Fang"
+              ],
+              "shuffledAnswers": [
+                "Fagin",
+                "Bull&rsquo;s-eye",
+                "Mr. Fang",
+                "The Artful Dodger"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "Entertainment: Books",
+              "question": "In the book series &quot;Odd Thomas&quot;, Danny Jessup has what genetic disease? ",
+              "correct_answer": " Osteogenesis Imperfecta",
+              "incorrect_answers": [
+                "Spinocerebellar ataxia",
+                "Adrenoleukodystrophy",
+                "Cystic Fibrosis"
+              ],
+              "shuffledAnswers": [
+                " Osteogenesis Imperfecta",
+                "Spinocerebellar ataxia",
+                "Adrenoleukodystrophy",
+                "Cystic Fibrosis"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Books",
+              "question": "According to The Hitchhiker&#039;s Guide to the Galaxy book, the answer to life, the universe and everything else is...",
+              "correct_answer": "42",
+              "incorrect_answers": [
+                "Loving everyone around you",
+                "Chocolate",
+                "Death"
+              ],
+              "shuffledAnswers": [
+                "Loving everyone around you",
+                "Chocolate",
+                "Death",
+                "42"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "easy",
+              "category": "Entertainment: Books",
+              "question": "Who wrote &quot;A Tale of Two Cities&quot;?",
+              "correct_answer": "Charles Dickens",
+              "incorrect_answers": [
+                "Charles Darwin",
+                "Mark Twain",
+                "Roald Dahl"
+              ],
+              "shuffledAnswers": [
+                "Charles Darwin",
+                "Mark Twain",
+                "Charles Dickens",
+                "Roald Dahl"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Entertainment: Books",
+              "question": "In Romance of the Three Kingdoms, who was not a member of the Peach Garden Oath?",
+              "correct_answer": "Zhao Yun",
+              "incorrect_answers": [
+                "Liu Bei",
+                "Guan Yu",
+                "Zhang Fei"
+              ],
+              "shuffledAnswers": [
+                "Zhao Yun",
+                "Liu Bei",
+                "Guan Yu",
+                "Zhang Fei"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            }
+          ],
+          "basicInfo": {
+            "amount": 12,
+            "category": 10,
+            "difficulty": "any",
+            "type": "multiple",
+            "submited": "submitted",
+            "expirationTime": 5,
+            "startingDate": "2024-05-02T13:29:24.558Z",
+            "submittedTime": [
+              4,
+              17
+            ],
+            "websiteLeaved": "null"
+          },
+          "dataId": "VGh1IE1heSAwMiAyMDI0IDE4OjI5OjAyIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "boolean",
+              "difficulty": "easy",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "Kiznaiver is an adaptation of a manga.",
+              "correct_answer": "False",
+              "incorrect_answers": [
+                "True"
+              ],
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "boolean",
+              "difficulty": "easy",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "No Game No Life first aired in 2014.",
+              "correct_answer": "True",
+              "incorrect_answers": [
+                "False"
+              ],
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "boolean",
+              "difficulty": "easy",
+              "category": "Entertainment: Japanese Anime &amp; Manga",
+              "question": "In Pok&eacute;mon, Ash&#039;s Pikachu refuses to go into a pokeball.",
+              "correct_answer": "True",
+              "incorrect_answers": [
+                "False"
+              ],
+              "selectedAnswer": "undefined"
+            }
+          ],
+          "basicInfo": {
+            "amount": 3,
+            "category": 31,
+            "difficulty": "easy",
+            "type": "boolean",
+            "submited": "not started",
+            "expirationTime": 5,
+            "startingDate": "null",
+            "submittedTime": "null",
+            "websiteLeaved": "null"
+          },
+          "dataId": "TW9uIE1heSAwNiAyMDI0IDE1OjE2OjI2IEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "medium",
+              "category": "Animals",
+              "question": "&quot;Decapods&quot; are an order of ten-footed crustaceans.  Which of these are NOT decapods?",
+              "correct_answer": "Krill",
+              "incorrect_answers": [
+                "Lobsters",
+                "Shrimp",
+                "Crabs"
+              ],
+              "shuffledAnswers": [
+                "Krill",
+                "Lobsters",
+                "Shrimp",
+                "Crabs"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": 1
+            },
+            {
+              "type": "boolean",
+              "difficulty": "medium",
+              "category": "Entertainment: Video Games",
+              "question": "In the video game &quot;Transistor&quot;, &quot;Red&quot; is the name of the main character.",
+              "correct_answer": "True",
+              "incorrect_answers": [
+                "False"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": 1
+            },
+            {
+              "type": "boolean",
+              "difficulty": "hard",
+              "category": "Vehicles",
+              "question": "The term &quot;GTO&quot; was originated by Ferrari?",
+              "correct_answer": "True",
+              "incorrect_answers": [
+                "False"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": 0
+            }
+          ],
+          "basicInfo": {
+            "amount": 3,
+            "category": "any",
+            "difficulty": "any",
+            "type": "any",
+            "submited": "submitted",
+            "expirationTime": 5,
+            "startingDate": "2024-05-06T10:18:33.415Z",
+            "submittedTime": [
+              4,
+              3
+            ],
+            "websiteLeaved": "null"
+          },
+          "dataId": "TW9uIE1heSAwNiAyMDI0IDE1OjE3OjMyIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Originally another word for poppy, coquelicot is a shade of what?",
+              "correct_answer": "Red",
+              "incorrect_answers": [
+                "Green",
+                "Blue",
+                "Pink"
+              ],
+              "shuffledAnswers": [
+                "Green",
+                "Red",
+                "Blue",
+                "Pink"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which one of these Swedish companies was founded in 1943?",
+              "correct_answer": "IKEA",
+              "incorrect_answers": [
+                "H &amp; M",
+                "Lindex",
+                "Clas Ohlson"
+              ],
+              "shuffledAnswers": [
+                "IKEA",
+                "H &amp; M",
+                "Lindex",
+                "Clas Ohlson"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "The word &quot;abulia&quot; means which of the following?",
+              "correct_answer": "The inability to make decisions",
+              "incorrect_answers": [
+                "The inability to stand up",
+                "The inability to concentrate on anything",
+                "A feverish desire to rip one&#039;s clothes off"
+              ],
+              "shuffledAnswers": [
+                "The inability to stand up",
+                "The inability to concentrate on anything",
+                "The inability to make decisions",
+                "A feverish desire to rip one&#039;s clothes off"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "The Swedish word &quot;Grunka&quot; means what in English?",
+              "correct_answer": "Thing",
+              "incorrect_answers": [
+                "People",
+                "Place",
+                "Pineapple"
+              ],
+              "shuffledAnswers": [
+                "People",
+                "Place",
+                "Pineapple",
+                "Thing"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which church&#039;s interior in Vatican City was designed in 1503 by renaissance architects including Bramante, Michelangelo and Bernini?",
+              "correct_answer": "St. Peter&#039;s Basilica",
+              "incorrect_answers": [
+                "Catania Cathedral",
+                "St. Mark&rsquo;s Basilica",
+                "The Duomo of Florence"
+              ],
+              "shuffledAnswers": [
+                "Catania Cathedral",
+                "St. Peter&#039;s Basilica",
+                "St. Mark&rsquo;s Basilica",
+                "The Duomo of Florence"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "When was &quot;YouTube&quot; founded?",
+              "correct_answer": "February 14, 2005",
+              "incorrect_answers": [
+                "May 22, 2004",
+                "September 12, 2005",
+                "July 19, 2009"
+              ],
+              "shuffledAnswers": [
+                "February 14, 2005",
+                "May 22, 2004",
+                "September 12, 2005",
+                "July 19, 2009"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Before the 19th Century, the &quot;Living Room&quot; was originally called the...",
+              "correct_answer": "Parlor",
+              "incorrect_answers": [
+                "Open Room",
+                "Sitting Room",
+                "Loft"
+              ],
+              "shuffledAnswers": [
+                "Parlor",
+                "Open Room",
+                "Sitting Room",
+                "Loft"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "How long did it take the motorized window washers of the original World Trade Center to clean the entire exterior of the building?",
+              "correct_answer": "1 Month",
+              "incorrect_answers": [
+                "3 Weeks",
+                "1 Week",
+                "2 Months"
+              ],
+              "shuffledAnswers": [
+                "3 Weeks",
+                "1 Month",
+                "1 Week",
+                "2 Months"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which of the following  British Monarchs never appeared on a circulated pound sterling coin?",
+              "correct_answer": "Edward VIII",
+              "incorrect_answers": [
+                "Victoria",
+                "George VI",
+                "Charles II"
+              ],
+              "shuffledAnswers": [
+                "Victoria",
+                "George VI",
+                "Edward VIII",
+                "Charles II"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What is the romanized Chinese word for &quot;airplane&quot;?",
+              "correct_answer": "Feiji",
+              "incorrect_answers": [
+                "Qiche",
+                "Zongxian",
+                "Huojian"
+              ],
+              "shuffledAnswers": [
+                "Feiji",
+                "Qiche",
+                "Zongxian",
+                "Huojian"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "The word &quot;astasia&quot; means which of the following?",
+              "correct_answer": "The inability to stand up",
+              "incorrect_answers": [
+                "The inability to make decisions",
+                "The inability to concentrate on anything",
+                "A feverish desire to rip one&#039;s clothes off"
+              ],
+              "shuffledAnswers": [
+                "The inability to make decisions",
+                "The inability to concentrate on anything",
+                "The inability to stand up",
+                "A feverish desire to rip one&#039;s clothes off"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What type of dog is &#039;Handsome Dan&#039;, the mascot of Yale University?",
+              "correct_answer": "Bulldog",
+              "incorrect_answers": [
+                "Yorkshire Terrier",
+                "Boxer",
+                "Pug"
+              ],
+              "shuffledAnswers": [
+                "Yorkshire Terrier",
+                "Boxer",
+                "Pug",
+                "Bulldog"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Electronic music producer Kygo&#039;s popularity skyrocketed after a certain remix. Which song did he remix?",
+              "correct_answer": "Ed Sheeran - I See Fire",
+              "incorrect_answers": [
+                "Marvin Gaye - Sexual Healing",
+                "Coldplay - Midnight",
+                "a-ha - Take On Me"
+              ],
+              "shuffledAnswers": [
+                "Ed Sheeran - I See Fire",
+                "Marvin Gaye - Sexual Healing",
+                "Coldplay - Midnight",
+                "a-ha - Take On Me"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Sciophobia is the fear of what?",
+              "correct_answer": "Shadows",
+              "incorrect_answers": [
+                "Eating",
+                "Bright lights",
+                "Transportation"
+              ],
+              "shuffledAnswers": [
+                "Eating",
+                "Bright lights",
+                "Shadows",
+                "Transportation"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which of the following languages does NOT use gender as a part of its grammar?",
+              "correct_answer": "Turkish",
+              "incorrect_answers": [
+                "German",
+                "Danish",
+                "Polish"
+              ],
+              "shuffledAnswers": [
+                "German",
+                "Danish",
+                "Polish",
+                "Turkish"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which film star has his statue in Leicester Square?",
+              "correct_answer": "Charlie Chaplin",
+              "incorrect_answers": [
+                "Paul Newman",
+                "Rowan Atkinson ",
+                "Alfred Hitchcock"
+              ],
+              "shuffledAnswers": [
+                "Paul Newman",
+                "Rowan Atkinson ",
+                "Charlie Chaplin",
+                "Alfred Hitchcock"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Who founded the Khan Academy?",
+              "correct_answer": "Sal Khan",
+              "incorrect_answers": [
+                "Ben Khan",
+                "Kitt Khan",
+                "Adel Khan"
+              ],
+              "shuffledAnswers": [
+                "Sal Khan",
+                "Ben Khan",
+                "Kitt Khan",
+                "Adel Khan"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What year was Queen Elizabeth II born?",
+              "correct_answer": "1926",
+              "incorrect_answers": [
+                "1923",
+                "1929",
+                "1930"
+              ],
+              "shuffledAnswers": [
+                "1923",
+                "1926",
+                "1929",
+                "1930"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "In flight systems, what does the initialism &quot;TCAS&quot; stand for?",
+              "correct_answer": "Traffic Collision Avoidance System",
+              "incorrect_answers": [
+                "Traffic Communication Alert System",
+                "Traffic Configuration Alignment System",
+                "Traffic Call-sign Abbreviation System"
+              ],
+              "shuffledAnswers": [
+                "Traffic Communication Alert System",
+                "Traffic Configuration Alignment System",
+                "Traffic Collision Avoidance System",
+                "Traffic Call-sign Abbreviation System"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Nephelococcygia is the practice of doing what?",
+              "correct_answer": "Finding shapes in clouds",
+              "incorrect_answers": [
+                "Sleeping with your eyes open",
+                "Breaking glass with your voice",
+                "Swimming in freezing water"
+              ],
+              "shuffledAnswers": [
+                "Sleeping with your eyes open",
+                "Breaking glass with your voice",
+                "Swimming in freezing water",
+                "Finding shapes in clouds"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What is the romanized Arabic word for &quot;moon&quot;?",
+              "correct_answer": "Qamar",
+              "incorrect_answers": [
+                "Najma",
+                "Kawkab",
+                "Shams"
+              ],
+              "shuffledAnswers": [
+                "Najma",
+                "Kawkab",
+                "Qamar",
+                "Shams"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "How many calories are in a 355 ml can of Pepsi Cola?",
+              "correct_answer": "150",
+              "incorrect_answers": [
+                "200",
+                "100",
+                "155"
+              ],
+              "shuffledAnswers": [
+                "200",
+                "150",
+                "100",
+                "155"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "If you planted the seeds of Quercus robur, what would grow?",
+              "correct_answer": "Trees",
+              "incorrect_answers": [
+                "Grains",
+                "Vegetables",
+                "Flowers"
+              ],
+              "shuffledAnswers": [
+                "Grains",
+                "Vegetables",
+                "Flowers",
+                "Trees"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What is the romanized Korean word for &quot;heart&quot;?",
+              "correct_answer": "Simjang",
+              "incorrect_answers": [
+                "Aejeong",
+                "Jeongsin",
+                "Segseu"
+              ],
+              "shuffledAnswers": [
+                "Aejeong",
+                "Jeongsin",
+                "Simjang",
+                "Segseu"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "In the MMO RPG &quot;Realm of the Mad God&quot;, what dungeon is widely considered to be the most difficult?",
+              "correct_answer": "The Shatter&#039;s",
+              "incorrect_answers": [
+                "Snake Pit",
+                "The Tomb of the Acient&#039;s",
+                "The Puppet Master&#039;s Theater"
+              ],
+              "shuffledAnswers": [
+                "The Shatter&#039;s",
+                "Snake Pit",
+                "The Tomb of the Acient&#039;s",
+                "The Puppet Master&#039;s Theater"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What is the airspeed velocity of an unladen swallow?",
+              "correct_answer": "24 MPH",
+              "incorrect_answers": [
+                "15 MPH",
+                "20 MPH",
+                "200 MPH"
+              ],
+              "shuffledAnswers": [
+                "15 MPH",
+                "24 MPH",
+                "20 MPH",
+                "200 MPH"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which product did Nokia, the telecommunications company, originally sell?",
+              "correct_answer": "Paper",
+              "incorrect_answers": [
+                "Phones",
+                "Computers",
+                "Processors"
+              ],
+              "shuffledAnswers": [
+                "Phones",
+                "Computers",
+                "Paper",
+                "Processors"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "In &quot;Battle Cats&quot;, what is Moneko / MISS Moneko&#039;s critical percentage rate?",
+              "correct_answer": "15%",
+              "incorrect_answers": [
+                "20%",
+                "10%",
+                "25%"
+              ],
+              "shuffledAnswers": [
+                "15%",
+                "20%",
+                "10%",
+                "25%"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What was Bank of America originally established as?",
+              "correct_answer": "Bank of Italy",
+              "incorrect_answers": [
+                "Bank of Long Island",
+                "Bank of Pennsylvania",
+                "Bank of Charlotte"
+              ],
+              "shuffledAnswers": [
+                "Bank of Long Island",
+                "Bank of Italy",
+                "Bank of Pennsylvania",
+                "Bank of Charlotte"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Disney&#039;s Haunted Mansion is home to a trio of Hitchhiking Ghosts. Which of these is NOT one of them?",
+              "correct_answer": "Harry",
+              "incorrect_answers": [
+                "Gus",
+                "Phineas",
+                "Ezra"
+              ],
+              "shuffledAnswers": [
+                "Gus",
+                "Harry",
+                "Phineas",
+                "Ezra"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "The words &quot;bungalow&quot; and &quot;shampoo&quot; originate from the languages of which country?",
+              "correct_answer": "India",
+              "incorrect_answers": [
+                "Papua New Guinea",
+                "Ethiopia",
+                "China"
+              ],
+              "shuffledAnswers": [
+                "Papua New Guinea",
+                "Ethiopia",
+                "India",
+                "China"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "How many notes are there on a standard grand piano?",
+              "correct_answer": "88",
+              "incorrect_answers": [
+                "98",
+                "108",
+                "78"
+              ],
+              "shuffledAnswers": [
+                "98",
+                "88",
+                "108",
+                "78"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which of the following is not another name for the eggplant?",
+              "correct_answer": "Potimarron",
+              "incorrect_answers": [
+                "Brinjal",
+                "Guinea Squash",
+                "Melongene"
+              ],
+              "shuffledAnswers": [
+                "Brinjal",
+                "Potimarron",
+                "Guinea Squash",
+                "Melongene"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What is the weight of a Gold Bar in Fallout: New Vegas?",
+              "correct_answer": "35 Pounds",
+              "incorrect_answers": [
+                "30 Pounds",
+                "40 Pounds",
+                "32.50 Pounds"
+              ],
+              "shuffledAnswers": [
+                "30 Pounds",
+                "40 Pounds",
+                "32.50 Pounds",
+                "35 Pounds"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which of these banks are NOT authorized to issue currency notes in Hong Kong?",
+              "correct_answer": "OCBC",
+              "incorrect_answers": [
+                "HSBC",
+                "Standard Chartered",
+                "Bank of China"
+              ],
+              "shuffledAnswers": [
+                "HSBC",
+                "Standard Chartered",
+                "Bank of China",
+                "OCBC"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which musician has collaborated with American producer Porter Robinson and released the 2016 song &quot;Shelter&quot;?",
+              "correct_answer": "Madeon",
+              "incorrect_answers": [
+                "Mat Zo",
+                "deadmau5",
+                "Zedd"
+              ],
+              "shuffledAnswers": [
+                "Mat Zo",
+                "deadmau5",
+                "Madeon",
+                "Zedd"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What year was the RoboSapien toy robot released?",
+              "correct_answer": "2004",
+              "incorrect_answers": [
+                "2000",
+                "2001",
+                "2006"
+              ],
+              "shuffledAnswers": [
+                "2004",
+                "2000",
+                "2001",
+                "2006"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "According to the 2014-2015 Australian Bureau of Statistics, what percentage of Australians were born overseas?",
+              "correct_answer": "28%",
+              "incorrect_answers": [
+                "13%",
+                "20%",
+                "7%"
+              ],
+              "shuffledAnswers": [
+                "13%",
+                "28%",
+                "20%",
+                "7%"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Where is Apple Inc. headquartered?",
+              "correct_answer": "Cupertino, California",
+              "incorrect_answers": [
+                "Redwood City, California",
+                "Redmond, Washington",
+                "Santa Monica, CA"
+              ],
+              "shuffledAnswers": [
+                "Cupertino, California",
+                "Redwood City, California",
+                "Redmond, Washington",
+                "Santa Monica, CA"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What is the most commonly used noun in the English language?",
+              "correct_answer": "Time",
+              "incorrect_answers": [
+                "Home",
+                "Water",
+                "Man"
+              ],
+              "shuffledAnswers": [
+                "Home",
+                "Time",
+                "Water",
+                "Man"
+              ],
+              "corectAnswerIndex": 1,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Located in Chile, El Teniente is the world&#039;s largest underground mine for what metal?",
+              "correct_answer": "Copper",
+              "incorrect_answers": [
+                "Iron",
+                "Nickel",
+                "Silver"
+              ],
+              "shuffledAnswers": [
+                "Copper",
+                "Iron",
+                "Nickel",
+                "Silver"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "The Quadrangularis Reversum is best described as which of the following?",
+              "correct_answer": "A percussion instrument",
+              "incorrect_answers": [
+                "A building in Oxford University",
+                "A chess move",
+                "A geometric theorem"
+              ],
+              "shuffledAnswers": [
+                "A building in Oxford University",
+                "A chess move",
+                "A geometric theorem",
+                "A percussion instrument"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Virtual reality company Oculus VR lost which of it&#039;s co-founders in a freak car accident in 2013?",
+              "correct_answer": "Andrew Scott Reisse",
+              "incorrect_answers": [
+                "Nate Mitchell",
+                "Jack McCauley",
+                "Palmer Luckey"
+              ],
+              "shuffledAnswers": [
+                "Andrew Scott Reisse",
+                "Nate Mitchell",
+                "Jack McCauley",
+                "Palmer Luckey"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "De Eemhof, Port Zelande and Het Heijderbos are holiday villas owned by what company?",
+              "correct_answer": "Center Parcs",
+              "incorrect_answers": [
+                "Yelloh Village",
+                "Keycamp",
+                "Villa Plus"
+              ],
+              "shuffledAnswers": [
+                "Yelloh Village",
+                "Keycamp",
+                "Villa Plus",
+                "Center Parcs"
+              ],
+              "corectAnswerIndex": 3,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which of the following chemicals are found in eggplant seeds?",
+              "correct_answer": "Nicotine",
+              "incorrect_answers": [
+                "Mescaline",
+                "Cyanide",
+                "Psilocybin"
+              ],
+              "shuffledAnswers": [
+                "Mescaline",
+                "Cyanide",
+                "Nicotine",
+                "Psilocybin"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "If someone said &quot;you are olid&quot;, what would they mean?",
+              "correct_answer": "You smell extremely unpleasant.",
+              "incorrect_answers": [
+                "You are out of shape/weak.",
+                "Your appearance is repulsive.",
+                "You are incomprehensible/an idiot."
+              ],
+              "shuffledAnswers": [
+                "You are out of shape/weak.",
+                "Your appearance is repulsive.",
+                "You smell extremely unpleasant.",
+                "You are incomprehensible/an idiot."
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "In &quot;Resident Evil 3&quot;, how many inventory slots does Jill have at the start of the game?",
+              "correct_answer": "10",
+              "incorrect_answers": [
+                "6",
+                "8",
+                "12"
+              ],
+              "shuffledAnswers": [
+                "10",
+                "6",
+                "8",
+                "12"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "What does the Latin phrase &quot;Veni, vidi, vici&quot; translate into English?",
+              "correct_answer": "I came, I saw, I conquered",
+              "incorrect_answers": [
+                "See no evil, hear no evil, speak no evil",
+                "Life, liberty, and happiness",
+                "Past, present, and future"
+              ],
+              "shuffledAnswers": [
+                "See no evil, hear no evil, speak no evil",
+                "Life, liberty, and happiness",
+                "I came, I saw, I conquered",
+                "Past, present, and future"
+              ],
+              "corectAnswerIndex": 2,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Which of the following is an existing family in &quot;The Sims&quot;?",
+              "correct_answer": "The Goth Family",
+              "incorrect_answers": [
+                "The Family",
+                "The Simoleon Family",
+                "The Proud Family"
+              ],
+              "shuffledAnswers": [
+                "The Goth Family",
+                "The Family",
+                "The Simoleon Family",
+                "The Proud Family"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": "undefined"
+            },
+            {
+              "type": "multiple",
+              "difficulty": "hard",
+              "category": "General Knowledge",
+              "question": "Named after the mallow flower, mauve is a shade of what?",
+              "correct_answer": "Purple",
+              "incorrect_answers": [
+                "Red",
+                "Brown",
+                "Pink"
+              ],
+              "shuffledAnswers": [
+                "Purple",
+                "Red",
+                "Brown",
+                "Pink"
+              ],
+              "corectAnswerIndex": 0,
+              "selectedAnswer": 1
+            }
+          ],
+          "basicInfo": {
+            "amount": 50,
+            "category": 9,
+            "difficulty": "hard",
+            "type": "multiple",
+            "submited": "submitted",
+            "expirationTime": 5,
+            "startingDate": "2024-05-06T10:22:23.928Z",
+            "submittedTime": [
+              null,
+              null
+            ],
+            "websiteLeaved": "null"
+          },
+          "dataId": "TW9uIE1heSAwNiAyMDI0IDE1OjIxOjQ0IEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "quiz": [
             {
               "type": "multiple",
               "shuffledAnswers": [],
@@ -723,21 +5182,14 @@
             "submittedTime": "null",
             "websiteLeaved": null
           },
-          "dataId": "VHVlIEFwciAzMCAyMDI0IDE3OjU3OjEyIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+          "dataId": "TW9uIE1heSAwNiAyMDI0IDE1OjQwOjQxIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
         }
       ]
     }
   ],
   "notifications": [
     {
-      "data": [
-        {
-          "message": "You Have A Quiz To do ",
-          "read": true,
-          "type": "quiz",
-          "dataId": "RnJpIEFwciAyNiAyMDI0IDE1OjI2OjEwIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
-        }
-      ],
+      "data": [],
       "id": "YWhtZWRqYW4xMjNkZmFzZGZhc2RmYXNkZg=="
     },
     {
@@ -771,6 +5223,18 @@
           "read": false,
           "type": "quiz",
           "dataId": "VHVlIEFwciAzMCAyMDI0IDE3OjU3OjEyIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "message": "You Have A Quiz To do ",
+          "read": false,
+          "type": "quiz",
+          "dataId": "TW9uIE1heSAwNiAyMDI0IDE1OjM4OjQzIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
+        },
+        {
+          "message": "You Have A Quiz To do ",
+          "read": false,
+          "type": "quiz",
+          "dataId": "TW9uIE1heSAwNiAyMDI0IDE1OjQwOjQxIEdNVCswNTAwIChQYWtpc3RhbiBTdGFuZGFyZCBUaW1lKQ=="
         }
       ],
       "id": "YXNkZmFzZGZhc2RmYTI="
