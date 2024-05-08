@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import { QuizAreaContext } from "../../store/ContextApiStore";
-import { useState } from "react";
+// import { useContext } from "react";
+// import { QuizAreaContext } from "../../Store/ContextApiStore";
+// import { useState } from "react";
 
 export const useMediaRecorder = (props) => {
   let videoChunks = [];

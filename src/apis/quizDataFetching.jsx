@@ -1,7 +1,7 @@
 import axios from "axios";
 import { flattenObjectValues, setPastQuizHistory } from "./QuizHistory";
 import { Buffer } from "buffer";
-import { createNewDataSet } from "../utils";
+import { createNewDataSet } from "../Utils";
 
 const apiRequest = async (url, params) => {
   try {
@@ -62,8 +62,9 @@ export const HandleSubmit = async (formData, setLoading, userId) => {
     // setLoading(false);
     return { quizData: data, dataId };
   } catch (error) {
-    // setLoading(false);
-    console.log("cannot get the information");
+    // throw new Error("Unexpected error ouccred while sumitting the data")
+    console.log("Unexpected error ouccred while sumitting the data")
+    return  false;
   }
   finally{
     setLoading(false);

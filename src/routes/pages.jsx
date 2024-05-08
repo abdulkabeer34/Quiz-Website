@@ -1,13 +1,34 @@
-import { CreateQuiz, Home, Login, Notifications, QuizArea, QuizHistory, QuizResult } from "../pages";
-import { paths } from "./paths";
+import { Navbar } from "../Components";
+import {
+  CreateQuiz,
+  Home,
+  Login,
+  Notifications,
+  QuizArea,
+  QuizHistory,
+  QuizResult,
+} from "../Pages";
+import { createBrowserRouter } from "react-router-dom";
 
-export const PrivatPages = [
-  { path: ["/", paths.Home], component: Home },
-  { path: paths.QuizArea, component: QuizArea },
-  { path: paths.QuizResult, component: QuizResult },
-  { path: paths.QuizHistory, component: QuizHistory },
-  { path: paths.createQuiz, component: CreateQuiz },
-  { path: paths.Notifications, component: Notifications },
-];
+const PrivatePages = createBrowserRouter([
+  {
+    path: "/",
+    element: <Navbar />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/home", element: <Home /> },
+      { path: "/quiz-area/:id/:question", element: <QuizArea /> },
+      { path: "/quiz-result/:id", element: <QuizResult /> },
+      { path: "/quiz-history", element: <QuizHistory /> },
+      { path: "/create-quiz", element: <CreateQuiz /> },
+      { path: "/notifications", element: <Notifications /> },
+    ],
+  },
+]);
 
-export const Publicpages = [{ path: ["/", paths.Login], component: Login }];
+const PublicPages = createBrowserRouter([
+  { path: "/", element: <Login /> },
+  { path: "/login", element: <Login /> },
+]);
+
+export { PrivatePages, PublicPages };

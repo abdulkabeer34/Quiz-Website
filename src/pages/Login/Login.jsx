@@ -10,8 +10,8 @@ import {
   AntdForm,
   AntdButton,
   AntdLoginTheme,
-} from "../../styledComponents/styledComponent";
-import { verifyData } from "../../apis/login";
+} from "./StyledComponents";
+import { verifyData } from "../../Apis/login";
 import { InputPasswordRules, InputUsernameRules } from "./attributes";
 
 export const Login = () => {
@@ -39,7 +39,7 @@ export const Login = () => {
         <LoginMain className="login-main">
           <Left className="left">
             <img
-              src={require("../../assets/Images/illustration.svg").default}
+              src={require("../../Assets/Images/illustration.svg").default}
             />
           </Left>
           <Right className="right">
@@ -51,7 +51,7 @@ export const Login = () => {
               }}
             >
               <div className="image">
-                <img src={require("../../assets/Images/pngwing.com (5).png")} />
+                <img src={require("../../Assets/Images/pngwing.com (5).png")} />
               </div>
               <div className="heading">
                 <h1>Welcome</h1>

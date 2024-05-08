@@ -1,7 +1,7 @@
 import React from "react";
-import RouterReturn from "../routes/routerReturn";
-import { Publicpages } from "../routes/pages";
+import { PublicPages } from "../Routes/pages";
+import { RouterProvider } from "react-router-dom";
 
 export const Public = () => {
-  return <RouterReturn pages={Publicpages} />;
+  return <RouterProvider pages={PublicPages} />;
 };

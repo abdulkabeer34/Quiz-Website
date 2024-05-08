@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { setTimer } from "../store/quizStore";
+import { setTimer } from "../Store/QuizStore";
 import { useHandleQuizSubmit } from "./QuizSubmit";
 
 

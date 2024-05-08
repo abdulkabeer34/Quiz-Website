@@ -1,18 +1,11 @@
 import React from "react";
-import { Private, Public } from "../Layouts";
-import { useLocation } from "react-router-dom";
+import { PublicPages } from "./pages";
+import { Private } from "../Layouts/Private";
 
 const Authentication = () => {
-  const location = useLocation();
-  const token = localStorage.getItem("token");
-  if (token) {
-    return <Private />;
-  } else {
-    if (location.pathname != "/") {
-      window.location.replace("/");
-    }
-    return <Public />;
-  }
+  const isAuthenticated = Boolean(localStorage.getItem("token"));
+
+  return isAuthenticated ? <Private /> :<PublicPages /> 
 };
 
 export default Authentication;

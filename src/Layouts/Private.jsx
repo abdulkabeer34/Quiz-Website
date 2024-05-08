@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import RouterReturn from "../routes/routerReturn";
-import { PrivatPages } from "../routes/pages";
-import { Navbar } from "../Components";
+import { PrivatePages } from "../Routes/pages";
 import { useDispatch } from "react-redux";
-import { setAllQuizData, setUserToken } from "../store/quizStore";
-import { getPastQuizHistory } from "../apis";
+import { setAllQuizData, setUserToken } from "../Store/QuizStore";
+import { getPastQuizHistory } from "../Apis";
+import { RouterProvider } from "react-router-dom";
 
 export const Private = () => {
   const dispatch = useDispatch();
@@ -21,8 +20,7 @@ export const Private = () => {
 
   return (
     <div style={{minheight:"100vh"}}>
-      <Navbar />
-      <RouterReturn pages={PrivatPages} />
+        <RouterProvider router={PrivatePages}></RouterProvider>
     </div>
   );
 };

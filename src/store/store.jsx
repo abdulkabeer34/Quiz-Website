@@ -1,5 +1,5 @@
-import quizAreaStore from "./quizAreaStore";
-import quizStoreReducer from "./quizStore";
+import quizAreaStore from "./QuizAreaStore";
+import quizStoreReducer from "./QuizStore";
 import { configureStore } from "@reduxjs/toolkit";
 
 export default configureStore({

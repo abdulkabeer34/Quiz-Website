@@ -1,7 +1,6 @@
 export { Notifications } from "./Notifications/Notifications";
-export  {CreateQuiz} from "./CreateQuiz/CreateQuiz";
+export { CreateQuiz } from "./CreateQuiz/CreateQuiz";
 export { Home } from "./Home/Home";
-export { About } from "./About/About";
 export { Login } from "./Login/Login";
 export { QuizArea } from "./QuizArea/QuizArea";
 export { QuizResult } from "./QuizResult/QuizResult";

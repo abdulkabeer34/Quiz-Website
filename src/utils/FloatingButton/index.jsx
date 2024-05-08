@@ -4,20 +4,16 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledIcon = styled(FloatButton)`
-// color:blue;
-transition: all .2s linear;
+  transition: all 0.2s linear;
   &:hover {
-    transform: rotate(${e=>e.$animation?45:0}deg);
+    transform: rotate(${(e) => (e.$animation ? 45 : 0)}deg);
   }
-
-  
 `;
-
-
 
 export const FloatingButtonAntd = ({animation,callback,icon:Icon,tooltip,...restProps}) => {
   return (
     <StyledIcon
+    color="blue"
       icon={Icon?<Icon/>:<PlusOutlined />}
       $animation={animation}
       onClick={callback}

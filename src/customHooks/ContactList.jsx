@@ -2,7 +2,7 @@ import { Button } from "antd";
 import axios from "axios";
 import React, { useEffect, useMemo, useState } from "react";
 import { useSelector } from "react-redux";
-import { sendNotifications } from "../apis/notificationApis";
+import { sendNotifications } from "../Apis/notificationApis";
 
 export const ContactList = ({ questions,confirmLoading }) => {
   const [contactList, setContactList] = useState([]);
@@ -23,10 +23,7 @@ export const ContactList = ({ questions,confirmLoading }) => {
   useEffect(() => {
     setData(questions)
   }, [questions])
-  
 
-
- 
 
   if (!contactList) return;
   return (
@@ -42,7 +39,6 @@ export const ContactList = ({ questions,confirmLoading }) => {
     >
       <div style={{ display: "grid", gap: "24px", padding: "24px" }}>
         {contactList.map((item, index) => {
-          // setButtonLoading([...Array(contactList.length).fill(true)]);
           if (token == item.id) return;
           return (
             <div

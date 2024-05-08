@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import { GiCrossMark } from "react-icons/gi";
 
-import { RemoveNotification, UpdateNotification } from "../../apis/notificationApis";
+import { RemoveNotification, UpdateNotification } from "../../Apis/notificationApis";
 
 export const Notifications = () => {
   const [notifications, setNotifications] = useState([]);

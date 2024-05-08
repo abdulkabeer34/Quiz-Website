@@ -1,15 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updatePastQuizHistory } from "../apis/QuizHistory";
+import { updatePastQuizHistory } from "../Apis/QuizHistory";
 import { useUpdateTime } from "./CalculateTime";
 import {
   setAllQuizData,
   setData,
   setQuizAreaButtonLoading,
-} from "../store/quizStore";
+} from "../Store/QuizStore";
 import { useContext } from "react";
-import { QuizAreaContext } from "../store/ContextApiStore";
-import { ToggleModal } from "../store/quizAreaStore";
-import { useMediaRecorder } from "./MediaRecorder";
+import { QuizAreaContext } from "../Store/ContextApiStore";
+import { ToggleModal } from "../Store/QuizAreaStore";
 
 export const useStartAssignmentData = () => {
   const UpdateTime = useUpdateTime();

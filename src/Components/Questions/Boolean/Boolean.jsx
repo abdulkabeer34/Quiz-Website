@@ -1,8 +1,8 @@
 import React from "react";
 import "./Boolean.scss";
 import { ConfigProvider, Radio } from "antd";
-import { AntdRadio } from "../../../styledComponents/styledComponent";
-import { decodeHtmlEntities } from "../../../utils";
+import { decodeHtmlEntities } from "../../../Utils";
+import { AntdRadio } from "./StyledComponents";
 
 export const Boolean = ({ data, setSelectedAnswer }) => {
   if (!data) return null;

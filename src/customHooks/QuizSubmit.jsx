@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updatePastQuizHistory } from "../apis/QuizHistory";
+import { updatePastQuizHistory } from "../Apis/QuizHistory";
 import {
   setAllQuizData,
   setData,
   setQuizAreaButtonLoading,
   setTimer,
-} from "../store/quizStore";
+} from "../Store/QuizStore";
 import { calculateTimeDifference } from "./TimeDifference";
-import { QuizAreaContext } from "../store/ContextApiStore";
+import { QuizAreaContext } from "../Store/ContextApiStore";
 import { calculateQuizTimeDifference } from "./CalculateTime";
 // this custom hook  wil handl ethe quiz submit
 export const useHandleQuizSubmit = () => {
