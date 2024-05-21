@@ -6,8 +6,7 @@ import { setPastQuizHistory } from "./QuizHistory";
 export const sendNotifications = async ({token,data,index,buttonsLoading,setButtonsLoading,setConfirmLoading}) => {
 
   if(!setConfirmLoading){
-
-    setButtonsLoading([...buttonsLoading.slice(0,index),true,...buttonsLoading.slice(index+1)])
+    setButtonsLoading &&  setButtonsLoading([...buttonsLoading.slice(0,index),true,...buttonsLoading.slice(index+1)])
   }
 
 
@@ -21,6 +20,7 @@ export const sendNotifications = async ({token,data,index,buttonsLoading,setButt
   
   let {data: { data : oldData } } = await axios.get(api)
   
+  
   if(!oldData) return;
   
   const notificationsData = {message:"You Have A Quiz To do ",read:false,type:"quiz",dataId:data.dataId}
@@ -28,12 +28,10 @@ export const sendNotifications = async ({token,data,index,buttonsLoading,setButt
   
   const response =await  axios.put(api,{data:newData});
 
-  console.log(notificationsData,"this is the notii data")
-
   const response2 = await setPastQuizHistory({data,userId:token});
 
   if(!setConfirmLoading){
-      setButtonsLoading([...buttonsLoading.slice(0,index),false,...buttonsLoading.slice(index+1)])
+    setButtonsLoading &&  setButtonsLoading([...buttonsLoading.slice(0,index),false,...buttonsLoading.slice(index+1)])
   }
 
 };
@@ -53,3 +51,18 @@ export const UpdateNotification = async (token,data)=>{
 }
 
 
+export const sendNotificationsAll  = async ({contactList,data,setConfirmLoading,token})=>{
+   const request =   contactList.map((item) => item.id != token && sendNotifications({ token: item.id, data, setConfirmLoading, }))
+   await Promise.all(request);
+   return;
+}
+
+
+
+
+export const getNotifications = async (token) => {
+  const api = `http://127.0.0.3:3003/notifications/${token}`;
+  const { data } = await axios.get(api);
+
+  return  data;
+};

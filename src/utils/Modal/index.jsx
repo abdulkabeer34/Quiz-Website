@@ -6,8 +6,10 @@ export const AntdModal = ({
   open,
   confirmLoading,
   header,
+  setOpen,
   footerMessage,
   closeModal,
+  onOk,
   ...restProps
 }) => {
   return (
@@ -15,11 +17,12 @@ export const AntdModal = ({
       open={open}
       {...restProps}
       cancelText={false}
-      closeIcon={null}
+      // closeIcon={null}
       centered
+      onCancel = {closeModal}
       footer={
         <ConfigProvider theme={{ token: { colorPrimary: "black" } }}>
-          <Button type="primary" onClick={closeModal} loading={confirmLoading}>
+          <Button type="primary" onClick={onOk} loading={confirmLoading}>
             {footerMessage}
           </Button>
         </ConfigProvider>

@@ -9,6 +9,9 @@
 
   .right {
     .center {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
       .image {
         img {
           width: 40px;

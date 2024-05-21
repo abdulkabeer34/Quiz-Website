@@ -1,6 +1,3 @@
-// import { useContext } from "react";
-// import { QuizAreaContext } from "../../Store/ContextApiStore";
-// import { useState } from "react";
 
 export const useMediaRecorder = (props) => {
   let videoChunks = [];
@@ -19,7 +16,6 @@ export const useMediaRecorder = (props) => {
   // its will be use to check the available devices on the devices
   const checkRequiredDevices = async () => {
     const devices = await navigator.mediaDevices.enumerateDevices();
-    console.log(devices);
     const checkMicrophone = devices.some((e) => e.kind == "audioinput");
     const checkCamera = devices.some((e) => e.kind == "videoinput");
     if (checkCamera && checkMicrophone) {
@@ -39,7 +35,6 @@ export const useMediaRecorder = (props) => {
       setAudioStream(audioStream);
       return { videoStream, audioStream };
     } catch (error) {
-      console.log(error);
       throw new Error(
         "You Denied The Acces Cant Start The Assignment Right Now"
       );
@@ -84,14 +79,12 @@ export const useMediaRecorder = (props) => {
   };
 
   const stopAndSaveRecording = () => {
-    console.log("hello this is stop and save recrding ");
     recorder && recorder.audioRecorder.stop();
     recorder && recorder.videoRecorder.stop();
 
     if (audioStream) audioStream.getTracks().forEach((track) => track.stop());
 
     if (videoStream) videoStream.getTracks().forEach((track) => track.stop());
-    console.log("hello world12p90");
   };
 
   return {

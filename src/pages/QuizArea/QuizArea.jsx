@@ -4,7 +4,7 @@ import "./QuizArea.scss";
 import { AntdButton, QuizAreaProgressBar } from "./StyledComponents";
 import { Boolean, MultipleChoice } from "../../Components";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { setData, setTimer, setWarningNumber } from "../../Store/QuizStore";
 import {
   useStartAssignmentData,
@@ -12,15 +12,17 @@ import {
   useSetSelectedAnswer,
   useInitializeQuiz,
   useWarningModal,
+  useQuizHistory,
 } from "../../CustomHooks";
-
+import {useNavigate} from "react-router-dom"
 import { AntdModal } from "../../Utils";
 import { ConfigProvider } from "antd";
 import { QuizAreaContext } from "../../Store/ContextApiStore";
 import { ToggleModal } from "../../Store/QuizAreaStore";
+import { QuizAreaHooks } from "../../CustomHooks/QuizAreaHooks";
 
 export const QuizArea = () => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(3);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [loading, setLoading] = useState(1);
 
   const Timer = useSelector((e) => e.quizStore.timer);
@@ -29,43 +31,75 @@ export const QuizArea = () => {
     (e) => e.quizStore.quizAreaButtonLoading
   );
   const token = localStorage.getItem("token");
-  const data = useSelector((e) => e.quizStore.data);
+
+
+  const data = useSelector(e=>e.quizStore.data)
+  let { queryData } = useQuizHistory();
+  let { data:info, isLoading } = queryData;
+
   const Assignment = useStartAssignmentData();
   const HandleSubmit = useHandleQuizSubmit();
   const SetSelectedAnswer = useSetSelectedAnswer();
   const { StopInterval } = useContext(QuizAreaContext);
   const quizAreaModal = useSelector((e) => e.quizAreaStore.ModalInfo);
-
-  const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const { id: dataId, question } = useParams();
+  const navigate   = useNavigate();
 
   const props = { dataId, token, setCurrentQuestionIndex, question };
-  const WarningModalLogic = useWarningModal({ ...props });
   const InitializeQuiz = useInitializeQuiz({ ...props });
+  const WarningModalLogic = useWarningModal({ ...props });
+  // const { changeQuestion, triggerEvent, setSelectedAnswer } = QuizAreaHooks({
+  //   setCurrentQuestionIndex,
+  //   data,
+  //   token,
+  //   currentQuestionIndex,
+  //   dataId,
+  //   SetSelectedAnswer,
+  //   quizOptionLoading,
+  // });
 
   useEffect(() => {
-    (async () => await InitializeQuiz.initializeQuiz(props))();
-    (async () => await WarningModalLogic.checkWebsiteReloaded())();
+
+    if (isLoading) return;
+
+    const currentQuiz = info.find((item) => item.dataId === dataId);
+    dispatch(setData(currentQuiz));
+
+    const initializeQuiz = async () => {
+      await InitializeQuiz.initializeQuiz(currentQuiz);
+    };
+
+    const checkWebsiteReloaded = async () => {
+      await WarningModalLogic.checkWebsiteReloaded(currentQuiz);
+    };
+
+
+    initializeQuiz();
+    checkWebsiteReloaded();
+    setCurrentQuestionIndex(parseInt(question))
 
     return () => {
       StopInterval();
-      dispatch(setTimer([5, 0]));
-      StopInterval();
       dispatch(setData({}));
       dispatch(setWarningNumber(0));
+      dispatch(setTimer(["_", "__"]));
     };
-  }, []);
+  }, [info, dataId]);
 
+
+
+
+  
   const changeQuestion = (value) => {
+    if (!data || !data.quiz) return;
+
     if (
       quizOptionLoading >= 0 ||
       (currentQuestionIndex == data.quiz.length - 1 && value == 1) ||
       (currentQuestionIndex == 0 && value == -1)
     )
       return;
-    console.log(currentQuestionIndex, value);
     setCurrentQuestionIndex(currentQuestionIndex + value);
     navigate(`/quiz-area/${dataId}/${currentQuestionIndex + value}`, {
       replace: true,
@@ -80,12 +114,12 @@ export const QuizArea = () => {
         (currentQuestionIndex == 0 && value == -1)
       )
         return;
-      console.log(currentQuestionIndex, value);
       setCurrentQuestionIndex(currentQuestionIndex + value);
       navigate(`/quiz-area/${dataId}/${currentQuestionIndex + value}`, {
         replace: true,
       });
     };
+
     if (event.key === "ArrowLeft") {
       changeQuestion(-1);
     } else if (event.key === "ArrowRight") {
@@ -93,25 +127,30 @@ export const QuizArea = () => {
     }
   };
 
-  useEffect(() => {
-    document.addEventListener("keydown", triggerEvent);
+  const setSelectedAnswer = async (index) => {
+    console.log(index)
 
-    return () => document.removeEventListener("keydown", triggerEvent);
-  }, [currentQuestionIndex, data]);
-
-  const setSelectedAnswer = async (index) =>
     await SetSelectedAnswer.setSelectedAnswer({
       index,
       currentQuestionIndex,
       token,
       dataId,
     });
+  };
 
-  if ( !data  || !data.quiz || data.basicInfo  || !data.quiz[currentQuestionIndex]) return;
+
+
+  useEffect(() => {
+    document.addEventListener("keydown", triggerEvent);
+
+    return () => document.removeEventListener("keydown", triggerEvent);
+    
+  }, [currentQuestionIndex, data]);
+
+  if (!data || !data.quiz || !data.quiz[currentQuestionIndex]) return;
 
   return (
     <div className="quiz-area-main">
-      {/* <CreateQuiz/> */}
       <ConfigProvider theme={{ token: { colorPrimary: "black" } }}>
         <QuizAreaProgressBar
           $current={currentQuestionIndex}
@@ -174,14 +213,14 @@ export const QuizArea = () => {
           {data.quiz[currentQuestionIndex].type !== "boolean" ? (
             <MultipleChoice
               data={data.quiz[currentQuestionIndex]}
-              setSelectedAnswer={setSelectedAnswer}
+              setSelectedAnswer={(index)=>setSelectedAnswer(index)}
               setLoading={setLoading}
               loading={loading}
             />
           ) : (
             <Boolean
               data={data.quiz[currentQuestionIndex]}
-              setSelectedAnswer={setSelectedAnswer}
+              setSelectedAnswer={(index)=>setSelectedAnswer(index)}
             />
           )}
         </div>
@@ -212,7 +251,8 @@ export const QuizArea = () => {
           </div>
         </div>
         <AntdModal
-          closeModal={() => dispatch(ToggleModal({ open: false }))}
+        closeModal={() => dispatch(ToggleModal({ open: false }))}
+          onOk={() => dispatch(ToggleModal({ open: false }))}
           {...quizAreaModal}
           centered
         />

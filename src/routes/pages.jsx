@@ -9,21 +9,18 @@ import {
   QuizResult,
 } from "../Pages";
 import { createBrowserRouter } from "react-router-dom";
+import { ErrorPage } from "../Pages/ErrorPage/ErrorPage";
 
-const PrivatePages = createBrowserRouter([
-  {
-    path: "/",
-    element: <Navbar />,
-    children: [
-      { path: "/", element: <Home /> },
-      { path: "/home", element: <Home /> },
-      { path: "/quiz-area/:id/:question", element: <QuizArea /> },
-      { path: "/quiz-result/:id", element: <QuizResult /> },
-      { path: "/quiz-history", element: <QuizHistory /> },
-      { path: "/create-quiz", element: <CreateQuiz /> },
-      { path: "/notifications", element: <Notifications /> },
-    ],
-  },
+ const PrivatePages = createBrowserRouter([
+   {path:"/",element:<Navbar/>,errorElement:<ErrorPage/>,children:[
+    { path: "/", element: <Home />,errorElement:<ErrorPage/>, },
+    { path: "/home", element: <Home /> ,errorElement:<ErrorPage/>,},
+    { path: "/quiz-area/:id/:question", element: <QuizArea />,errorElement:<ErrorPage/>, },
+    { path: "/quiz-result/:id", element: <QuizResult /> ,errorElement:<ErrorPage/>,},
+    { path: "/quiz-history", element: <QuizHistory />,errorElement:<ErrorPage/>, },
+    { path: "/create-quiz", element: <CreateQuiz /> ,errorElement:<ErrorPage/>,},
+    { path: "/notifications", element: <Notifications /> ,errorElement:<ErrorPage/>,},
+   ]}
 ]);
 
 const PublicPages = createBrowserRouter([

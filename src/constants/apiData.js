@@ -31,9 +31,10 @@ const Categories = [
     label: item,
   }));
   export const DifficultyDataSet = Difficulty.map((item) => ({
-    value: item.toLocaleLowerCase(),
+    value: item.toLowerCase(),
     label: item,
   }));
+
   export const TypeDataSet = [
     { value: "multiple", label: "Multiple Choice" },
     { value: "boolean", label: "True/False" },

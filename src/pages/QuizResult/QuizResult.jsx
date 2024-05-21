@@ -1,25 +1,23 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./QuizResult.scss";
 import { Boolean, MultipleChoice } from "../../Components";
-import { getPastQuizHistory } from "../../Apis/QuizHistory";
 import { useParams } from "react-router-dom";
 import { ConfigProvider, Empty } from "antd";
 import { QuizAreaContext } from "../../Store/ContextApiStore";
+import { useQuizHistory } from "../../CustomHooks";
 
 export const QuizResult = () => {
   const { id: dataId } = useParams();
-  // const recordedVideo = useSelector((e) => e.quizStore.recordedVideo);
   const [result, setResult] = useState(null);
-  const { recordedVideo ,screenRecording} = useContext(QuizAreaContext);
+  let { queryData } = useQuizHistory();
+  let { data, isPending, isLoading } = queryData;
+  const { recordedVideo, screenRecording } = useContext(QuizAreaContext);
 
   useEffect(() => {
-    const getData = async () => {
-      const { data } = await getPastQuizHistory();
-      const currentQuiz = data.find((item) => item.dataId === dataId);
-      setResult(currentQuiz);
-    };
-    getData();
-  }, []);
+    if (isLoading) return;
+    const currentQuiz = data.find((item) => item.dataId === dataId);
+    setResult(currentQuiz);
+  }, [data]);
 
   if (!result) return <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />;
   return (
@@ -48,14 +46,14 @@ export const QuizResult = () => {
         })}
         {recordedVideo && (
           <video
-            style={{ position: "relative",marginTop:"40px", right:0 , bottom: 0,width:"40vw" }}
+            className="recorded-video"
             src={recordedVideo}
             controls
           ></video>
         )}
         {screenRecording && (
           <video
-            style={{ position: "relative",marginTop:"40px", right:0 , bottom: 0,width:"40vw" }}
+            className="recorded-video"
             src={screenRecording}
             controls
           ></video>

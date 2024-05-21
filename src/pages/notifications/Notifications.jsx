@@ -1,51 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Notifications.scss";
 import { IoSettingsOutline } from "react-icons/io5";
-import { Dropdown } from "antd";
+import { Dropdown, Skeleton, Empty } from "antd";
 import { IoEllipsisHorizontal } from "react-icons/io5";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import { GiCrossMark } from "react-icons/gi";
-
-import { RemoveNotification, UpdateNotification } from "../../Apis/notificationApis";
+import { useQuizNotification } from "../../CustomHooks";
+import { FullWidthSkeletonInput } from "./styledComponents";
 
 export const Notifications = () => {
-  const [notifications, setNotifications] = useState([]);
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const getNotifications = async () => {
-      const api = `http://127.0.0.3:3003/notifications/${token}`;
-      const { data } = await axios.get(api);
-      setNotifications(data.data);
-
-      console.log(data);
-    };
-
-    getNotifications();
-  }, []);
+  
+  const { queryData, updateNotificationMutation } = useQuizNotification(token);
+  const { data, isLoading } = queryData;
 
   const removeItem = async (index, dataId) => {
-    const newData = notifications.filter((item, subIndex) => index != subIndex);
-    setNotifications(newData);
-
-    await RemoveNotification(token, dataId);
+    const newData = data.data.filter((item, subIndex) => index !== subIndex);
+    updateNotificationMutation.mutate(newData);
   };
 
-  const markAsReadorUnread = async (index, expresssion) => {
-    const newData = notifications.map((item, subIndex) => {
-      if (subIndex == index) {
-        item.read = expresssion;
+  const markAsReadorUnread = async (index, expression) => {
+    const newData = data.data.map((item, subIndex) => {
+      if (subIndex === index) {
+        item.read = expression;
       }
-      return item
+      return item;
     });
-    setNotifications(newData);
-    UpdateNotification(token,newData)
+    updateNotificationMutation.mutate(newData);
   };
 
-  if (!notifications) return;
   return (
     <>
       <div className="notifications-main">
@@ -55,21 +40,24 @@ export const Notifications = () => {
             <IoSettingsOutline />
           </div>
           <div className="notifications">
-            {notifications.map((item, index) => {
-              const items = [
-                {
-                  key: "1",
-                  label: (
-                    <p onClick={() => removeItem(index, item.dataId)}>
-                      {" "}
-                      Remove Item
-                    </p>
-                  ),
-                },
-                {
-                  key: "2",
-                  label:
-                    item.read == true ? (
+            {isLoading ? (
+              Array(10).fill(null).map((item,index)=> <FullWidthSkeletonInput $index={index}    active/>)
+            ) : !data.data.length ? (
+              <Empty />
+            ) : (
+              data.data.map((item, index) => {
+                const items = [
+                  {
+                    key: "1",
+                    label: (
+                      <p onClick={() => removeItem(index, item.dataId)}>
+                        Remove Item
+                      </p>
+                    ),
+                  },
+                  {
+                    key: "2",
+                    label: item.read ? (
                       <p onClick={() => markAsReadorUnread(index, false)}>
                         mark as unread
                       </p>
@@ -78,47 +66,62 @@ export const Notifications = () => {
                         mark as read
                       </p>
                     ),
-                },
-                {
-                  key: "3",
-                  label: (
-                    <p onClick={() => navigate(`/quiz-area/${item.dataId}/0`)}>
-                      Open Item
-                    </p>
-                  ),
-                },
-              ];
+                  },
+                  {
+                    key: "3",
+                    label: (
+                      <p onClick={() => navigate(`/quiz-area/${item.dataId}/0`)}>
+                        Open Item
+                      </p>
+                    ),
+                  },
+                ];
 
-              return (
-                <div className="notification" key={index}>
-                  <div className="left">
-                    <div className="image">
-                      <img src="https://ui.shadcn.com/avatars/01.png" alt="" />
+                return (
+                  <div className="notification" key={index}>
+                    <div className="left">
+                      <div className="image">
+                        <img src="https://ui.shadcn.com/avatars/01.png" alt="" />
+                      </div>
+                      <div className="content">
+                        <h1>
+                          Assignment{" "}
+                          <span>
+                            {item.read ? (
+                              <div>
+                                (<p>Done</p> <FaCheck color="#16a34a" />)
+                              </div>
+                            ) : (
+                              <div>
+                                (<p>Not done</p> <GiCrossMark color="#dc2626" />)
+                              </div>
+                            )}
+                          </span>
+                        </h1>
+                        <p className="details">{item.message}</p>
+                      </div>
                     </div>
-                    <div className="content">
-                    <h1 >Ass
-                    ignment <span >{item.read ? <div>(<p>Done</p> <FaCheck color="#16a34a"/>)</div> : <div>(<p>Not done</p> <GiCrossMark color="#dc2626" />)</div>}</span></h1>
-                      <p className="details">{item.message}</p>
+                    <div className="right">
+                      <Dropdown
+                        menu={{ items }}
+                        trigger="click"
+                        placement="bottom"
+                        onClick={(event) => {
+                          event.stopPropagation();
+                        }}
+                      >
+                        <IoEllipsisHorizontal />
+                      </Dropdown>
                     </div>
                   </div>
-                  <div className="right">
-                    <Dropdown
-                      menu={{ items }}
-                      trigger="click"
-                      placement="bottom"
-                      onClick={(event) => {
-                        event.stopPropagation();
-                      }}
-                    >
-                      <IoEllipsisHorizontal />
-                    </Dropdown>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })
+            )}
           </div>
         </div>
       </div>
     </>
   );
 };
+
+export default Notifications;

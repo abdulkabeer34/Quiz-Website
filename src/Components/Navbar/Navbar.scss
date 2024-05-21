@@ -9,7 +9,7 @@
     a {
         text-decoration: none;
         text-transform: none;
-        color:black;
+        color: black;
     }
 
     @media (max-width:370px) {
@@ -62,6 +62,11 @@
             width: 60%;
         }
 
+        @media(max-width:615px){
+            display: none;
+        }
+
+
 
         a {
             text-decoration: none;
@@ -72,8 +77,13 @@
     }
 
 
-    .profile {
+    .notification {
         margin-bottom: 0;
+
+        @media(max-width:615px){
+            display: none;
+        }
+
 
 
         a {
@@ -95,4 +105,55 @@
 
 
     }
+
+    .cross-bar {
+        display: none;
+        cursor: pointer;
+
+        @media(max-width:615px){
+            display: initial;
+        }
+
+
+        a {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        svg {
+            font-size: 25px !important;
+            color: black;
+
+            :hover {
+                color: black;
+            }
+        }
+
+        
+    }
 }
+
+
+
+
+
+.ant-drawer{
+    display:none !important;
+    
+        @media(max-width:615px){
+            display: initial !important;
+           }
+
+
+
+    }
+    
+      .ant-drawer-body {
+        padding: 8px;
+      }
+      
+    
+    
