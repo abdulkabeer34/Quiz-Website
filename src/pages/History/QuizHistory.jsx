@@ -1,36 +1,35 @@
-import React, { useEffect, useState } from "react";
-import { Button, Table } from "antd";
+import React from "react";
+import { Table } from "antd";
 import "./History.scss";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { Columns } from "../../Constants";
+import { FormatQuizHistoryData } from "../../Components/FormatQuizHistoryData";
+import { useQuizHistory } from "../../CustomHooks";
+import { Skeleton,Empty } from "antd";
+import { FullWidthSkeletonInput } from "./StyledComponets";
 
 export const QuizHistory = () => {
+  const token = localStorage.getItem("token")
+  let { queryData } = useQuizHistory(false,token);
+  let { data, isLoading } = queryData;
 
-  
-  let pastQuizData = useSelector((e) => e.quizStore.allQuizData);
-  const [newData,setNewData] = useState([])
-  
-  useEffect(() => {
-    let data  = [];
-    pastQuizData.map((item,index) => {
-      console.log(item)
-      const { basicInfo,dataId ,basicInfo:{submited}} = item;
-      data.push({...basicInfo,dataId,state:<Link key={index} to={`/quiz-area/${dataId}/0`}><Button>{submited=="not submitted"?"Not Submitted":submited=="not started"?"Not Started":"Submitted"}</Button></Link>});
-    });
-    setNewData([...data]);
-  }, [pastQuizData])
-  
-   
 
-   
-  console.log(pastQuizData)
+
+
   return (
     <div className="history-main">
       <div className="upper-area">
         <h2>Your Past Quiz History:</h2>
       </div>
-      <Table columns={Columns} rowKey={e=>e.dataId} dataSource={newData} />;
+      <Table
+        columns={Columns}
+        rowKey={(e) => e.dataId}
+        locale={{
+          emptyText: !data ?  Array(10).fill(null).map(()=> <FullWidthSkeletonInput   active/>)  : <Empty  />,
+        }}
+        dataSource={FormatQuizHistoryData({ data })}
+      >
+        <Skeleton active={true} />
+      </Table>
     </div>
   );
 };

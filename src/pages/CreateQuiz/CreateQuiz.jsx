@@ -1,43 +1,46 @@
 import { PlusOutlined } from "@ant-design/icons";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { AntdModal, FloatingButtonAntd } from "../../Utils";
 import "./CreateQuiz.scss";
 import { Button, Input, message } from "antd";
-import { CreateQuizConfigProvider, basicInfo} from "../../Constants";
+import { basicInfo } from "../../Constants";
 import { useCreateQuizHandler } from "../../CustomHooks";
 import { Box, AntdInput } from "./StyledComponents";
-import { ContactList } from "../../CustomHooks/ContactList";
-import axios from "axios";
-import { sendNotifications } from "../../Apis/notificationApis";
+import { ContactList, CreateQuizConfigProvider } from "../../Components";
+import { useLoginQuery, useQuizNotification } from "../../CustomHooks/Query";
 
 export const CreateQuiz = () => {
+  const [questions, setQuestion] = useState({
+    quiz: [],
+    basicInfo,
+    dataId: "",
+  });
 
 
-  const [questions, setQuestion] = useState({ quiz: [], basicInfo, dataId:"" });
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
-
-  const [contactList, setContactList] = useState(null);
   const [open, setOpen] = useState(false);
+  const token = localStorage.getItem('token');
 
   const { AddOpt, AddQuiz, DeleteOpt, UpdateOpt, UpdateQuiz, DeleteData } =
     useCreateQuizHandler({ questions, setQuestion, messageApi });
 
-  useEffect(() => {
-    const getLogins = async () => {
-      const { data } = await axios.get("http://127.0.0.3:3003/users");
-      setContactList(data);
-    };
-    getLogins();
-  }, []);
+
+  const {loginData:{data:contactList,isLoading}} = useLoginQuery();
+  const {sendNotificationsAllMutation } = useQuizNotification();
+
+
+  if(isLoading) return;
 
   const sendALl = async () => {
     setConfirmLoading(true);
-    const request = contactList.map(async (item) => {
-      await sendNotifications({ token: item.id, data:questions, setConfirmLoading });
-    });
-    Promise.all(request).then(() => setConfirmLoading(false));
+    await sendNotificationsAllMutation.mutateAsync({contactList,data:questions,setConfirmLoading,token})
+    setConfirmLoading(false);
+    setOpen(false)
   };
+
+
+
 
   return (
     <div className="create-quiz-main">
@@ -49,7 +52,8 @@ export const CreateQuiz = () => {
               questions={questions}
             />
           }
-          closeModal={async () => await sendALl()}
+          onOk={async () => await sendALl()}
+          closeModal={()=>setOpen(false)}
           open={open}
           style={{ heigth: "80vw" }}
           header={

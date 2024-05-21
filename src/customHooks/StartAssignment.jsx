@@ -1,27 +1,24 @@
 import { useDispatch, useSelector } from "react-redux";
 import { updatePastQuizHistory } from "../Apis/QuizHistory";
 import { useUpdateTime } from "./CalculateTime";
-import {
-  setAllQuizData,
-  setData,
-  setQuizAreaButtonLoading,
-} from "../Store/QuizStore";
+import { setData, setQuizAreaButtonLoading } from "../Store/QuizStore";
 import { useContext } from "react";
 import { QuizAreaContext } from "../Store/ContextApiStore";
 import { ToggleModal } from "../Store/QuizAreaStore";
+import { useQuizHistory } from "./Query";
 
 export const useStartAssignmentData = () => {
   const UpdateTime = useUpdateTime();
   const dispatch = useDispatch();
-  const allQuizData = useSelector((e) => e.quizStore.allQuizData);
   const data = useSelector((e) => e.quizStore.data);
   const expirationTime = useSelector((e) => e.quizStore.expirationTime);
+  const { mutation } = useQuizHistory(false);
+
   const {
     StartInterval,
     checkRequiredDevices,
     getDevicesAccess,
     startRecording,
-    stopAndSaveRecording,
   } = useContext(QuizAreaContext);
 
   const startAssignment = async ({ token, dataId }) => {
@@ -49,7 +46,6 @@ export const useStartAssignmentData = () => {
           })
         );
       } catch (error) {
-        console.log(error);
         dispatch(
           ToggleModal({
             open: true,
@@ -85,28 +81,20 @@ export const useStartAssignmentData = () => {
 
     dispatch(setQuizAreaButtonLoading(true));
 
-    await updatePastQuizHistory({
+    mutation.mutate({
       token,
       dataId,
       startingDate,
       expirationTime,
       submited: "not submitted",
-    });
+    })
 
     const newData = {
       ...data,
       basicInfo: { ...data.basicInfo, startingDate, submited: "not submitted" },
     };
 
-    const newAllQuizData = allQuizData.map((item) => {
-      if (item.dataId == dataId) {
-        return newData;
-      }
-      return item;
-    });
-
     dispatch(setData(newData));
-    dispatch(setAllQuizData([...newAllQuizData]));
     dispatch(setQuizAreaButtonLoading(false));
   };
   return { startAssignment };

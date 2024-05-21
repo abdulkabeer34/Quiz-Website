@@ -1,10 +1,11 @@
-import React from "react";
+
 
 export const useCreateQuizHandler = ({
   questions,
   setQuestion,
   messageApi,
 }) => {
+
   const AddQuiz = () => {
     const data = { ...questions };
     let newQuestion = {
@@ -19,7 +20,6 @@ export const useCreateQuizHandler = ({
     data.quiz.push(newQuestion);
 
     setQuestion({ ...data });
-    console.log(data)
 
   };
 
@@ -27,7 +27,6 @@ export const useCreateQuizHandler = ({
     let data = questions;
     data.quiz[index].question = value;
     setQuestion({ ...data });
-    console.log(data)
 
   };
 
@@ -43,7 +42,6 @@ export const useCreateQuizHandler = ({
     const filteredData = data.quiz.filter((item, indexe) => indexe != index);
     data.quiz = filteredData;
     setQuestion(data);
-    console.log(data);
   };
 
   const AddOpt = (index) => {
@@ -57,15 +55,12 @@ export const useCreateQuizHandler = ({
       "",
     ];
     setQuestion({ ...data });
-    console.log(data)
-
   };
 
   const UpdateOpt = (index, subIndex, value) => {
     let data = questions;
     data.quiz[index].shuffledAnswers[subIndex] = value;
     setQuestion({ ...data });
-    console.log(data);
   };
 
   const DeleteOpt = (index, subIndex) => {
@@ -76,7 +71,6 @@ export const useCreateQuizHandler = ({
       (i, index) => index != subIndex
     );
     setQuestion({ ...data });
-    console.log(data)
   };
 
   return { AddOpt, AddQuiz, DeleteData, DeleteOpt, UpdateOpt, UpdateQuiz };

@@ -15,27 +15,24 @@ export const flattenObjectValues = (data) => {
 
 export const setPastQuizHistory = async ({ data, userId }) => {
   try {
-    const { data: pastData } = await getPastQuizHistory(userId);
+    const  pastData  = await getPastQuizHistory(userId);
     const respnose = await axios.patch(
       `http://127.0.0.3:3003/quizPastHistory/${userId}`,
-      { data: [...(pastData ?? []), data] }
+      { data: [...pastData, data] }
     );
     return data;
   } catch (error) {
-    console.log(error);
     return false;
   }
 };
 
-export const getPastQuizHistory = async () => {
+export const getPastQuizHistory = async (token) => {
   try {
-    const id = localStorage.getItem("token");
+    const id = token ?token : localStorage.getItem("token");
     const {
       data: { data },
     } = await axios.get(` http://127.0.0.3:3003/quizPastHistory/${id}`);
-
-    // console.log(data);
-    return { data };
+    return data ;
   } catch (error) {
     return false;
   }
@@ -51,7 +48,7 @@ export const updatePastQuizHistory = async ({
   submittedTime,
   websiteLeaved,
 }) => {
-  const { data } = await getPastQuizHistory();
+  const  data  = await getPastQuizHistory();
   const newData = data.map((item) => {
     if (item.dataId !== dataId) return item;
 

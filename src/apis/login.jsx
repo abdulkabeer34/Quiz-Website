@@ -28,7 +28,7 @@ const setUpNotifications  = async (token)=>{
   }
 }
 
-const fetchData = async () => {
+export const fetchData = async () => {
   try {
     const { data } = await axios.get("http://127.0.0.3:3003/users");
     return data;
@@ -38,8 +38,7 @@ const fetchData = async () => {
 };
 
 export const verifyData = () => {
-  const login = async (info, setLoading, api) => {
-    setLoading(true);
+  const login = async (info, api) => {
     let LoggedIn = false;
     try {
       const data = await fetchData();
@@ -48,7 +47,6 @@ export const verifyData = () => {
         if (username == info.username && password == info.password) {
           LoggedIn = true;
           localStorage.setItem("token", id);
-          console.log(id);
         }
       });
 
@@ -63,11 +61,9 @@ export const verifyData = () => {
       openNotification({ ...notifications.error, api });
     }
 
-    setLoading(false);
   };
 
-  const signup = async (info, setLoading, api) => {
-    setLoading(true);
+  const signup = async (info, api) => {
     try {
       const token = Buffer.from(info.username, "utf-8").toString("base64");
       const userData = { id: token, ...info };
@@ -85,8 +81,13 @@ export const verifyData = () => {
     } catch (error) {
       openNotification({ ...notifications.error, api });
     }
-    setLoading(false);
   };
 
   return { signup, login };
 };
+
+
+export const getLogins = async ()=>{
+  const { data } = await axios.get("http://127.0.0.3:3003/users");
+  return data;
+}

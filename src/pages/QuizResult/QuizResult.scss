@@ -1,6 +1,16 @@
 .quiz-result-main{
     padding: 30px 50px;
 
+
+    .recorded-video {
+        position: relative;
+        margin-top: 40px;
+        right: 0;
+        bottom: 0;
+        width: 40vw;
+      }
+      
+
     
     @media (max-width:370px) {
         padding: 30px 10px;

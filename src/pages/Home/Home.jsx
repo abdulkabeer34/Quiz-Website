@@ -4,23 +4,23 @@ import { Button, ConfigProvider, Form, InputNumber, message } from "antd";
 import { AntdCascader, CustomModalAntd, FormItem } from "./StyledComponents";
 
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { HandleSubmit } from "../../Apis";
-import { setAllQuizData, setData } from "../../Store/QuizStore";
+import { useDispatch } from "react-redux";
+import { setData } from "../../Store/QuizStore";
 import {
   CategoriesDataSet,
   DifficultyDataSet,
   TypeDataSet,
-} from "../../Constants";
+} from "../../Constants"
+import { useHandleSubmitQuizQuery } from "../../CustomHooks/Query/handleSubmitQuiz";
 
 export const Home = () => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const userId = useSelector((e) => e.quizStore.userToken);
-  const allQuizData = useSelector((e) => e.quizStore.allQuizData);
+  const token = localStorage.getItem("token");
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [messageApi, contextHolder] = message.useMessage();
+  const {mutation} = useHandleSubmitQuizQuery()
 
   const warning = ({ content }) => {
     messageApi.open({
@@ -29,9 +29,11 @@ export const Home = () => {
     });
   };
 
-  const startQuiz = async (e) => {
-    const props = await HandleSubmit(e, setLoading, userId);
-    console.log(props);
+  const startQuiz = async (formData) => {
+    setLoading(true)
+    const props = await  mutation.mutateAsync({formData,userId: token});
+    setLoading(false)
+
     if (!props) {
       warning({
         content:
@@ -41,12 +43,11 @@ export const Home = () => {
     }
     const { quizData, dataId } = props;
     dispatch(setData(quizData));
-    let newData = [...allQuizData, { ...quizData }];
-    dispatch(setAllQuizData([...newData]));
     navigate(`/quiz-area/${dataId}/0`);
   };
 
   return (
+    
     <div className="home-main">
       {contextHolder}
       <ConfigProvider theme={{ token: { colorPrimary: "black" } }}>

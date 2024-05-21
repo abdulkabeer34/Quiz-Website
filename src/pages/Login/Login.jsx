@@ -12,7 +12,8 @@ import {
   AntdLoginTheme,
 } from "./StyledComponents";
 import { verifyData } from "../../Apis/login";
-import { InputPasswordRules, InputUsernameRules } from "./attributes";
+import { useFormik } from "formik";
+import { signupSchema } from "../../Constants";
 
 export const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -25,12 +26,33 @@ export const Login = () => {
     form.resetFields();
   };
 
-  const handleSubmit = async (data, setLoading, api) => {
+  const handleSubmitForm = async (data) => {
+    setLoading(true);
     const { login, signup } = verifyData();
 
-    if (isLogin) await login(data, setLoading, api);
-    else await signup(data, setLoading, api);
+    try {
+      if (isLogin) await login(data,api);
+      else await signup(data,api);
+    } catch (error) {
+      api.error({
+        message: 'Error',
+        description: error.message,
+      });
+    } finally {
+      setLoading(false);
+    }
   };
+
+  const {values,handleChange,handleSubmit,handleReset,handleBlur,errors,touched} = useFormik({
+    initialValues: {
+      username: '',
+      password: ''
+    },
+    validationSchema: signupSchema,
+    onSubmit: async (values) => {
+      await handleSubmitForm(values);
+    }
+  });
 
   return (
     <>
@@ -40,35 +62,45 @@ export const Login = () => {
           <Left className="left">
             <img
               src={require("../../Assets/Images/illustration.svg").default}
+              alt="Illustration"
             />
           </Left>
           <Right className="right">
-            <AntdForm
-              form={form}
-              className="center"
-              onFinish={(data) => {
-                handleSubmit(data, setLoading, api);
-              }}
-            >
+            <AntdForm className="center" onFinish={handleSubmit}>
               <div className="image">
-                <img src={require("../../Assets/Images/pngwing.com (5).png")} />
+                <img src={require("../../Assets/Images/pngwing.com (5).png")} alt="Logo" />
               </div>
               <div className="heading">
                 <h1>Welcome</h1>
-                <p>Plz {isLogin ? "Login" : "Signup"} To Continue</p>
+                <p>Please {isLogin ? "Login" : "Signup"} to continue</p>
               </div>
               <div className="form-item">
                 <p>Username</p>
-                <Form.Item name="username" rules={InputUsernameRules}>
-                  <AntdInput placeholder="Enter the username" />
-                </Form.Item>
+                <AntdInput
+                  name="username"
+                  value={values.username}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  autoComplete="false"
+                  placeholder="Enter the username"
+                />
+                {touched.username && errors.username ? (
+                  <div className="error">{errors.username}</div>
+                ) : null}
               </div>
               <div className="password">
                 <p>Password</p>
-
-                <Form.Item name="password" rules={InputPasswordRules}>
-                  <AntdPasswordInput placeholder="Enter the password" />
-                </Form.Item>
+                <AntdPasswordInput
+                  autoComplete = "false"
+                  name="password"
+                  value={values.password}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  placeholder="Enter the password"
+                />
+                {touched.password && errors.password ? (
+                  <div className="error">{errors.password}</div>
+                ) : null}
               </div>
               <AntdButton loading={loading} htmlType="submit">
                 {isLogin ? "Login" : "Signup"}
@@ -86,7 +118,7 @@ export const Login = () => {
               <div className="sign-login">
                 {isLogin ? (
                   <>
-                    Didnt have an account?
+                    Don't have an account?
                     <span onClick={registerUser}>Signup</span>
                   </>
                 ) : (

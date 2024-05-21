@@ -9,13 +9,11 @@ const apiRequest = async (url, params) => {
     if (data.results) return data;
     else throw new Error("Sorry You Cannot take the quiz right now");
   } catch (error) {
-    console.log(error);
     throw new Error("You Cannot take the quiz right now");
   }
 };
 
-export const HandleSubmit = async (formData, setLoading, userId) => {
-  setLoading(true);
+export const HandleSubmit = async ({formData, userId}) => {
   const keys = Object.keys(formData);
   let params = new Object();
   const url = "https://opentdb.com/api.php";
@@ -35,7 +33,6 @@ export const HandleSubmit = async (formData, setLoading, userId) => {
   try {
     const { results } = await apiRequest(url, params);
     const date = new Date();
-    console.log(results);
     const dataId = Buffer.from(`${date}`, "utf-8").toString("base64");
     const newDataSet = createNewDataSet(results);
 
@@ -62,11 +59,7 @@ export const HandleSubmit = async (formData, setLoading, userId) => {
     // setLoading(false);
     return { quizData: data, dataId };
   } catch (error) {
-    // throw new Error("Unexpected error ouccred while sumitting the data")
-    console.log("Unexpected error ouccred while sumitting the data")
     return  false;
   }
-  finally{
-    setLoading(false);
-  }
+  
 };

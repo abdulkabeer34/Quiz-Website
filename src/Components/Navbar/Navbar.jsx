@@ -1,12 +1,17 @@
 import { Link,Outlet } from "react-router-dom";
 import "./Navbar.scss";
-import React from "react";
+import React, { useState } from "react";
 import { IoNotificationsOutline } from "react-icons/io5";
+import { HiBars3 } from "react-icons/hi2";
+import Sidebar from "../SideBar/Sidebar";
+
 
 export const Navbar = () => {
+  const [open,setOpen] = useState()
   return (
    <>
     <div>
+      <Sidebar open={open} onClose={()=>setOpen(prev=>!prev)}/>
       <header className="nav-header">
         <Link to="/">
           <div className="logo">
@@ -21,14 +26,17 @@ export const Navbar = () => {
           <Link to="/create-quiz">
             <p>Create Quiz</p>
           </Link>
-          <Link to="/profile">
+          {/* <Link to="/profile">
             <p>Profile</p>
-          </Link>
+          </Link> */}
         </div>
-        <div className="profile">
+        <div className="notification">
           <Link trigger="click" to="/notifications">
             <IoNotificationsOutline className="notification" />
           </Link>
+        </div>
+        <div onClick={()=>setOpen(prev=>!prev)}className="cross-bar">
+          <HiBars3/>
         </div>
       </header>
 

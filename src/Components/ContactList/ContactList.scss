@@ -1,0 +1,66 @@
+.contact-list-main {
+    // Main container styling
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: scroll;
+    height: 73vh;
+    scrollbar-width: none;
+
+    .center {
+        // Styling for the grid container within the main container
+        display: grid;
+        gap: 24px;
+        padding: 24px;
+
+      .contact{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .main-info {
+            // Styling for the contacts container
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .image {
+                // Styling for the image within the contacts container
+                width: 2.25rem;
+
+                img {
+                    width: 100%; // Set image width to full width of the container
+                }
+            }
+
+            .user-details {
+                // Styling for the user details container
+                font-size: 14px;
+                font-weight: 500;
+
+                p {
+                    &:first-of-type {
+                        // Styling for the first paragraph (username)
+                        margin: 0;
+                    }
+
+                    &:last-of-type {
+                        // Styling for the last paragraph (student label)
+                        color: #888;
+                    }
+                }
+            }
+        }
+
+        .send-button {
+            // Styling for the send button container
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            // Button {
+            //     // Styling for the Ant Design Button component
+            //     // No additional styles needed here for now
+            // }
+        }
+      }
+    }
+}
